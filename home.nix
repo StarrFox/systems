@@ -1,7 +1,10 @@
 { config, pkgs, ... }:
 
 let
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-22.05.tar.gz";
+  home-manager = builtins.fetchTarball {
+      url = "https://github.com/nix-community/home-manager/archive/release-22.05.tar.gz";
+      sha256 = "";
+    };
 in
 {
   imports = [
