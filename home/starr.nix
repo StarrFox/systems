@@ -10,6 +10,8 @@ in
   #   (import "${home-manager}/nixos")
   # ];
 
+  # TODO: pass (programs.password-store)
+
   nixpkgs = {
     config = {
       allowUnfree = true;
@@ -22,18 +24,38 @@ in
     homeDirectory = "/home/starr";
     stateVersion = "22.11";
     packages = with pkgs; [
+      # cli
+      aria2c
+      bat
+      cava
+      comma
+      croc
+      duf
+      feh
+      ffmpeg
+      htop
       httpie
       neofetch
-      chromium
+      ncdu
+      p7zip
       ripgrep
-      vscode
+      tldr
+
+      # gui
       alacritty
-      comma
-      duf
-      croc
+      chromium
+      mpv
+      the-powder-toy
+      vscode
     ] ++ [
       inputs.nh.packages.${pkgs.system}.default
       inputs.nix_search.packages.${pkgs.system}.default
+    ] ++ [
+      # I want the latest version
+      nixpkgs-unstable.imhex
+    ] ++ [
+      # TODO: update python version sometimes
+      python310Packages.ipython
     ];
   };
 
@@ -41,7 +63,11 @@ in
     enable = true;
     shellAbbrs = {
       ls = "exa -la";
+      download = "aria2c --split=10 ";
+      extract = "7z x ";
     };
+    # wish they'd just remove this garbage
+    interactiveShellInit = "set -U fish_greeting";
   };
 
   programs.starship = {
