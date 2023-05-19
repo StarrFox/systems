@@ -61,10 +61,10 @@ in
 
   programs.fish = {
     enable = true;
-    shellAbbrs = {
+    shellAliases = {
       ls = "exa -la";
-      download = "aria2c --split=10 ";
-      extract = "7z x ";
+      download = "aria2c --split=10";
+      extract = "7z x";
     };
     # wish they'd just remove this garbage
     interactiveShellInit = "set -U fish_greeting";
