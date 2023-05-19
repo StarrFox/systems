@@ -6,6 +6,7 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     nh.url = "github:ViperML/nh";
+    nix_search.url = "github:peterldowns/nix-search-cli";
 
     home-manager = {
       url = "github:nix-community/home-manager";

@@ -74,6 +74,7 @@
 
   fonts.fonts = with pkgs; [
     fira-code
+    fira-code-symbols
   ];
 
   users.users.starr = {

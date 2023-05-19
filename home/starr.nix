@@ -33,6 +33,7 @@ in
       croc
     ] ++ [
       inputs.nh.packages.${pkgs.system}.default
+      inputs.nix_search.${pkgs.system}.default
     ];
   };
 
@@ -77,7 +78,6 @@ in
 
   programs.exa = {
     enable = true;
-    icons = true;
     extraOptions = [
       "--no-time"
       "--color=always"
