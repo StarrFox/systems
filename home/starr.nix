@@ -25,7 +25,7 @@ in
     stateVersion = "22.11";
     packages = with pkgs; [
       # cli
-      aria2c
+      aria
       bat
       cava
       comma
