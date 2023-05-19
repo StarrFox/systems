@@ -1,7 +1,7 @@
 { inputs, lib, config, pkgs, ... }: 
 let 
   nixpkgs-unstable = import inputs.nixpkgs-unstable {
-    system = ${pkgs.system};
+    system = "${pkgs.system}";
     config = config.nixpkgs.config;
   };
 in
