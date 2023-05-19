@@ -31,6 +31,7 @@ in
       comma
       croc
       duf
+      erdtree
       feh
       ffmpeg
       htop
@@ -46,7 +47,6 @@ in
       chromium
       mpv
       the-powder-toy
-      vscode
     ] ++ [
       inputs.nh.packages.${pkgs.system}.default
       inputs.nix_search.packages.${pkgs.system}.default
@@ -65,13 +65,30 @@ in
       ls = "exa -la";
       download = "aria2c --split=10";
       extract = "7z x";
+      usage = "erd --human";
     };
     # wish they'd just remove this garbage
     interactiveShellInit = "set -U fish_greeting";
   };
 
+  programs.vscode = {
+    enable = true;
+    enableUpdateCheck = false;
+    enableExtensionUpdateCheck = false;
+    extensions = with pkgs.vscode-extensions; [
+      njpwerner.autodocstring
+      bungcip.better-toml
+      usernamehw.errorlens
+      davidanson.vscode-markdownlint
+      jnoortheen.nix-ide
+      ms-python.vscode-python
+      ms-python.vscode-pylance
+    ];
+  };
+
   programs.starship = {
     enable = true;
+    # we need the latest version for the `heuristic` setting
     package = nixpkgs-unstable.starship;
     settings = {
       username.show_always = true;
@@ -86,6 +103,7 @@ in
 
   programs.helix = {
     enable = true;
+    # the unstable version has a setting I want
     package = nixpkgs-unstable.helix;
     settings = {
       theme = "base16_transparent";
