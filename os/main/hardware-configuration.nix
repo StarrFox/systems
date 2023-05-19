@@ -14,12 +14,12 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/5e9f4944-1dc8-4127-a391-14ce8920d310";
+    { device = "/dev/disk/by-uuid/8d3930e3-e233-45d2-aa63-0f77192232df";
       fsType = "ext4";
     };
 
   fileSystems."/boot/efi" =
-    { device = "/dev/disk/by-uuid/B175-984D";
+    { device = "/dev/disk/by-uuid/BBD0-910B";
       fsType = "vfat";
     };
 
@@ -32,7 +32,6 @@
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp1s0.useDHCP = lib.mkDefault true;
 
-  pkgs.hostPlatform = "x86_64-linux";
-
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
