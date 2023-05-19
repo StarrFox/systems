@@ -84,6 +84,7 @@ in
       jnoortheen.nix-ide
       ms-python.python
       ms-python.vscode-pylance
+      mkhl.direnv
     ];
   };
 
