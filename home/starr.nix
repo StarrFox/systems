@@ -72,6 +72,9 @@ in
   };
 
   programs.gh.enable = true;
-  programs.git.enable = true;
+  programs.git = {
+    enable = true;
+    difftastic.enable = true;
+  };
   programs.home-manager.enable = true;
 }
