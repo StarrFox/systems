@@ -31,7 +31,6 @@ in
       comma
       croc
       duf
-      erdtree
       feh
       ffmpeg
       htop
@@ -53,6 +52,8 @@ in
     ] ++ [
       # I want the latest version
       nixpkgs-unstable.imhex
+      # erdtree isnt in stable yet
+      nixpkgs-unstable.erdtree
     ] ++ [
       # TODO: update python version sometimes
       python310Packages.ipython
