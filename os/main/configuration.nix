@@ -102,7 +102,7 @@
       EDITOR = "nvim";
     };
     sessionVariables = {
-      FLAKE = "/home/starr/os_config";
+      FLAKE = "/home/starr/systems";
     };
   };
 
