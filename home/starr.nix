@@ -92,7 +92,7 @@ in
   programs.firefox = {
     enable = true;
     profiles = {
-      config.home.username = {
+      ${config.home.username} = {
         bookmarks = [
           {
             name = "Nix package search";
