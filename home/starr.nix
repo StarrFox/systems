@@ -21,7 +21,7 @@ in
 
   home = {
     username = "starr";
-    homeDirectory = "/home/starr";
+    homeDirectory = "/home/${config.home.username}";
     stateVersion = "22.11";
     packages = with pkgs; [
       # cli
@@ -44,6 +44,7 @@ in
       # gui
       alacritty
       chromium
+      discord
       mpv
       the-powder-toy
     ] ++ [
@@ -86,6 +87,52 @@ in
       ms-python.vscode-pylance
       mkhl.direnv
     ];
+  };
+
+  programs.firefox = {
+    enable = true;
+    profiles = {
+      config.home.username = {
+        bookmarks = [
+          {
+            name = "Nix package search";
+            url = "https://search.nixos.org/packages?";
+          }
+          {
+            name = "Home manager package search";
+            url = "https://mipmip.github.io/home-manager-option-search/";
+          }
+          {
+            name = "Noogle";
+            url = "https://noogle.dev/";
+          }
+          {
+            name = "Nix command man";
+            url = "https://nixos.org/manual/nix/stable/command-ref/experimental-commands.html";
+          }
+          {
+            name = "anilist";
+            url = "https://anilist.co/home";
+          }
+          {
+            name = "anichart";
+            url = "https://anichart.net/airing";
+          }
+          {
+            name = "protondb";
+            url = "https://www.protondb.com/";
+          }
+          {
+            name = "steamdb";
+            url = "https://steamdb.info/";
+          }
+          {
+            name = "librespeed";
+            url = "https://librespeed.org/";
+          }
+        ];
+      };
+    };
   };
 
   programs.starship = {

@@ -13,6 +13,10 @@
     settings = {
       experimental-features = ["nix-command" "flakes"];
       auto-optimise-store = true;
+      trusted-users = ["@wheel"];
+      trusted-substituters = [
+        "https://hydra.nixos.org"
+      ];
     };
   };
 
