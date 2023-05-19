@@ -1,7 +1,7 @@
 { inputs, lib, config, pkgs, ... }: 
 let 
   nixpkgs-unstable = import inputs.nixpkgs-unstable {
-    system = "x86_64-linux";
+    system = ${pkgs.system};
     config = config.nixpkgs.config;
   };
 in
@@ -30,6 +30,7 @@ in
       alacritty
       comma
       duf
+      croc
     ] ++ [
       inputs.nh.packages.${pkgs.system}.default
     ];
