@@ -33,7 +33,7 @@ in
       croc
     ] ++ [
       inputs.nh.packages.${pkgs.system}.default
-      inputs.nix_search.${pkgs.system}.default
+      inputs.nix_search.packages.${pkgs.system}.default
     ];
   };
 
