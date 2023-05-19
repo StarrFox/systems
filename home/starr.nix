@@ -38,6 +38,9 @@ in
 
   programs.fish = {
     enable = true;
+    shellAbbrs = {
+      ls = "exa -la";
+    };
   };
 
   programs.starship = {
@@ -74,7 +77,7 @@ in
 
   programs.exa = {
     enable = true;
-    enableAliases = true;
+    icons = true;
     extraOptions = [
       "--no-time"
       "--color=always"
