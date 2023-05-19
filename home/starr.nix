@@ -72,6 +72,16 @@ in
     };
   };
 
+  programs.exa = {
+    enable = true;
+    enableAliases = true;
+    extraOptions = [
+      "--no-time"
+      "--color=always"
+      "--group-directories-first"
+    ];
+  };
+
   programs.gh.enable = true;
   programs.git = {
     enable = true;
