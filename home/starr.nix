@@ -81,7 +81,7 @@ in
       usernamehw.errorlens
       davidanson.vscode-markdownlint
       jnoortheen.nix-ide
-      ms-python.vscode-python
+      ms-python.python
       ms-python.vscode-pylance
     ];
   };
