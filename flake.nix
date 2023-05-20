@@ -21,7 +21,16 @@
           inherit inputs;
         };
         modules = [
-          ./os/main/configuration.nix
+          ./os/starrnix/default.nix
+        ];
+      };
+
+      nixtop = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs;
+        };
+        modules = [
+          ./os/nixtop/default.nix
         ];
       };
     };
