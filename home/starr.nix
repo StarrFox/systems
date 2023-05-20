@@ -19,6 +19,8 @@ in
     };
   };
 
+  # NOTE: if switching from plasma consider adding handlr to handle default apps
+
   home = {
     username = "starr";
     homeDirectory = "/home/${config.home.username}";
@@ -31,20 +33,28 @@ in
       comma
       croc
       duf
+      drawio
       feh
       ffmpeg
       htop
       httpie
       neofetch
+      nethogs
       ncdu
+      nnn
+      onefetch # TODO: add `git info` which runs onefetch
       p7zip
       ripgrep
+      rsync
       tldr
 
       # gui
       alacritty
       #chromium
       discord
+      gimp
+      insomnia # this is the rest api gui thing
+      obsidian
       mpv
       the-powder-toy
     ] ++ [
@@ -56,8 +66,8 @@ in
       # erdtree isnt in stable yet
       nixpkgs-unstable.erdtree
     ] ++ [
-      # TODO: update python version sometimes
-      python310Packages.ipython
+      python3Packages.ipython
+      python3Packages.howdoi
     ];
   };
 
@@ -68,6 +78,7 @@ in
       download = "aria2c --split=10";
       extract = "7z x";
       usage = "erd --human";
+      files = "nnn -de";
     };
     # wish they'd just remove this garbage
     interactiveShellInit = "set -U fish_greeting";
