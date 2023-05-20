@@ -52,6 +52,7 @@ in
       alacritty
       #chromium
       discord
+      flameshot
       gimp
       insomnia # this is the rest api gui thing
       obsidian
@@ -88,6 +89,9 @@ in
     enable = true;
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
+    userSettings = {
+      "files.autoSave" = "afterDelay";
+    };
     extensions = with pkgs.vscode-extensions; [
       njpwerner.autodocstring
       bungcip.better-toml
@@ -204,7 +208,8 @@ in
   programs.gh.enable = true;
   programs.git = {
     enable = true;
-    difftastic.enable = true;
+    userName = "StarrFox";
+    userEmail = "StarrFox6312@gmail.com";
   };
   programs.home-manager.enable = true;
 }

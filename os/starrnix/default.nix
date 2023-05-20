@@ -47,6 +47,7 @@
   services.xserver = {
     layout = "us";
     xkbVariant = "";
+    videoDrivers = ["nvidia"];
   };
 
   services.xserver = {
@@ -63,6 +64,9 @@
     };
     desktopManager.plasma5.enable = true;
   };
+
+  hardware.opengl.enable = true;
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
 
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -95,7 +99,7 @@
   environment = {
     systemPackages = with pkgs; [
       neovim
-      python3
+      git
     ];
     variables = {
       EDITOR = "nvim";
