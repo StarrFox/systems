@@ -43,7 +43,7 @@ in
 
       # gui
       alacritty
-      chromium
+      #chromium
       discord
       mpv
       the-powder-toy
