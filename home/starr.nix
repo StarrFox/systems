@@ -93,7 +93,7 @@ in
     enable = true;
     profiles = {
       ${config.home.username} = {
-        bookmarks = map (attrset: attrset // { attrset.toolbar = true; }) [
+        bookmarks = map (attrset: {attrset.toolbar = true;}) [
           {
             name = "Nix package search";
             url = "https://search.nixos.org/packages?";
