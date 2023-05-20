@@ -50,10 +50,12 @@ in
 
       # gui
       alacritty
+      bitwarden
       #chromium
       discord
       flameshot
       gimp
+      kate
       insomnia # this is the rest api gui thing
       obsidian
       mpv

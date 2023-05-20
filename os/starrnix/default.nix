@@ -1,11 +1,9 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ inputs, lib, config, pkgs, ... }:
+{ inputs, lib, config, pkgs, modulesPath, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [
+    (modulesPath + "/installer/scan/not-detected.nix")
+  ];
 
   nix = {
     registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
@@ -20,15 +18,35 @@
     };
   };
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  boot = {
+    loader = {
+      systemd-boot.enable = true;
+      efi = {
+        canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot/efi";
+      };
+    };
+    initrd = {
+      availableKernelModules = ["xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod"];
+      kernelModules = [];
+    };
+    kernelModules = ["kvm-amd"];
+    extraModulePackages = [];
+  };
 
-  networking.hostName = "starrnix";
-  # uncommit for wifi
-  # networking.wireless.enable = true;
+  services.mullvad-vpn = {
+    enable = true;
+    package = pkgs.mullvad-vpn;
+  };
 
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = "starrnix";
+    networkmanager.enable = true;
+    useDHCP = lib.mkDefault true;
+    # wifi
+    #wireless.enable = true;
+  };
+
   time.timeZone = "Etc/UTC";
 
   i18n.defaultLocale = "en_US.UTF-8";
@@ -45,13 +63,10 @@
   };
 
   services.xserver = {
+    enable = true;
     layout = "us";
     xkbVariant = "";
     videoDrivers = ["nvidia"];
-  };
-
-  services.xserver = {
-    enable = true;
     displayManager = {
       autoLogin = {
         enable = true;
@@ -65,8 +80,32 @@
     desktopManager.plasma5.enable = true;
   };
 
-  hardware.opengl.enable = true;
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+  hardware = {
+    opengl.enable = true;
+    nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+    cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  };
+
+  fileSystems = {
+    "/" ={
+      device = "/dev/disk/by-uuid/9f21177b-4aca-4fc6-9dcd-28517d9dbc96";
+      fsType = "ext4";
+    };
+    "/boot/efi" ={
+      device = "/dev/disk/by-uuid/6806-5F13";
+      fsType = "vfat";
+    };
+    "/big" = {
+      device = "/dev/disk/by-label/big-drive";
+      fsType = "ext4";
+    };
+  };
+
+  swapDevices = [
+    {
+      device = "/dev/disk/by-uuid/050acb3c-9365-4f58-9af8-d53d59dd9c73";
+    }
+  ];
 
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -94,7 +133,6 @@
   };
 
   services.getty.autologinUser = "starr";
-  nixpkgs.config.allowUnfree = true;
 
   environment = {
     systemPackages = with pkgs; [
@@ -109,6 +147,11 @@
     };
   };
 
+  nixpkgs = {
+    config.allowUnfree = true;
+    hostPlatform = "x86_64-linux";
+  };
+
   security.sudo.wheelNeedsPassword = false;
 
   programs.steam.enable = true;
@@ -121,8 +164,6 @@
   #   enableSSHSupport = true;
   # };
 
-  # List services that you want to enable:
-
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
@@ -132,6 +173,6 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  system.stateVersion = "22.11"; # Did you read the comment?
+  system.stateVersion = "22.11";
 }
 
