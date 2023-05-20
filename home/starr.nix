@@ -93,6 +93,13 @@ in
     enable = true;
     profiles = {
       ${config.home.username} = {
+        search = {
+          default = "DuckDuckGo";
+          force = true;
+        };
+        settings = {
+          "browser.toolbars.bookmarks.visibility" = "always";
+        };
         bookmarks = [
           {
             toolbar = true;
