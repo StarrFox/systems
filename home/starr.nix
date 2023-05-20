@@ -93,41 +93,50 @@ in
     enable = true;
     profiles = {
       ${config.home.username} = {
-        bookmarks = map (attrset: {attrset.toolbar = true;}) [
+        bookmarks = [
           {
             name = "Nix package search";
+            toolbar = true;
             url = "https://search.nixos.org/packages?";
           }
           {
             name = "Home manager package search";
+            toolbar = true;
             url = "https://mipmip.github.io/home-manager-option-search/";
           }
           {
             name = "Noogle";
+            toolbar = true;
             url = "https://noogle.dev/";
           }
           {
             name = "Nix command man";
+            toolbar = true;
             url = "https://nixos.org/manual/nix/stable/command-ref/experimental-commands.html";
           }
           {
             name = "anilist";
+            toolbar = true;
             url = "https://anilist.co/home";
           }
           {
             name = "anichart";
+            toolbar = true;
             url = "https://anichart.net/airing";
           }
           {
             name = "protondb";
+            toolbar = true;
             url = "https://www.protondb.com/";
           }
           {
             name = "steamdb";
+            toolbar = true;
             url = "https://steamdb.info/";
           }
           {
             name = "librespeed";
+            toolbar = true;
             url = "https://librespeed.org/";
           }
         ];
