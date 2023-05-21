@@ -129,49 +129,6 @@ in
         settings = {
           "browser.toolbars.bookmarks.visibility" = "always";
         };
-        bookmarks = [
-          {
-            toolbar = true;
-            bookmarks = [
-              {
-                name = "Nix package search";
-                url = "https://search.nixos.org/packages?";
-              }
-              {
-                name = "Home manager package search";
-                url = "https://mipmip.github.io/home-manager-option-search/";
-              }
-              {
-                name = "Noogle";
-                url = "https://noogle.dev/";
-              }
-              {
-                name = "Nix command man";
-                url = "https://nixos.org/manual/nix/stable/command-ref/experimental-commands.html";
-              }
-              {
-                name = "anilist";
-                url = "https://anilist.co/home";
-              }
-              {
-                name = "anichart";
-                url = "https://anichart.net/airing";
-              }
-              {
-                name = "protondb";
-                url = "https://www.protondb.com/";
-              }
-              {
-                name = "steamdb";
-                url = "https://steamdb.info/";
-              }
-              {
-                name = "librespeed";
-                url = "https://librespeed.org/";
-              }
-            ];
-          }
-        ];
       };
     };
   };
