@@ -122,6 +122,9 @@ in
       "explorer.confirmDelete" = false;
       "git.confirmSync" = false;
       "git.autofetch" = true;
+      "[python]" = {
+        "editor.formatOnType" = true;
+      };
     };
     extensions = with pkgs.vscode-extensions; [
       njpwerner.autodocstring
