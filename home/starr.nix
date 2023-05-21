@@ -95,6 +95,22 @@ in
     };
     # wish they'd just remove this garbage
     interactiveShellInit = "set -U fish_greeting";
+    functions = {
+      md = {
+        body = ''
+          command mkdir $argv
+          if test $status = 0
+              switch $argv[(count $argv)]
+                  case '-*'
+
+                  case '*'
+                      cd $argv[(count $argv)]
+                      return
+              end
+          end
+        '';
+      };
+    };
   };
 
   programs.vscode = {
@@ -187,6 +203,7 @@ in
     enable = true;
     userName = "StarrFox";
     userEmail = "StarrFox6312@gmail.com";
+    difftastic.enable = true;
   };
   programs.home-manager.enable = true;
 }
