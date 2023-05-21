@@ -72,7 +72,16 @@ in
     ] ++ [
       python3Packages.ipython
       python3Packages.howdoi
+    ] ++ [
+      # needed for gpg
+      pkgs.pinentry-curses
     ];
+  };
+
+  programs.gpg.enable = true;
+  services.gpg-agent = {
+    enable = true;
+    pinentryFlavor = "curses";
   };
 
   programs.fish = {
