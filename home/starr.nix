@@ -210,6 +210,11 @@ in
     ];
   };
 
+  programs.password-store = {
+    enable = true;
+    package = pkgs.pass.withExtensions (exts: [ exts.pass-otp ]);
+  };
+
   programs.gh.enable = true;
   programs.git = {
     enable = true;
