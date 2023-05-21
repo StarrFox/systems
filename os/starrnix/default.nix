@@ -132,7 +132,7 @@
   users.users.starr = {
     isNormalUser = true;
     description = "starr";
-    extraGroups = ["networkmanager" "wheel" "libvirtd"];
+    extraGroups = ["networkmanager" "wheel" "libvirtd" "audio"];
     shell = pkgs.fish;
     initialHashedPassword = "$y$j9T$FF0N8WmrfwlzpN924bHgF/$h6MQqAxuOLe1LiS.1GqOx104aUbwtyho9lnLocm4iq3";
   };
@@ -161,7 +161,11 @@
 
   programs.steam.enable = true;
 
-  services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    permitRootLogin = "no";
+    passwordAuthentication = false;
+  };
 
   # TODO: setup declaritivly
   # NOTE: gui is on 8384
