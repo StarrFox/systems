@@ -94,6 +94,7 @@ in
     userSettings = {
       "files.autoSave" = "afterDelay";
       "explorer.confirmDelete" = false;
+      "git.confirmSync" = false;
     };
     extensions = with pkgs.vscode-extensions; [
       njpwerner.autodocstring
