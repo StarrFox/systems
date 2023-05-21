@@ -105,6 +105,7 @@ in
       "files.autoSave" = "afterDelay";
       "explorer.confirmDelete" = false;
       "git.confirmSync" = false;
+      "git.autofetch" = true;
     };
     extensions = with pkgs.vscode-extensions; [
       njpwerner.autodocstring
