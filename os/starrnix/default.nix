@@ -86,6 +86,9 @@
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   };
 
+  virtualisation.libvirtd.enable = true;
+  programs.dconf.enable = true;
+
   fileSystems = {
     "/" ={
       device = "/dev/disk/by-uuid/9f21177b-4aca-4fc6-9dcd-28517d9dbc96";
@@ -127,7 +130,7 @@
   users.users.starr = {
     isNormalUser = true;
     description = "starr";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel" "libvirtd"];
     shell = pkgs.fish;
     initialHashedPassword = "$y$j9T$FF0N8WmrfwlzpN924bHgF/$h6MQqAxuOLe1LiS.1GqOx104aUbwtyho9lnLocm4iq3";
   };
