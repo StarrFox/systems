@@ -93,6 +93,7 @@ in
     enableExtensionUpdateCheck = false;
     userSettings = {
       "files.autoSave" = "afterDelay";
+      "explorer.confirmDelete" = false;
     };
     extensions = with pkgs.vscode-extensions; [
       njpwerner.autodocstring
