@@ -92,6 +92,8 @@ in
     enable = true;
     shellAliases = {
       ls = "exa -la";
+      tree = "ls --tree";
+      lt = "tree";
       download = "aria2c --split=10";
       extract = "7z x";
       usage = "erd --human";
