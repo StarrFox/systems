@@ -211,7 +211,10 @@ in
     enable = true;
     userName = "StarrFox";
     userEmail = "StarrFox6312@gmail.com";
-    difftastic.enable = true;
+    delta.enable = true;
+    extraConfig = {
+      push.autoSetupRemote = true;
+    };
   };
   programs.home-manager.enable = true;
 }
