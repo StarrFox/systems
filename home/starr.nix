@@ -14,8 +14,6 @@ in
   #   (import "${home-manager}/nixos")
   # ];
 
-  # TODO: pass (programs.password-store)
-
   nixpkgs = {
     config = {
       allowUnfree = true;
