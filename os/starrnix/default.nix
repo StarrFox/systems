@@ -32,6 +32,7 @@
     };
     kernelModules = ["kvm-amd"];
     extraModulePackages = [];
+    supportedFilesystems = ["ntfs"];
   };
 
   services.tailscale.enable = true;
