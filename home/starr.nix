@@ -135,6 +135,7 @@ in
       ms-python.python
       ms-python.vscode-pylance
       mkhl.direnv
+      editorconfig.editorconfig
     ];
   };
 
