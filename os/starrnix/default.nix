@@ -160,7 +160,10 @@
 
   security.sudo.wheelNeedsPassword = false;
 
-  programs.steam.enable = true;
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+  };
 
   services.openssh = {
     enable = true;
