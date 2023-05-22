@@ -6,6 +6,10 @@
   ];
 
   nix = {
+    gc = {
+      automatic = true;
+      dates = "weekly";
+    };
     registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
 
     settings = {
