@@ -127,6 +127,7 @@ in
       "explorer.confirmDelete" = false;
       "git.confirmSync" = false;
       "git.autofetch" = true;
+      "window.zoomLevel" = 1;
       "[python]" = {
         "editor.formatOnType" = true;
       };
