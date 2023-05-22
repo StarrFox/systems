@@ -4,6 +4,10 @@ let
     system = "${pkgs.system}";
     config = config.nixpkgs.config;
   };
+  starrpkgs = import inputs.starrpkgs {
+    system = "${pkgs.system}";
+    config = config.nixpkgs.config;
+  };
 in
 {
   # imports = [
@@ -66,7 +70,7 @@ in
       inputs.nix_search.packages.${pkgs.system}.default
     ] ++ [
       # I want the latest version
-      nixpkgs-unstable.imhex
+      starrpkgs.imhex
       # erdtree isnt in stable yet
       nixpkgs-unstable.erdtree
     ] ++ [
