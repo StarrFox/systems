@@ -188,6 +188,21 @@
     dataDir = "/home/starr";
   };
 
+  services.postgresql = {
+    enable = true;
+    ensureDatabases = [
+      "discord_chan"
+    ];
+    ensureUsers = [
+      {
+        name = "starr";
+        ensurePermissions = {
+          "DATABASE discord_chan" = "ALL PRIVILEGES";
+        };
+      }
+    ];
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

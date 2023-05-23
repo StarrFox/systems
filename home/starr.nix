@@ -47,6 +47,7 @@ in
       nnn
       onefetch # TODO: add `git info` which runs onefetch
       p7zip
+      python3
       ripgrep
       rsync
       tldr
