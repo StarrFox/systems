@@ -144,6 +144,7 @@ in
       ms-python.vscode-pylance
       mkhl.direnv
       editorconfig.editorconfig
+      matklad.rust-analyzer
     ];
   };
 
