@@ -4,13 +4,16 @@ let
     system = "${pkgs.system}";
     config = config.nixpkgs.config;
   };
+  starrpkgs = import inputs.starrpkgs {
+    system = "${pkgs.system}";
+    config = config.nixpkgs.config;
+  };
 in
 {
-  # imports = [
-  #   (import "${home-manager}/nixos")
-  # ];
-
-  # TODO: pass (programs.password-store)
+  imports = [
+    programs/helix.nix
+    shells/fish.nix
+  ];
 
   nixpkgs = {
     config = {
@@ -44,6 +47,7 @@ in
       nnn
       onefetch # TODO: add `git info` which runs onefetch
       p7zip
+      python3
       ripgrep
       rsync
       tldr
@@ -66,7 +70,7 @@ in
       inputs.nix_search.packages.${pkgs.system}.default
     ] ++ [
       # I want the latest version
-      nixpkgs-unstable.imhex
+      starrpkgs.imhex
       # erdtree isnt in stable yet
       nixpkgs-unstable.erdtree
     ] ++ [
@@ -84,34 +88,37 @@ in
     pinentryFlavor = "curses";
   };
 
-  programs.fish = {
-    enable = true;
-    shellAliases = {
-      ls = "exa -la";
-      download = "aria2c --split=10";
-      extract = "7z x";
-      usage = "erd --human";
-      files = "nnn -de";
-    };
-    # wish they'd just remove this garbage
-    interactiveShellInit = "set -U fish_greeting";
-    functions = {
-      md = {
-        body = ''
-          command mkdir $argv
-          if test $status = 0
-              switch $argv[(count $argv)]
-                  case '-*'
+  # programs.fish = {
+  #   enable = true;
+  #   shellAliases = {
+  #     ls = "exa -la";
+  #     tree = "ls --tree";
+  #     lt = "tree";
+  #     gi = "onefetch";
+  #     download = "aria2c --split=10";
+  #     extract = "7z x";
+  #     usage = "erd --human";
+  #     files = "nnn -de";
+  #   };
+  #   # wish they'd just remove this garbage
+  #   interactiveShellInit = "set -U fish_greeting";
+  #   functions = {
+  #     md = {
+  #       body = ''
+  #         command mkdir $argv
+  #         if test $status = 0
+  #             switch $argv[(count $argv)]
+  #                 case '-*'
 
-                  case '*'
-                      cd $argv[(count $argv)]
-                      return
-              end
-          end
-        '';
-      };
-    };
-  };
+  #                 case '*'
+  #                     cd $argv[(count $argv)]
+  #                     return
+  #             end
+  #         end
+  #       '';
+  #     };
+  #   };
+  # };
 
   programs.vscode = {
     enable = true;
@@ -122,6 +129,7 @@ in
       "explorer.confirmDelete" = false;
       "git.confirmSync" = false;
       "git.autofetch" = true;
+      "window.zoomLevel" = 1;
       "[python]" = {
         "editor.formatOnType" = true;
       };
@@ -136,6 +144,7 @@ in
       ms-python.vscode-pylance
       mkhl.direnv
       editorconfig.editorconfig
+      matklad.rust-analyzer
     ];
   };
 
@@ -169,24 +178,24 @@ in
     nix-direnv.enable = true;
   };
 
-  programs.helix = {
-    enable = true;
-    # the unstable version has a setting I want
-    package = nixpkgs-unstable.helix;
-    settings = {
-      theme = "base16_transparent";
-      editor = {
-        line-number = "relative";
-        bufferline = "multiple";
-        cursor-shape = {
-          normal = "block";
-          insert = "bar";
-          select = "underline";
-        };
-        file-picker.hidden = false;
-      };
-    };
-  };
+  # programs.helix = {
+  #   enable = true;
+  #   # the unstable version has a setting I want
+  #   package = nixpkgs-unstable.helix;
+  #   settings = {
+  #     theme = "base16_transparent";
+  #     editor = {
+  #       line-number = "relative";
+  #       bufferline = "multiple";
+  #       cursor-shape = {
+  #         normal = "block";
+  #         insert = "bar";
+  #         select = "underline";
+  #       };
+  #       file-picker.hidden = false;
+  #     };
+  #   };
+  # };
 
   programs.exa = {
     enable = true;
@@ -207,7 +216,10 @@ in
     enable = true;
     userName = "StarrFox";
     userEmail = "StarrFox6312@gmail.com";
-    difftastic.enable = true;
+    delta.enable = true;
+    extraConfig = {
+      push.autoSetupRemote = true;
+    };
   };
   programs.home-manager.enable = true;
 }

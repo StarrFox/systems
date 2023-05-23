@@ -6,6 +6,10 @@
   ];
 
   nix = {
+    gc = {
+      automatic = true;
+      dates = "weekly";
+    };
     registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
 
     settings = {
@@ -22,7 +26,8 @@
     loader = {
       systemd-boot.enable = true;
       efi = {
-        canTouchEfiVariables = true;
+        # TODO: change to true eventually
+        canTouchEfiVariables = false;
         efiSysMountPoint = "/boot/efi";
       };
     };
@@ -149,7 +154,7 @@
       EDITOR = "nvim";
     };
     sessionVariables = {
-      FLAKE = "/home/starr/systems";
+      FLAKE = "${./.}";
     };
   };
 
@@ -182,6 +187,21 @@
     group = "users";
     # NOTE: this chowns this dir to .user
     dataDir = "/home/starr";
+  };
+
+  services.postgresql = {
+    enable = true;
+    ensureDatabases = [
+      "discord_chan"
+    ];
+    ensureUsers = [
+      {
+        name = "starr";
+        ensurePermissions = {
+          "DATABASE discord_chan" = "ALL PRIVILEGES";
+        };
+      }
+    ];
   };
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -238,7 +238,24 @@
         "nh": "nh",
         "nix_search": "nix_search",
         "nixpkgs": "nixpkgs_3",
-        "nixpkgs-unstable": "nixpkgs-unstable"
+        "nixpkgs-unstable": "nixpkgs-unstable",
+        "starrpkgs": "starrpkgs"
+      }
+    },
+    "starrpkgs": {
+      "locked": {
+        "lastModified": 1684776893,
+        "narHash": "sha256-5xe7ZLoyZR6NeXUbtk5NsUthwepASntEV4+Wdaw0mlo=",
+        "owner": "StarrFox",
+        "repo": "nixpkgs",
+        "rev": "64820b8b87af5ee68f4caf2b3f8af9582a23fdb6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "StarrFox",
+        "ref": "imhex_1.29.0",
+        "repo": "nixpkgs",
+        "type": "github"
       }
     }
   },
