@@ -19,6 +19,9 @@ in
     config = {
       allowUnfree = true;
       allowUnfreePredicate = (_: true);
+      permittedInsecurePackages = [
+        "electron-21.4.0"
+      ];
     };
   };
 
@@ -159,6 +162,12 @@ in
         settings = {
           "browser.toolbars.bookmarks.visibility" = "always";
         };
+        userChrome = ''
+        :root[titlepreface="no bar"] #navigator-toolbox-background {
+          visibility: hidden;
+          height: 0;
+        }
+        '';
       };
     };
   };

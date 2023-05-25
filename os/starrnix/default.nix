@@ -189,6 +189,8 @@
     dataDir = "/home/starr";
   };
 
+  services.xbanish.enable = true;
+
   services.postgresql = {
     enable = true;
     ensureDatabases = [
