@@ -1,5 +1,29 @@
 { inputs, lib, config, pkgs, ... }:
+let
+  nixpkgs-unstable = import inputs.nixpkgs-unstable {
+    system = "${pkgs.system}";
+    config = config.nixpkgs.config;
+  };
+in
 {
+  home.packages = with pkgs; [
+    aria
+    onefetch
+    p7zip
+    nnn
+    # erdtree isnt in stable yet
+    nixpkgs-unstable.erdtree
+  ];
+
+  programs.exa = {
+    enable = true;
+    extraOptions = [
+      "--no-time"
+      "--color=always"
+      "--group-directories-first"
+    ];
+  };
+
   programs.fish = {
     enable = true;
     shellAliases = {

@@ -154,7 +154,8 @@
       EDITOR = "nvim";
     };
     sessionVariables = {
-      FLAKE = "${./.}";
+      # TODO: find a better way to handle this
+      FLAKE = "/home/starr/systems";
     };
   };
 

@@ -11,8 +11,11 @@ let
 in
 {
   imports = [
-    programs/helix.nix
-    shells/fish.nix
+    ./helix.nix
+    ./fish.nix
+    ./git.nix
+    ./vscode.nix
+    ./firefox.nix
   ];
 
   nixpkgs = {
@@ -33,7 +36,6 @@ in
     stateVersion = "22.11";
     packages = with pkgs; [
       # cli
-      aria
       bat
       cava
       comma
@@ -47,10 +49,6 @@ in
       neofetch
       nethogs
       ncdu
-      nnn
-      onefetch # TODO: add `git info` which runs onefetch
-      p7zip
-      python3
       ripgrep
       rsync
       tldr
@@ -62,7 +60,7 @@ in
       discord
       flameshot
       gimp
-      kate
+      ghidra-bin
       insomnia # this is the rest api gui thing
       obsidian
       mpv
@@ -74,8 +72,6 @@ in
     ] ++ [
       # I want the latest version
       starrpkgs.imhex
-      # erdtree isnt in stable yet
-      nixpkgs-unstable.erdtree
     ] ++ [
       python3Packages.ipython
       python3Packages.howdoi
@@ -85,93 +81,16 @@ in
     ];
   };
 
+  xdg.enable = true;
+  xsession.numlock.enable = true;
+
   programs.gpg.enable = true;
   services.gpg-agent = {
     enable = true;
     pinentryFlavor = "curses";
   };
 
-  # programs.fish = {
-  #   enable = true;
-  #   shellAliases = {
-  #     ls = "exa -la";
-  #     tree = "ls --tree";
-  #     lt = "tree";
-  #     gi = "onefetch";
-  #     download = "aria2c --split=10";
-  #     extract = "7z x";
-  #     usage = "erd --human";
-  #     files = "nnn -de";
-  #   };
-  #   # wish they'd just remove this garbage
-  #   interactiveShellInit = "set -U fish_greeting";
-  #   functions = {
-  #     md = {
-  #       body = ''
-  #         command mkdir $argv
-  #         if test $status = 0
-  #             switch $argv[(count $argv)]
-  #                 case '-*'
-
-  #                 case '*'
-  #                     cd $argv[(count $argv)]
-  #                     return
-  #             end
-  #         end
-  #       '';
-  #     };
-  #   };
-  # };
-
-  programs.vscode = {
-    enable = true;
-    enableUpdateCheck = false;
-    enableExtensionUpdateCheck = false;
-    userSettings = {
-      "files.autoSave" = "afterDelay";
-      "explorer.confirmDelete" = false;
-      "git.confirmSync" = false;
-      "git.autofetch" = true;
-      "window.zoomLevel" = 1;
-      "[python]" = {
-        "editor.formatOnType" = true;
-      };
-    };
-    extensions = with pkgs.vscode-extensions; [
-      njpwerner.autodocstring
-      bungcip.better-toml
-      usernamehw.errorlens
-      davidanson.vscode-markdownlint
-      jnoortheen.nix-ide
-      ms-python.python
-      ms-python.vscode-pylance
-      mkhl.direnv
-      editorconfig.editorconfig
-      matklad.rust-analyzer
-    ];
-  };
-
-  programs.firefox = {
-    enable = true;
-    profiles = {
-      ${config.home.username} = {
-        search = {
-          default = "DuckDuckGo";
-          force = true;
-        };
-        settings = {
-          "browser.toolbars.bookmarks.visibility" = "always";
-        };
-        userChrome = ''
-        :root[titlepreface="no bar"] #navigator-toolbox-background {
-          visibility: hidden;
-          height: 0;
-        }
-        '';
-      };
-    };
-  };
-
+  # every shell uses this
   programs.starship = {
     enable = true;
     # we need the latest version for the `heuristic` setting
@@ -187,48 +106,10 @@ in
     nix-direnv.enable = true;
   };
 
-  # programs.helix = {
-  #   enable = true;
-  #   # the unstable version has a setting I want
-  #   package = nixpkgs-unstable.helix;
-  #   settings = {
-  #     theme = "base16_transparent";
-  #     editor = {
-  #       line-number = "relative";
-  #       bufferline = "multiple";
-  #       cursor-shape = {
-  #         normal = "block";
-  #         insert = "bar";
-  #         select = "underline";
-  #       };
-  #       file-picker.hidden = false;
-  #     };
-  #   };
-  # };
-
-  programs.exa = {
-    enable = true;
-    extraOptions = [
-      "--no-time"
-      "--color=always"
-      "--group-directories-first"
-    ];
-  };
-
   programs.password-store = {
     enable = true;
     package = pkgs.pass.withExtensions (exts: [ exts.pass-otp ]);
   };
 
-  programs.gh.enable = true;
-  programs.git = {
-    enable = true;
-    userName = "StarrFox";
-    userEmail = "StarrFox6312@gmail.com";
-    delta.enable = true;
-    extraConfig = {
-      push.autoSetupRemote = true;
-    };
-  };
   programs.home-manager.enable = true;
 }
