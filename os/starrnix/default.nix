@@ -145,10 +145,14 @@
 
   services.getty.autologinUser = "starr";
 
+  # logitech mouse config daemon
+  services.ratbagd.enable = true;
+
   environment = {
     systemPackages = with pkgs; [
       neovim
       git
+      piper # ratbagd frontend
     ];
     variables = {
       EDITOR = "nvim";
@@ -191,6 +195,13 @@
   };
 
   services.xbanish.enable = true;
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      libsForQt5.xdg-desktop-portal-kde
+    ];
+  };
 
   services.postgresql = {
     enable = true;
