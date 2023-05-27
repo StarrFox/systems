@@ -34,7 +34,10 @@
       in
         pkgs.mkShell {
           name = "starr-systems";
-          packages = [inputs.alejandra.defaultPackage.x86_64-linux];
+          packages = [
+            inputs.alejandra.defaultPackage.x86_64-linux
+            inputs.nh.packages.x86_64-linux.default
+          ];
         };
     };
 
