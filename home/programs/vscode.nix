@@ -31,6 +31,7 @@
       mkhl.direnv
       editorconfig.editorconfig
       matklad.rust-analyzer
+      kamadorueda.alejandra
     ];
   };
 }
