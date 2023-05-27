@@ -16,6 +16,7 @@ in
     ./programs/git.nix
     ./programs/vscode.nix
     ./programs/firefox.nix
+    ./services/dunst.nix
   ];
 
   nixpkgs = {
