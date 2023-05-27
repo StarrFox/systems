@@ -11,11 +11,11 @@ let
 in
 {
   imports = [
-    ./helix.nix
-    ./fish.nix
-    ./git.nix
-    ./vscode.nix
-    ./firefox.nix
+    ./programs/helix.nix
+    ./programs/fish.nix
+    ./programs/git.nix
+    ./programs/vscode.nix
+    ./programs/firefox.nix
   ];
 
   nixpkgs = {
