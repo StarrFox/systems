@@ -43,6 +43,7 @@
       matklad.rust-analyzer
       kamadorueda.alejandra
       viktorqvarfordt.vscode-pitch-black-theme
+      skellock.just
     ];
   };
 }

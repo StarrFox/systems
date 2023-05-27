@@ -31,6 +31,7 @@
           name = "starr-systems";
           packages = [
             pkgs.alejandra
+            pkgs.just
             inputs.nh.packages.x86_64-linux.default
           ];
         };
