@@ -19,8 +19,8 @@
     nixpkgs,
     home-manager,
     ...
-  } @ inputs: {
-    #packages = let pkgs = nixpkgs.legacyPackages.x86_64-linux; in import ./packages {inherit pkgs;};
+  } @ inputs: rec {
+    packages.x86_64-linux = let pkgs = nixpkgs.legacyPackages.x86_64-linux; in import ./packages {inherit pkgs;};
 
     # devshell with formatter
     devShells.x86_64-linux = {
@@ -61,6 +61,7 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = {
           inherit inputs;
+          selfpkgs = packages.x86_64-linux;
         };
         modules = [
           ./home/starr.nix

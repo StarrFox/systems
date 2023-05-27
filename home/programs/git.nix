@@ -3,12 +3,14 @@
   lib,
   config,
   pkgs,
+  selfpkgs,
   ...
 }: {
   programs.gh = {
     enable = true;
     extensions = [
       pkgs.gh-dash
+      selfpkgs.gh-poi
     ];
   };
 

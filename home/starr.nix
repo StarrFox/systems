@@ -3,6 +3,7 @@
   lib,
   config,
   pkgs,
+  selfpkgs,
   ...
 }: let
   nixpkgs-unstable = import inputs.nixpkgs-unstable {
