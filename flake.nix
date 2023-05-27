@@ -13,11 +13,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    alejandra = {
-      url = "github:kamadorueda/alejandra/3.0.0";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
@@ -35,7 +30,7 @@
         pkgs.mkShell {
           name = "starr-systems";
           packages = [
-            inputs.alejandra.defaultPackage.x86_64-linux
+            pkgs.alejandra
             inputs.nh.packages.x86_64-linux.default
           ];
         };
