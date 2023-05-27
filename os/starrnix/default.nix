@@ -22,6 +22,7 @@
       automatic = true;
       dates = "weekly";
     };
+    # this makes nix * commands use the same nixpkgs versions as the system
     registry = lib.mapAttrs (_: value: {flake = value;}) inputs;
 
     settings = {

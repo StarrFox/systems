@@ -13,6 +13,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    alejandra = {
+      url = "github:kamadorueda/alejandra/3.0.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -20,7 +25,18 @@
     home-manager,
     ...
   } @ inputs: {
-    packages = let pkgs = nixpkgs.legacyPackages.x86_64-linux; in import ./packages {inherit pkgs;};
+    #packages = let pkgs = nixpkgs.legacyPackages.x86_64-linux; in import ./packages {inherit pkgs;};
+
+    # devshell with formatter
+    devShells.x86_64-linux = {
+      default = let
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+      in
+        pkgs.mkShell {
+          name = "starr-systems";
+          packages = [inputs.alejandra.defaultPackage.x86_64-linux];
+        };
+    };
 
     nixosConfigurations = {
       starrnix = nixpkgs.lib.nixosSystem {
