@@ -1,4 +1,3 @@
-{pkgs, ...}:
-{
+{pkgs, ...}: {
   gh-poi = pkgs.callPackage ./gh-poi {};
 }

@@ -15,7 +15,11 @@
     };
   };
 
-  outputs = {nixpkgs, home-manager, ...}@inputs: {
+  outputs = {
+    nixpkgs,
+    home-manager,
+    ...
+  } @ inputs: {
     packages = let pkgs = nixpkgs.legacyPackages.x86_64-linux; in import ./packages {inherit pkgs;};
 
     nixosConfigurations = {

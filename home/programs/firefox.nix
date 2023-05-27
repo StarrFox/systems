@@ -1,5 +1,10 @@
-{ inputs, lib, config, pkgs, ... }:
 {
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   programs.firefox = {
     enable = true;
     profiles = {
@@ -12,10 +17,10 @@
           "browser.toolbars.bookmarks.visibility" = "always";
         };
         userChrome = ''
-        :root[titlepreface="no bar"] #navigator-toolbox-background {
-          visibility: hidden;
-          height: 0;
-        }
+          :root[titlepreface="no bar"] #navigator-toolbox-background {
+            visibility: hidden;
+            height: 0;
+          }
         '';
       };
     };

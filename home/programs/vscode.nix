@@ -1,6 +1,11 @@
-{ inputs, lib, config, pkgs, ... }:
 {
-    programs.vscode = {
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
+  programs.vscode = {
     enable = true;
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;

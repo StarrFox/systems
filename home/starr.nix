@@ -1,5 +1,10 @@
-{ inputs, lib, config, pkgs, ... }: 
-let 
+{
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: let
   nixpkgs-unstable = import inputs.nixpkgs-unstable {
     system = "${pkgs.system}";
     config = config.nixpkgs.config;
@@ -8,8 +13,7 @@ let
     system = "${pkgs.system}";
     config = config.nixpkgs.config;
   };
-in
-{
+in {
   imports = [
     ./programs/helix.nix
     ./programs/fish.nix
@@ -22,7 +26,7 @@ in
   nixpkgs = {
     config = {
       allowUnfree = true;
-      allowUnfreePredicate = (_: true);
+      allowUnfreePredicate = _: true;
       # TODO: what program uses this? discord? the api thing?
       permittedInsecurePackages = [
         "electron-21.4.0"
@@ -36,51 +40,56 @@ in
     username = "starr";
     homeDirectory = "/home/${config.home.username}";
     stateVersion = "22.11";
-    packages = with pkgs; [
-      # cli
-      bat
-      cava
-      comma
-      croc
-      duf
-      drawio
-      feh
-      ffmpeg
-      htop
-      httpie
-      neofetch
-      nethogs
-      ncdu
-      ripgrep
-      rsync
-      tldr
+    packages = with pkgs;
+      [
+        # cli
+        bat
+        cava
+        comma
+        croc
+        duf
+        drawio
+        feh
+        ffmpeg
+        htop
+        httpie
+        neofetch
+        nethogs
+        ncdu
+        ripgrep
+        rsync
+        tldr
 
-      # gui
-      alacritty
-      bitwarden
-      #chromium
-      discord
-      flameshot
-      gimp
-      ghidra-bin
-      insomnia # this is the rest api gui thing
-      obsidian
-      mpv
-      the-powder-toy
-      virt-manager
-    ] ++ [
-      inputs.nh.packages.${pkgs.system}.default
-      inputs.nix_search.packages.${pkgs.system}.default
-    ] ++ [
-      # I want the latest version
-      starrpkgs.imhex
-    ] ++ [
-      python3Packages.ipython
-      python3Packages.howdoi
-    ] ++ [
-      # needed for gpg
-      pkgs.pinentry-curses
-    ];
+        # gui
+        alacritty
+        bitwarden
+        #chromium
+        discord
+        flameshot
+        gimp
+        ghidra-bin
+        insomnia # this is the rest api gui thing
+        obsidian
+        mpv
+        the-powder-toy
+        virt-manager
+      ]
+      ++ [
+        inputs.nh.packages.${pkgs.system}.default
+        inputs.nix_search.packages.${pkgs.system}.default
+      ]
+      ++ [
+        # I want the latest version
+        starrpkgs.imhex
+      ]
+      ++ [
+        python3Packages.ipython
+        python3Packages.howdoi
+      ]
+      ++ [
+        # needed for gpg
+        pkgs.pinentry-curses
+      ];
   };
 
   # Nicely reload system units when changing configs
@@ -113,7 +122,7 @@ in
 
   programs.password-store = {
     enable = true;
-    package = pkgs.pass.withExtensions (exts: [ exts.pass-otp ]);
+    package = pkgs.pass.withExtensions (exts: [exts.pass-otp]);
   };
 
   programs.home-manager.enable = true;

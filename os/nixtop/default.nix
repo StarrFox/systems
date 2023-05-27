@@ -1,14 +1,17 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ inputs, lib, config, pkgs, ... }:
-
 {
-  imports = [ ./hardware-configuration.nix ];
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [./hardware-configuration.nix];
 
   nix = {
-    registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
+    registry = lib.mapAttrs (_: value: {flake = value;}) inputs;
 
     settings = {
       experimental-features = ["nix-command" "flakes"];
@@ -52,11 +55,11 @@
     displayManager = {
       autoLogin = {
         enable = true;
-	      user = "starr";
+        user = "starr";
       };
       sddm = {
         enable = true;
-	      autoNumlock = true;
+        autoNumlock = true;
       };
     };
     desktopManager.xfce.enable = true;
@@ -68,7 +71,7 @@
   users.users.starr = {
     isNormalUser = true;
     description = "starr";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     shell = pkgs.fish;
     initialHashedPassword = "$y$j9T$FF0N8WmrfwlzpN924bHgF/$h6MQqAxuOLe1LiS.1GqOx104aUbwtyho9lnLocm4iq3";
 
@@ -151,4 +154,3 @@
 
   system.stateVersion = "22.11"; # Did you read the comment?
 }
-

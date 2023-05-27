@@ -1,6 +1,11 @@
-{ inputs, lib, config, pkgs, modulesPath, ... }:
-
 {
+  inputs,
+  lib,
+  config,
+  pkgs,
+  modulesPath,
+  ...
+}: {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
     ./services/mullvad.nix
@@ -17,7 +22,7 @@
       automatic = true;
       dates = "weekly";
     };
-    registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
+    registry = lib.mapAttrs (_: value: {flake = value;}) inputs;
 
     settings = {
       experimental-features = ["nix-command" "flakes"];
@@ -78,11 +83,11 @@
     displayManager = {
       autoLogin = {
         enable = true;
-	      user = "starr";
+        user = "starr";
       };
       sddm = {
         enable = true;
-	      autoNumlock = true;
+        autoNumlock = true;
       };
     };
     desktopManager.plasma5.enable = true;
@@ -98,11 +103,11 @@
   programs.dconf.enable = true;
 
   fileSystems = {
-    "/" ={
+    "/" = {
       device = "/dev/disk/by-uuid/9f21177b-4aca-4fc6-9dcd-28517d9dbc96";
       fsType = "ext4";
     };
-    "/boot/efi" ={
+    "/boot/efi" = {
       device = "/dev/disk/by-uuid/6806-5F13";
       fsType = "vfat";
     };
@@ -195,4 +200,3 @@
 
   system.stateVersion = "22.11";
 }
-

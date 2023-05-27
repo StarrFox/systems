@@ -1,11 +1,15 @@
-{ inputs, lib, config, pkgs, ... }:
-let
+{
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: let
   nixpkgs-unstable = import inputs.nixpkgs-unstable {
     system = "${pkgs.system}";
     config = config.nixpkgs.config;
   };
-in
-{
+in {
   home.packages = with pkgs; [
     aria
     onefetch

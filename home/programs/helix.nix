@@ -1,11 +1,15 @@
-{ inputs, lib, config, pkgs, ... }:
-let
+{
+  inputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}: let
   nixpkgs-unstable = import inputs.nixpkgs-unstable {
     system = "${pkgs.system}";
     config = config.nixpkgs.config;
   };
-in
-{
+in {
   programs.helix = {
     enable = true;
     # the unstable version has a setting I want
