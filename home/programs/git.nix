@@ -1,6 +1,11 @@
 { inputs, lib, config, pkgs, ... }:
 {
-  programs.gh.enable = true;
+  programs.gh = {
+    enable = true;
+    extensions = [
+      pkgs.gh-dash
+    ];
+  };
 
   programs.git = {
     enable = true;

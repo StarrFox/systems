@@ -7,3 +7,5 @@
 [viperML's configs](https://github.com/viperML/dotfiles)
 
 [Stu's configs](https://github.com/Stupremee/nix)
+
+[Remi's configs](https://github.com/remi-gelinas/rosetta/)
