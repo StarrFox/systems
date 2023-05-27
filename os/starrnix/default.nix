@@ -3,6 +3,13 @@
 {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
+    ./services/mullvad.nix
+    ./services/openssh.nix
+    ./services/postgresql.nix
+    ./services/ratbagd.nix
+    ./services/syncthing.nix
+    ./services/tailscale.nix
+    ./services/xbanish.nix
   ];
 
   nix = {
@@ -38,13 +45,6 @@
     kernelModules = ["kvm-amd"];
     extraModulePackages = [];
     supportedFilesystems = ["ntfs"];
-  };
-
-  services.tailscale.enable = true;
-
-  services.mullvad-vpn = {
-    enable = true;
-    package = pkgs.mullvad-vpn;
   };
 
   networking = {
@@ -145,15 +145,10 @@
 
   services.getty.autologinUser = "starr";
 
-  # TODO: figure out how to configure this directly
-  # logitech mouse config daemon
-  services.ratbagd.enable = true;
-
   environment = {
     systemPackages = with pkgs; [
       neovim
       git
-      piper # ratbagd frontend
     ];
     variables = {
       EDITOR = "nvim";
@@ -171,51 +166,16 @@
 
   security.sudo.wheelNeedsPassword = false;
 
+  # TODO: how do I do this just for the starr user
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
   };
 
-  services.openssh = {
-    enable = true;
-    permitRootLogin = "no";
-    passwordAuthentication = false;
-  };
-
-  # TODO: setup declaritivly
-  # NOTE: gui is on 8384
-  services.syncthing = {
-    enable = true;
-    overrideFolders = false;
-    overrideDevices = false;
-    openDefaultPorts = true;
-    user = "starr";
-    group = "users";
-    # NOTE: this chowns this dir to .user
-    dataDir = "/home/starr";
-  };
-
-  services.xbanish.enable = true;
-
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
       libsForQt5.xdg-desktop-portal-kde
-    ];
-  };
-
-  services.postgresql = {
-    enable = true;
-    ensureDatabases = [
-      "discord_chan"
-    ];
-    ensureUsers = [
-      {
-        name = "starr";
-        ensurePermissions = {
-          "DATABASE discord_chan" = "ALL PRIVILEGES";
-        };
-      }
     ];
   };
 

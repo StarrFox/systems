@@ -23,6 +23,7 @@ in
     config = {
       allowUnfree = true;
       allowUnfreePredicate = (_: true);
+      # TODO: what program uses this? discord? the api thing?
       permittedInsecurePackages = [
         "electron-21.4.0"
       ];
