@@ -13,6 +13,7 @@ check:
 
 update:
     nix flake update
+    nvfetcher --config packages/nvfetcher.toml --build-dir packages/_sources/
 
 format:
     alejandra .

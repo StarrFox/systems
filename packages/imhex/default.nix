@@ -21,25 +21,23 @@
   nlohmann_json,
   yara,
   rsync,
+  source,
 }: let
-  version = "1.29.0";
-
   patterns_src = fetchFromGitHub {
     owner = "WerWolv";
     repo = "ImHex-Patterns";
-    rev = "ImHex-v${version}";
+    rev = "ImHex-v${source.version}";
     hash = "sha256-lTTXu9RxoD582lXWI789gNcWvJmxmBIlBRIiyY3DseM=";
   };
 in
   gcc12Stdenv.mkDerivation rec {
-    pname = "imhex";
-    inherit version;
+    inherit (source) pname version;
 
     src = fetchFromGitHub {
-      #fetchSubmodules = true;
+      fetchSubmodules = true;
       owner = "WerWolv";
       repo = pname;
-      rev = "v${version}";
+      rev = "${version}";
       hash = "sha256-dghyv7rpqGs5dt51ziAaeb/Ba7rGEcJ54AYKRJ2xXuk=";
     };
 
@@ -62,6 +60,7 @@ in
 
     cmakeFlags = [
       "-DIMHEX_OFFLINE_BUILD=ON"
+      "-DIMHEX_IGNORE_BAD_CLONE=ON"
       "-DUSE_SYSTEM_CAPSTONE=ON"
       "-DUSE_SYSTEM_CURL=ON"
       "-DUSE_SYSTEM_FMT=ON"
@@ -76,10 +75,4 @@ in
       mkdir -p $out/share/imhex
       rsync -av --exclude="*_schema.json" ${patterns_src}/{constants,encodings,includes,magic,patterns} $out/share/imhex
     '';
-
-    meta = with lib; {
-      description = "Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM";
-      homepage = "https://github.com/WerWolv/ImHex";
-      license = with licenses; [gpl2Only];
-    };
   }

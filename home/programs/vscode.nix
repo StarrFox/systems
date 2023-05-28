@@ -1,4 +1,11 @@
 {pkgs, ...}: {
+  # TODO: don't do this
+  # this is just incase I forget to add them to the enviroment
+  home.packages = with pkgs; [
+    rnix-lsp
+    black
+  ];
+
   programs.vscode = {
     enable = true;
     enableUpdateCheck = false;
@@ -20,13 +27,14 @@
       "python.venvPath" = "~/.cache/pypoetry/virtualenvs";
       "python.formatting.provider" = "black";
       "python.testing.pytestEnabled" = true;
+      "nix.enableLanguageServer" = true;
       "[python]" = {
         "editor.formatOnType" = true;
       };
     };
     extensions = with pkgs.vscode-extensions; [
       njpwerner.autodocstring
-      bungcip.better-toml
+      tamasfe.even-better-toml
       usernamehw.errorlens
       davidanson.vscode-markdownlint
       jnoortheen.nix-ide

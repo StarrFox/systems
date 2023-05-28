@@ -1,0 +1,8 @@
+[imhex]
+src.github = "WerWolv/imhex"
+fetch.github = "WerWolv/imhex"
+
+[gh-poi]
+src.github = "seachicken/gh-poi"
+fetch.github = "seachicken/gh-poi"
+passthru = {vendorSha256 = "sha256-D/YZLwwGJWCekq9mpfCECzJyJ/xSlg7fC6leJh+e8i0="}

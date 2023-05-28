@@ -28,10 +28,12 @@
       in
         pkgs.mkShell {
           name = "starr-systems";
-          packages = [
-            pkgs.alejandra
-            pkgs.just
-            pkgs.deadnix
+          packages = with pkgs; [
+            alejandra
+            just
+            deadnix
+            rnix-lsp
+            nvfetcher
             inputs.nh.packages.x86_64-linux.default
           ];
         };

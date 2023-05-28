@@ -75,7 +75,7 @@ in {
         inputs.nix_search.packages.${pkgs.system}.default
       ]
       ++ [
-        selfpkgs.imhex
+        #selfpkgs.imhex
       ]
       ++ [
         python3Packages.ipython
