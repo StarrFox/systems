@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  selfpkgs,
+  ...
+}: {
   # TODO: don't do this
   # this is just incase I forget to add them to the enviroment
   home.packages = with pkgs; [
@@ -48,6 +52,7 @@
       viktorqvarfordt.vscode-pitch-black-theme
       skellock.just
       gruntfuggly.todo-tree
+      selfpkgs.vscord
     ];
   };
 }
