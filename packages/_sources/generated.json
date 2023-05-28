@@ -1,6 +1,7 @@
 {
     "gh-poi": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "gh-poi",
         "passthru": {
@@ -22,6 +23,7 @@
     },
     "imhex": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "imhex",
         "passthru": null,
@@ -41,6 +43,7 @@
     },
     "vscord": {
         "cargoLocks": null,
+        "date": null,
         "extract": null,
         "name": "vscord",
         "passthru": null,
