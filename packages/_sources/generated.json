@@ -28,13 +28,13 @@
         "pinned": false,
         "src": {
             "deepClone": false,
-            "fetchSubmodules": false,
+            "fetchSubmodules": true,
             "leaveDotGit": false,
             "name": null,
             "owner": "WerWolv",
             "repo": "imhex",
             "rev": "v1.29.0",
-            "sha256": "sha256-Ktwms/IrupbqWubPIEJxJVYCAdhPT1d1dy5m/E4y5q4=",
+            "sha256": "sha256-dghyv7rpqGs5dt51ziAaeb/Ba7rGEcJ54AYKRJ2xXuk=",
             "type": "github"
         },
         "version": "v1.29.0"

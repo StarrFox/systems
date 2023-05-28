@@ -21,10 +21,6 @@
     config = {
       allowUnfree = true;
       allowUnfreePredicate = _: true;
-      # # TODO: what program uses this? discord? the api thing?
-      # permittedInsecurePackages = [
-      #   "electron-21.4.0"
-      # ];
     };
   };
 
@@ -73,7 +69,7 @@
         inputs.nix_search.packages.${pkgs.system}.default
       ]
       ++ [
-        #selfpkgs.imhex
+        selfpkgs.imhex
       ]
       ++ [
         python3Packages.ipython

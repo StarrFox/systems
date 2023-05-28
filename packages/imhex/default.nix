@@ -1,4 +1,3 @@
-# TODO: setup automatic updates with nvfetcher
 {
   gcc12Stdenv,
   cmake,
@@ -30,15 +29,7 @@
   };
 in
   gcc12Stdenv.mkDerivation rec {
-    inherit (source) pname version;
-
-    src = fetchFromGitHub {
-      fetchSubmodules = true;
-      owner = "WerWolv";
-      repo = pname;
-      rev = "${version}";
-      hash = "sha256-dghyv7rpqGs5dt51ziAaeb/Ba7rGEcJ54AYKRJ2xXuk=";
-    };
+    inherit (source) pname version src;
 
     nativeBuildInputs = [cmake llvm python3 perl pkg-config rsync];
 

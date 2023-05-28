@@ -6,6 +6,5 @@
   };
 in {
   gh-poi = pkgs.callPackage ./gh-poi {source = source.gh-poi;};
-  # TODO: fix
-  #imhex = pkgs.callPackage ./imhex {source = source.imhex;};
+  imhex = pkgs.callPackage ./imhex {source = source.imhex;};
 }

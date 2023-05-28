@@ -21,8 +21,8 @@
       owner = "WerWolv";
       repo = "imhex";
       rev = "v1.29.0";
-      fetchSubmodules = false;
-      sha256 = "sha256-Ktwms/IrupbqWubPIEJxJVYCAdhPT1d1dy5m/E4y5q4=";
+      fetchSubmodules = true;
+      sha256 = "sha256-dghyv7rpqGs5dt51ziAaeb/Ba7rGEcJ54AYKRJ2xXuk=";
     };
   };
 }

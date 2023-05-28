@@ -1,6 +1,7 @@
 [imhex]
 src.github = "WerWolv/imhex"
 fetch.github = "WerWolv/imhex"
+git.fetchSubmodules = true
 
 [gh-poi]
 src.github = "seachicken/gh-poi"
