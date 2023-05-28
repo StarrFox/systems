@@ -2,20 +2,18 @@
   inputs,
   config,
   pkgs,
-  selfpkgs,
   ...
-}: let
-  nixpkgs-unstable = import inputs.nixpkgs-unstable {
-    system = "${pkgs.system}";
-    config = config.nixpkgs.config;
-  };
-in {
+}: {
   imports = [
     ./programs/helix.nix
     ./programs/fish.nix
     ./programs/git.nix
     ./programs/vscode.nix
     ./programs/firefox.nix
+    ./programs/gpg.nix
+    ./programs/starship.nix
+    ./programs/direnv.nix
+    ./programs/pass.nix
     ./services/dunst.nix
   ];
 
@@ -23,10 +21,10 @@ in {
     config = {
       allowUnfree = true;
       allowUnfreePredicate = _: true;
-      # TODO: what program uses this? discord? the api thing?
-      permittedInsecurePackages = [
-        "electron-21.4.0"
-      ];
+      # # TODO: what program uses this? discord? the api thing?
+      # permittedInsecurePackages = [
+      #   "electron-21.4.0"
+      # ];
     };
   };
 
@@ -80,10 +78,6 @@ in {
       ++ [
         python3Packages.ipython
         python3Packages.howdoi
-      ]
-      ++ [
-        # needed for gpg
-        pkgs.pinentry-curses
       ];
   };
 
@@ -92,39 +86,6 @@ in {
 
   xdg.enable = true;
   xsession.numlock.enable = true;
-
-  programs.gpg.enable = true;
-  services.gpg-agent = {
-    enable = true;
-    pinentryFlavor = "curses";
-  };
-
-  # every shell uses this
-  programs.starship = {
-    enable = true;
-    # we need the latest version for the `heuristic` setting
-    package = nixpkgs-unstable.starship;
-    settings = {
-      username.show_always = true;
-      nix_shell.heuristic = true;
-    };
-  };
-
-  programs.direnv = {
-    enable = true;
-    nix-direnv.enable = true;
-    config = {
-      global = {
-        disable_stdin = true;
-        warn_timeout = "5m";
-      };
-    };
-  };
-
-  programs.password-store = {
-    enable = true;
-    package = pkgs.pass.withExtensions (exts: [exts.pass-otp]);
-  };
 
   programs.home-manager.enable = true;
 }

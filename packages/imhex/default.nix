@@ -1,6 +1,5 @@
 # TODO: setup automatic updates with nvfetcher
 {
-  lib,
   gcc12Stdenv,
   cmake,
   llvm,
