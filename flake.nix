@@ -2,14 +2,15 @@
   description = "nixos configs";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     nh.url = "github:ViperML/nh";
     nix_search.url = "github:peterldowns/nix-search-cli";
 
+    # TODO: lock this to a release branch next nixos release
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-23.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -21,7 +22,6 @@
   } @ inputs: rec {
     packages.x86_64-linux = let pkgs = nixpkgs.legacyPackages.x86_64-linux; in import ./packages {inherit pkgs;};
 
-    # devshell with formatter
     devShells.x86_64-linux = {
       default = let
         pkgs = nixpkgs.legacyPackages.x86_64-linux;

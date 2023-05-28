@@ -151,6 +151,8 @@
     initialHashedPassword = "$y$j9T$FF0N8WmrfwlzpN924bHgF/$h6MQqAxuOLe1LiS.1GqOx104aUbwtyho9lnLocm4iq3";
   };
 
+  programs.fish.enable = true;
+
   services.getty.autologinUser = "starr";
 
   environment = {
