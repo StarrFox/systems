@@ -10,10 +10,6 @@
     system = "${pkgs.system}";
     config = config.nixpkgs.config;
   };
-  starrpkgs = import inputs.starrpkgs {
-    system = "${pkgs.system}";
-    config = config.nixpkgs.config;
-  };
 in {
   imports = [
     ./programs/helix.nix
@@ -80,8 +76,7 @@ in {
         inputs.nix_search.packages.${pkgs.system}.default
       ]
       ++ [
-        # I want the latest version
-        starrpkgs.imhex
+        selfpkgs.imhex
       ]
       ++ [
         python3Packages.ipython

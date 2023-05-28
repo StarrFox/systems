@@ -4,7 +4,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    starrpkgs.url = "github:StarrFox/nixpkgs/imhex_1.29.0";
 
     nh.url = "github:ViperML/nh";
     nix_search.url = "github:peterldowns/nix-search-cli";
