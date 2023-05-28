@@ -38,7 +38,7 @@ gcc12Stdenv.mkDerivation rec {
   inherit version;
 
   src = fetchFromGitHub {
-    fetchSubmodules = true;
+    #fetchSubmodules = true;
     owner = "WerWolv";
     repo = pname;
     rev = "v${version}";
@@ -83,7 +83,5 @@ gcc12Stdenv.mkDerivation rec {
     description = "Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM";
     homepage = "https://github.com/WerWolv/ImHex";
     license = with licenses; [ gpl2Only ];
-    maintainers = with maintainers; [ luis ];
-    platforms = platforms.linux;
   };
 }
