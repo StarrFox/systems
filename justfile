@@ -11,9 +11,11 @@ home:
 check:
     nix flake check
 
-update:
+update-packages: && format
+    nvfetcher --config packages/nvfetcher.toml --build-dir packages/_sources/ --commit-changes
+
+update: && update-packages
     nix flake update
-    nvfetcher --config packages/nvfetcher.toml --build-dir packages/_sources/
 
 format:
     alejandra .
