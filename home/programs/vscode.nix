@@ -23,7 +23,7 @@
       "python.analysis.inlayHints.functionReturnTypes" = true;
       "python.analysis.inlayHints.variableTypes" = true;
       # NOTE: options are off, basic, and strict
-      "python.analysis.typeCheckingMode" = "strict";
+      "python.analysis.typeCheckingMode" = "basic";
       "python.venvPath" = "~/.cache/pypoetry/virtualenvs";
       "python.formatting.provider" = "black";
       "python.testing.pytestEnabled" = true;
@@ -46,6 +46,7 @@
       kamadorueda.alejandra
       viktorqvarfordt.vscode-pitch-black-theme
       skellock.just
+      gruntfuggly.todo-tree
     ];
   };
 }
