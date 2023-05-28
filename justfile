@@ -13,3 +13,7 @@ check:
 
 update:
     nix flake update
+
+format:
+    alejandra .
+    deadnix . --edit

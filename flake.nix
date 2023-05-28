@@ -31,6 +31,7 @@
           packages = [
             pkgs.alejandra
             pkgs.just
+            pkgs.deadnix
             inputs.nh.packages.x86_64-linux.default
           ];
         };

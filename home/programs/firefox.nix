@@ -1,10 +1,4 @@
-{
-  inputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{config, ...}: {
   programs.firefox = {
     enable = true;
     profiles = {
