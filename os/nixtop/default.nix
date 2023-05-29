@@ -68,6 +68,8 @@
   # nixtop is a laptop
   services.logind.lidSwitch = "ignore";
 
+  programs.fish.enable = true;
+
   users.users.starr = {
     isNormalUser = true;
     description = "starr";
