@@ -20,14 +20,8 @@
   yara,
   rsync,
   source,
-}: let
-  patterns_src = fetchFromGitHub {
-    owner = "WerWolv";
-    repo = "ImHex-Patterns";
-    rev = "ImHex-v${source.version}";
-    hash = "sha256-lTTXu9RxoD582lXWI789gNcWvJmxmBIlBRIiyY3DseM=";
-  };
-in
+  patterns_source,
+}:
   gcc12Stdenv.mkDerivation rec {
     inherit (source) pname version src;
 
@@ -63,6 +57,6 @@ in
     # rsync is used here so we can not copy the _schema.json files
     postInstall = ''
       mkdir -p $out/share/imhex
-      rsync -av --exclude="*_schema.json" ${patterns_src}/{constants,encodings,includes,magic,patterns} $out/share/imhex
+      rsync -av --exclude="*_schema.json" ${patterns_source.src}/{constants,encodings,includes,magic,patterns} $out/share/imhex
     '';
   }
