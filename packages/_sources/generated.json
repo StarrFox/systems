@@ -41,6 +41,26 @@
         },
         "version": "v1.29.0"
     },
+    "imhex-patterns": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "imhex-patterns",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "WerWolv",
+            "repo": "ImHex-Patterns",
+            "rev": "ImHex-v1.29.0",
+            "sha256": "sha256-lTTXu9RxoD582lXWI789gNcWvJmxmBIlBRIiyY3DseM=",
+            "type": "github"
+        },
+        "version": "ImHex-v1.29.0"
+    },
     "vscord": {
         "cargoLocks": null,
         "date": null,
