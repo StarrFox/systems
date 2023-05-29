@@ -2,6 +2,12 @@
 
 ## resources
 
+## changelogs
+
+[NixOS](https://nixos.org/manual/nixos/stable/release-notes.html)
+
+[Home Manager](https://nix-community.github.io/home-manager/release-notes.html)
+
 ### links
 
 [NixOS manual](https://nixos.org/manual/nixos/stable/)
