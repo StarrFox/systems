@@ -69,11 +69,11 @@
         "passthru": null,
         "pinned": false,
         "src": {
-            "name": "vscord-5.1.9.zip",
-            "sha256": "sha256-fyR0oZ/PmmXBrRKmQatga/NPkf8G9Bd0cHANHBgMvCU=",
+            "name": "vscord-5.1.10.zip",
+            "sha256": "sha256-fcRDOCzQWLllJ8gxSwj5XwDecgQijk9g9KkvwOn+g9s=",
             "type": "url",
-            "url": "https://LeonardSSH.gallery.vsassets.io/_apis/public/gallery/publisher/LeonardSSH/extension/vscord/5.1.9/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
+            "url": "https://LeonardSSH.gallery.vsassets.io/_apis/public/gallery/publisher/LeonardSSH/extension/vscord/5.1.10/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage"
         },
-        "version": "5.1.9"
+        "version": "5.1.10"
     }
 }
