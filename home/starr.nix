@@ -15,6 +15,7 @@
     ./programs/starship.nix
     ./programs/direnv.nix
     ./programs/pass.nix
+    ./programs/alacritty.nix
     ./services/dunst.nix
   ];
 
@@ -52,7 +53,6 @@
         tldr
 
         # gui
-        alacritty
         bitwarden
         #chromium
         discord
