@@ -1,5 +1,4 @@
-{...}:
-{
+{...}: {
   services.jellyfin = {
     enable = true;
   };

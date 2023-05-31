@@ -1,5 +1,4 @@
-{...}:
-{
+{...}: {
   programs.alacritty = {
     enable = true;
     # https://github.com/alacritty/alacritty/blob/master/alacritty.yml

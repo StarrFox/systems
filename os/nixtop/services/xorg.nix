@@ -1,6 +1,5 @@
 # this is just for testing
-{pkgs, ...}:
-{
+{pkgs, ...}: {
   services.xserver = {
     layout = "us";
     xkbVariant = "";
