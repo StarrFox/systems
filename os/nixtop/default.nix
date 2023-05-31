@@ -45,26 +45,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "";
-  };
-
-  services.xserver = {
-    enable = true;
-    displayManager = {
-      autoLogin = {
-        enable = true;
-        user = "starr";
-      };
-      sddm = {
-        enable = true;
-        autoNumlock = true;
-      };
-    };
-    desktopManager.xfce.enable = true;
-  };
-
   # nixtop is a laptop
   services.logind.lidSwitch = "ignore";
 
@@ -76,11 +56,6 @@
     extraGroups = ["networkmanager" "wheel"];
     shell = pkgs.fish;
     initialHashedPassword = "$y$j9T$FF0N8WmrfwlzpN924bHgF/$h6MQqAxuOLe1LiS.1GqOx104aUbwtyho9lnLocm4iq3";
-
-    # TODO: remove after done testing
-    packages = with pkgs; [
-      firefox
-    ];
   };
 
   services.getty.autologinUser = "starr";
@@ -89,7 +64,6 @@
   environment = {
     systemPackages = with pkgs; [
       neovim
-      python3
       git
     ];
     variables = {
