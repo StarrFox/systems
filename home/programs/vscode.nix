@@ -36,6 +36,7 @@
       "editor.fontSize" = 17;
       "editor.fontLigatures" = true;
       "editor.fontFamily" = "'Fira Code', 'Droid Sans Mono', 'monospace'";
+      "python.terminal.activateEnvironment" = false;
       "[python]" = {
         "editor.formatOnType" = true;
       };
