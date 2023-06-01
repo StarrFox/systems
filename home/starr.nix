@@ -64,6 +64,7 @@
         mpv
         the-powder-toy
         thunderbird-bin
+        spotify
         virt-manager
       ]
       ++ [
