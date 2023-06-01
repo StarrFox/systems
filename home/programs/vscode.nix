@@ -33,6 +33,9 @@
       "python.formatting.provider" = "black";
       "python.testing.pytestEnabled" = true;
       "nix.enableLanguageServer" = true;
+      "editor.fontSize" = 17;
+      "editor.fontLigatures" = true;
+      "editor.fontFamily" = "'Fira Code', 'Droid Sans Mono', 'monospace'";
       "[python]" = {
         "editor.formatOnType" = true;
       };
