@@ -63,6 +63,7 @@
         obsidian
         mpv
         the-powder-toy
+        thunderbird-bin
         virt-manager
       ]
       ++ [
