@@ -31,7 +31,7 @@
   home = {
     username = "starr";
     homeDirectory = "/home/${config.home.username}";
-    stateVersion = "22.11";
+    stateVersion = "23.05";
     packages = with pkgs;
       [
         # cli
