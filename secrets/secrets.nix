@@ -4,8 +4,7 @@ let
 
   starrnix = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPFzsTqzBjIDhPhvHpOfpfqmXawLs3AU9aYAjesN0iKW";
   systems = [starrnix];
-in
-{
+in {
   # used to test if it's working
   "test.age".publicKeys = users ++ systems;
 }
