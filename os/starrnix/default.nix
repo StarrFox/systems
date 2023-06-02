@@ -155,6 +155,12 @@
 
   services.getty.autologinUser = "starr";
 
+  age.secrets.test = {
+    file = ../../secrets/test.age;
+    mode = "400";
+    owner = "starr";
+  };
+
   environment = {
     systemPackages = with pkgs; [
       neovim
@@ -181,6 +187,8 @@
     enable = true;
     remotePlay.openFirewall = true;
   };
+
+  programs.firejail.enable = true;
 
   xdg.portal = {
     enable = true;

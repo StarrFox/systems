@@ -1,8 +1,18 @@
 # systems
 
+## self docs
+
+### how to add secrets
+
+```bash
+nix run github:ryantm/agenix -- -e secrets/file.age -i path/to/key
+```
+
+add the public key to secrets/secrets.nix
+
 ## resources
 
-## changelogs
+### changelogs
 
 [NixOS](https://nixos.org/manual/nixos/stable/release-notes.html)
 

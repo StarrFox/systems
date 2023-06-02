@@ -8,16 +8,26 @@
     nh.url = "github:ViperML/nh";
     nix_search.url = "github:peterldowns/nix-search-cli";
 
-    # TODO: lock this to a release branch next nixos release
     home-manager = {
       url = "github:nix-community/home-manager/release-23.05";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+        # remove for darwin support
+        darwin.follows = "";
+      };
     };
   };
 
   outputs = {
     nixpkgs,
     home-manager,
+    agenix,
     ...
   } @ inputs: rec {
     packages.x86_64-linux = let pkgs = nixpkgs.legacyPackages.x86_64-linux; in import ./packages {inherit pkgs;};
@@ -46,6 +56,7 @@
         };
         modules = [
           ./os/starrnix/default.nix
+          agenix.nixosModules.default
         ];
       };
 
