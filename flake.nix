@@ -25,12 +25,18 @@
         darwin.follows = "";
       };
     };
+
+    discord_chan = {
+      url = "github:StarrFox/Discord-chan";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     nixpkgs,
     home-manager,
     agenix,
+    discord_chan,
     ...
   } @ inputs: rec {
     packages.x86_64-linux = let pkgs = nixpkgs.legacyPackages.x86_64-linux; in import ./packages {inherit pkgs;};
@@ -60,6 +66,7 @@
         modules = [
           ./os/starrnix/default.nix
           agenix.nixosModules.default
+          discord_chan.nixosModules.default
         ];
       };
 

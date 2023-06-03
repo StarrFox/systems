@@ -13,6 +13,7 @@
     ./services/syncthing.nix
     ./services/tailscale.nix
     ./services/xbanish.nix
+    ./services/discord_chan.nix
     ../../devices/main.nix
   ];
 

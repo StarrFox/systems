@@ -7,4 +7,5 @@ let
 in {
   # used to test if it's working
   "test.age".publicKeys = users ++ systems;
+  "discord_chan_token.age".publicKeys = [starrnix];
 }
