@@ -12,6 +12,16 @@ add the public key to secrets/secrets.nix
 
 ## resources
 
+### Info sources
+
+[NixOS search](https://search.nixos.org/): allows searching packages and options
+
+[Home manager option search](https://mipmip.github.io/home-manager-option-search/): search home manager options
+
+[Noogle](https://noogle.dev/): search nix functions
+
+[Nixtracker](https://nixtracker.org/): track nix pr status
+
 ### changelogs
 
 [NixOS](https://nixos.org/manual/nixos/stable/release-notes.html)
@@ -21,6 +31,8 @@ add the public key to secrets/secrets.nix
 ### links
 
 [NixOS manual](https://nixos.org/manual/nixos/stable/)
+
+[Nix command reference](https://nixos.org/manual/nix/stable/command-ref/experimental-commands.html)
 
 [Tour of nix](https://nixcloud.io/tour/?id=1)
 
