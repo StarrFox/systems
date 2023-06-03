@@ -6,7 +6,9 @@
 
 1. add the hardware configuration to devices/\<device name>.nix
 
-2. add the public key to secrets/secrets.nix
+2. optionally add the public key to secrets/secrets.nix
+
+3. change [this line](https://github.com/StarrFox/systems/blob/1e193a69551e12c8c4939eebec871f6ed0f6ed7e/os/starrnix/default.nix#L16) to reference the new device
 
 ### how to add secrets
 
