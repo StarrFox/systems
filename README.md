@@ -2,6 +2,12 @@
 
 ## self docs
 
+### adding new devices
+
+1. add the hardware configuration to devices/\<device name>.nix
+
+2. add the public key to secrets/secrets.nix
+
 ### how to add secrets
 
 ```bash
