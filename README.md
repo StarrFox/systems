@@ -26,6 +26,8 @@ add the public key to secrets/secrets.nix
 
 [Nix Pills](https://nixos.org/guides/nix-pills/)
 
+[Nixpkgs](https://github.com/NixOS/nixpkgs)
+
 ### other configs
 
 [starter configs](https://github.com/Misterio77/nix-starter-configs): used a lot to start configs
