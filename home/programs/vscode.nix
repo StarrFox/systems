@@ -6,7 +6,7 @@
   # TODO: don't do this
   # this is just incase I forget to add them to the enviroment
   home.packages = with pkgs; [
-    rnix-lsp
+    nil
     black
     rust-analyzer
   ];
@@ -33,6 +33,7 @@
       "python.formatting.provider" = "black";
       "python.testing.pytestEnabled" = true;
       "nix.enableLanguageServer" = true;
+      "nix.serverPath" = "nil";
       "editor.fontSize" = 17;
       "editor.fontLigatures" = true;
       "editor.fontFamily" = "'Fira Code', 'Droid Sans Mono', 'monospace'";

@@ -51,7 +51,7 @@
             alejandra
             just
             deadnix
-            rnix-lsp
+            nil
             nvfetcher
             inputs.nh.packages.x86_64-linux.default
           ];
