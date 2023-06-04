@@ -33,11 +33,11 @@
         "starrpkgs": "starrpkgs"
       },
       "locked": {
-        "lastModified": 1685849282,
-        "narHash": "sha256-F6Oo1PAJR6nZWGbkbDE/MFVdd4lQFx5Qsop0OQHQojg=",
+        "lastModified": 1685907266,
+        "narHash": "sha256-dofcaCZCGoEqdBrRfMdZYvwi9bxDRDlWWguf3fD9BGI=",
         "owner": "StarrFox",
         "repo": "Discord-chan",
-        "rev": "df03e1984972f74d0536434772a358c916997968",
+        "rev": "2aabe77b5171fc7bbe2d6f6458c75fecbd93d9b4",
         "type": "github"
       },
       "original": {
@@ -165,11 +165,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1685701733,
-        "narHash": "sha256-u3V5J93pWUAGLjeERGzq8homI2Ayu2cDb2p0Spd0XQk=",
+        "lastModified": 1685906686,
+        "narHash": "sha256-gVJkQY5YY7lpmTUphngU53IoWtyXS87Hw4gEQOs7RUA=",
         "owner": "ViperML",
         "repo": "nh",
-        "rev": "a9fc5c2879400043ca6fca5f0ce1c3293201408e",
+        "rev": "6c9e64d6515effbb12cd97c4b9aabbe34f3a7b7e",
         "type": "github"
       },
       "original": {
@@ -272,11 +272,11 @@
     },
     "nixpkgs-unstable": {
       "locked": {
-        "lastModified": 1685655444,
-        "narHash": "sha256-6EujQNAeaUkWvpEZZcVF8qSfQrNVWFNNGbUJxv/A5a8=",
+        "lastModified": 1685836261,
+        "narHash": "sha256-rpxEPGeW4JZJcH58SQApJUtJ7w78VPtkF6Cut/Pq6Kg=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "e635192892f5abbc2289eaac3a73cdb249abaefd",
+        "rev": "dd4982554e18b936790da07c4ea2db7c7600f283",
         "type": "github"
       },
       "original": {
@@ -288,11 +288,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1685716800,
-        "narHash": "sha256-b6RpYRRsv6Wwl9XG2sjLvqKdkPMvqQqgtiGJHAIyGSw=",
+        "lastModified": 1685801374,
+        "narHash": "sha256-otaSUoFEMM+LjBI1XL/xGB5ao6IwnZOXc47qhIgJe8U=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "f3d743463920751eb092930d06e700981398332a",
+        "rev": "c37ca420157f4abc31e26f436c1145f8951ff373",
         "type": "github"
       },
       "original": {
@@ -343,11 +343,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1685870676,
-        "narHash": "sha256-z9bhGJ9XS3JUx3xRiOj2v4LqFeCpTok5N0EUt/ezpTc=",
+        "lastModified": 1685905728,
+        "narHash": "sha256-o+HNdjM2IOVyl+Izkml1u6WHyczGR9jShSSbpZb1LNQ=",
         "owner": "StarrFox",
         "repo": "packages",
-        "rev": "6f317f05d667a2e9d5db9235c263d73479a8fdb9",
+        "rev": "0edd470be436ce8e9c854e1a8fe75b2a854bb28d",
         "type": "github"
       },
       "original": {
