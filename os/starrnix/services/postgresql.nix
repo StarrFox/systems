@@ -2,15 +2,20 @@
   services.postgresql = {
     enable = true;
     ensureDatabases = [
-      "discord_chan"
       "smitestat"
+      "discord_chan"
     ];
     ensureUsers = [
       {
         name = "starr";
         ensurePermissions = {
-          "DATABASE discord_chan" = "ALL PRIVILEGES";
           "DATABASE smitestat" = "ALL PRIVILEGES";
+        };
+      }
+      {
+        name = "discord_chan";
+        ensurePermissions = {
+          "DATABASE discord_chan" = "ALL PRIVILEGES";
         };
       }
     ];

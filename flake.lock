@@ -33,11 +33,11 @@
         "starrpkgs": "starrpkgs"
       },
       "locked": {
-        "lastModified": 1685826073,
-        "narHash": "sha256-6bbiWMTKN21hLw59a6ZGBamK9N0AbwTbVMOWc0/u8XI=",
+        "lastModified": 1685849282,
+        "narHash": "sha256-F6Oo1PAJR6nZWGbkbDE/MFVdd4lQFx5Qsop0OQHQojg=",
         "owner": "StarrFox",
         "repo": "Discord-chan",
-        "rev": "4a2b7b9c2b44a54d35525a2ec90ef6bda6dcff3a",
+        "rev": "df03e1984972f74d0536434772a358c916997968",
         "type": "github"
       },
       "original": {
