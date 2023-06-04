@@ -6,7 +6,7 @@
 }: let
   nixpkgs-unstable = import inputs.nixpkgs-unstable {
     system = "${pkgs.system}";
-    config = config.nixpkgs.config;
+    inherit (config.nixpkgs) config;
   };
 in {
   home.packages = with pkgs; [

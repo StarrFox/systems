@@ -7,7 +7,7 @@
   # TODO: remove this when the version in nixpkgs updates
   nixpkgs-unstable = import inputs.nixpkgs-unstable {
     system = "${pkgs.system}";
-    config = config.nixpkgs.config;
+    inherit (config.nixpkgs) config;
   };
 in {
   # every shell uses this

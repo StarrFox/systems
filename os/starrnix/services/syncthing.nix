@@ -1,4 +1,4 @@
-{...}: {
+_: {
   # TODO: setup declaritivly
   # NOTE: gui is on 8384
   services.syncthing = {
