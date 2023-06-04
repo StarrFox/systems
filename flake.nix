@@ -35,6 +35,11 @@
       url = "github:StarrFox/Discord-chan";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-index-database = {
+      url = "github:Mic92/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -43,6 +48,7 @@
     home-manager,
     agenix,
     discord_chan,
+    nix-index-database,
     ...
   } @ inputs: {
     devShells.x86_64-linux = {
@@ -94,6 +100,7 @@
         };
         modules = [
           ./home/starr.nix
+          nix-index-database.hmModules.nix-index
         ];
       };
     };

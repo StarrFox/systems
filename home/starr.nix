@@ -16,6 +16,7 @@
     ./programs/direnv.nix
     ./programs/pass.nix
     ./programs/alacritty.nix
+    ./programs/nix-index.nix
     ./services/dunst.nix
   ];
 
@@ -37,7 +38,6 @@
         # cli
         bat
         cava
-        comma
         croc
         duf
         drawio
