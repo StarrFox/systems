@@ -59,9 +59,10 @@
           name = "starr-systems";
           packages = with pkgs; [
             alejandra
-            just
             deadnix
+            just
             nil
+            statix
             inputs.nh.packages.x86_64-linux.default
           ];
         };

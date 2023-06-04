@@ -17,6 +17,7 @@ update:
 format:
     alejandra .
     deadnix . --edit
+    statix fix .
 
 list-generations:
     sudo nix-env -p /nix/var/nix/profiles/system --list-generations 
