@@ -2,7 +2,7 @@
   inputs,
   config,
   pkgs,
-  selfpkgs,
+  starrpkgs,
   ...
 }: {
   imports = [
@@ -72,7 +72,7 @@
         inputs.nix_search.packages.${pkgs.system}.default
       ]
       ++ [
-        selfpkgs.imhex
+        starrpkgs.imhex
       ]
       ++ [
         python3Packages.ipython

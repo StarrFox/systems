@@ -1,6 +1,6 @@
 {
   pkgs,
-  selfpkgs,
+  starrpkgs,
   ...
 }: {
   # TODO: don't do this
@@ -63,7 +63,7 @@
       viktorqvarfordt.vscode-pitch-black-theme
       skellock.just
       gruntfuggly.todo-tree
-      selfpkgs.vscord
+      starrpkgs.vscord
     ];
   };
 }

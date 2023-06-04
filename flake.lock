@@ -290,7 +290,8 @@
         "nh": "nh",
         "nix_search": "nix_search",
         "nixpkgs": "nixpkgs_2",
-        "nixpkgs-unstable": "nixpkgs-unstable"
+        "nixpkgs-unstable": "nixpkgs-unstable",
+        "starrpkgs": "starrpkgs_2"
       }
     },
     "starrpkgs": {
@@ -306,6 +307,26 @@
         "owner": "StarrFox",
         "repo": "packages",
         "rev": "5bd311560e62a6bf7679f8c1d956b9d2ba856de5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "StarrFox",
+        "repo": "packages",
+        "type": "github"
+      }
+    },
+    "starrpkgs_2": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1685870676,
+        "narHash": "sha256-z9bhGJ9XS3JUx3xRiOj2v4LqFeCpTok5N0EUt/ezpTc=",
+        "owner": "StarrFox",
+        "repo": "packages",
+        "rev": "6f317f05d667a2e9d5db9235c263d73479a8fdb9",
         "type": "github"
       },
       "original": {

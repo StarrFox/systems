@@ -1,13 +1,13 @@
 {
   pkgs,
-  selfpkgs,
+  starrpkgs,
   ...
 }: {
   programs.gh = {
     enable = true;
     extensions = [
       pkgs.gh-dash
-      selfpkgs.gh-poi
+      starrpkgs.gh-poi
     ];
   };
 

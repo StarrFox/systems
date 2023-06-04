@@ -5,6 +5,11 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    starrpkgs = {
+      url = "github:StarrFox/packages";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nh.url = "github:ViperML/nh";
     nix_search = {
       url = "github:peterldowns/nix-search-cli";
@@ -34,13 +39,12 @@
 
   outputs = {
     nixpkgs,
+    starrpkgs,
     home-manager,
     agenix,
     discord_chan,
     ...
-  } @ inputs: rec {
-    packages.x86_64-linux = let pkgs = nixpkgs.legacyPackages.x86_64-linux; in import ./packages {inherit pkgs;};
-
+  } @ inputs: {
     devShells.x86_64-linux = {
       default = let
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
@@ -52,7 +56,6 @@
             just
             deadnix
             nil
-            nvfetcher
             inputs.nh.packages.x86_64-linux.default
           ];
         };
@@ -80,12 +83,14 @@
       };
     };
 
-    homeConfigurations = {
+    homeConfigurations = let
+      spkgs = starrpkgs.packages.x86_64-linux;
+    in {
       "starr@starrnix" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = {
           inherit inputs;
-          selfpkgs = packages.x86_64-linux;
+          starrpkgs = spkgs;
         };
         modules = [
           ./home/starr.nix

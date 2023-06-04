@@ -11,10 +11,7 @@ home:
 check:
     nix flake check
 
-update-packages: && format
-    nvfetcher --config packages/nvfetcher.toml --build-dir packages/_sources/ 
-
-update: && update-packages
+update:
     nix flake update
 
 format:
