@@ -36,7 +36,10 @@
 
     discord_chan = {
       url = "github:StarrFox/Discord-chan";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        starrpkgs.follows = "starrpkgs";
+      };
     };
 
     nix-index-database = {
