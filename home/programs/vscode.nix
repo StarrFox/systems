@@ -16,6 +16,9 @@
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
     userSettings = {
+      "editor.fontSize" = 17;
+      "editor.fontLigatures" = true;
+      "editor.fontFamily" = "'Fira Code', 'Droid Sans Mono', 'monospace'";
       "files.autoSave" = "afterDelay";
       "explorer.confirmDelete" = false;
       "explorer.confirmDragAndDrop" = false;
@@ -32,13 +35,16 @@
       "python.venvPath" = "~/.cache/pypoetry/virtualenvs";
       "python.formatting.provider" = "black";
       "python.testing.pytestEnabled" = true;
-      "nix.enableLanguageServer" = true;
-      "nix.serverPath" = "nil";
-      "editor.fontSize" = 17;
-      "editor.fontLigatures" = true;
-      "editor.fontFamily" = "'Fira Code', 'Droid Sans Mono', 'monospace'";
       "python.terminal.activateEnvironment" = false;
       "[python]" = {
+        "editor.formatOnType" = true;
+      };
+      "nix.enableLanguageServer" = true;
+      "nix.serverPath" = "nil";
+      "[nix]" = {
+        "editor.defaultFormatter" = "kamadorueda.alejandra";
+        "editor.formatOnPaste" = true;
+        "editor.formatOnSave" = true;
         "editor.formatOnType" = true;
       };
     };
