@@ -31,6 +31,7 @@
       trusted-users = ["@wheel"];
       trusted-substituters = [
         "https://hydra.nixos.org"
+        "https://starrfox.cachix.org"
       ];
     };
   };
