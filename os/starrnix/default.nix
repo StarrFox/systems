@@ -30,11 +30,9 @@
       auto-optimise-store = true;
       trusted-users = ["@wheel"];
       substituters = [
-        "https://hydra.nixos.org"
         "https://starrfox.cachix.org"
       ];
       trusted-public-keys = [
-        "hydra.nixos.org-1:CNHJZBh9K4tP3EKF6FkkgeVYsS3ohTl+oS0Qa8bezVs="
         "starrfox.cachix.org-1:f72kZolyxFrJtrWoLRj12WdEx4xISSOybSlQ21HuhWY="
       ];
     };

@@ -10,7 +10,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nh.url = "github:ViperML/nh";
+    nh = {
+      url = "github:ViperML/nh";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix_search = {
       url = "github:peterldowns/nix-search-cli";
       inputs.nixpkgs.follows = "nixpkgs";
