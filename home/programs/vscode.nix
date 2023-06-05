@@ -64,6 +64,7 @@
       skellock.just
       gruntfuggly.todo-tree
       starrpkgs.vscord
+      starrpkgs.vscode-zig
       github.vscode-github-actions
     ];
   };
