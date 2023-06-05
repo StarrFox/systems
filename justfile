@@ -1,35 +1,48 @@
-default: both
+# show this list
+@default:
+    just --list
 
-both: os home
+# switch both os and home
+@both: os home
 
-os:
+# switch os
+@os:
     nh os switch .
 
-home:
+# switch home
+@home:
     nh home switch .
 
-check:
+# check flake
+@check:
     nix flake check
 
-update:
+# update flake
+@update:
     nix flake update
 
-update-commit: update check
+# update flake, check it, and commit
+@update-commit: update check
     git commit -am "bump lock"
 
-update-switch: update-commit both
+# update-command and switch both
+@update-switch: update-commit both
 
-format:
+# format nix code
+@format:
     alejandra .
     deadnix . --edit
     statix fix .
 
-list-generations:
+# list current generations
+@list-generations:
     sudo nix-env -p /nix/var/nix/profiles/system --list-generations 
 
-# +2 means keep the last 2 generations
-delete-generations:
+# delete all but the last 2 generations
+@delete-generations:
+    # +2 means keep the last 2 generations
     sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +2
 
-gc:
+# delete old store paths
+@gc:
     nix-collect-garbage -d --delete-older-than 1d
