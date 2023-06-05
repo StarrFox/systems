@@ -9,6 +9,7 @@
     nil
     black
     rust-analyzer
+    zls
   ];
 
   programs.vscode = {
@@ -47,6 +48,7 @@
         "editor.formatOnSave" = true;
         "editor.formatOnType" = true;
       };
+      "zig.zls.path" = "zls";
     };
     extensions = with pkgs.vscode-extensions; [
       njpwerner.autodocstring
