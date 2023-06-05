@@ -24,6 +24,7 @@
 # update flake, check it, and commit
 @update-commit: update check
     git commit -am "bump lock"
+    git push
 
 # update-command and switch both
 @update-switch: update-commit both
