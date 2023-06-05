@@ -49,6 +49,7 @@
         "editor.formatOnType" = true;
       };
       "zig.zls.path" = "zls";
+      "zig.zls.checkForUpdate" = false;
     };
     extensions = with pkgs.vscode-extensions; [
       njpwerner.autodocstring
