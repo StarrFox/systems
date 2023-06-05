@@ -46,15 +46,22 @@
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    deploy-rs = {
+      url = "github:serokell/deploy-rs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
+    self,
     nixpkgs,
     starrpkgs,
     home-manager,
     agenix,
     discord_chan,
     nix-index-database,
+    deploy-rs,
     ...
   } @ inputs: {
     devShells.x86_64-linux = {
@@ -70,6 +77,7 @@
             nil
             statix
             inputs.nh.packages.x86_64-linux.default
+            deploy-rs.packages.x86_64-linux.default
           ];
         };
     };
@@ -95,6 +103,16 @@
         ];
       };
     };
+
+    deploy.nodes.nixtop = {
+      hostname = "localhost";
+      profiles.system = {
+        user = "root";
+        path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixtop;
+      };
+    };
+
+    checks = builtins.mapAttrs (system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;
 
     homeConfigurations = let
       spkgs = starrpkgs.packages.x86_64-linux;
