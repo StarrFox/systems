@@ -6,12 +6,14 @@
     ../common/uefi_boot.nix
     ../common/environment.nix
 
+    ../common/services/openssh.nix
+
     ../common/users/starr.nix
 
     # to make testing nixtop easier
     ./services/xorg.nix
 
-    ../common/services/openssh.nix
+    ../../devices/laptop.nix
   ];
 
   networking.hostName = "nixtop";
