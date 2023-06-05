@@ -14,6 +14,11 @@ check:
 update:
     nix flake update
 
+update-commit: update check
+    git commit -am "bump lock"
+
+update-switch: update-commit both
+
 format:
     alejandra .
     deadnix . --edit
