@@ -9,4 +9,19 @@
     enable = true;
     tokenFile = config.age.secrets.discord_chan_token.path;
   };
+
+  services.postgresql = {
+    enable = true;
+    ensureDatabases = [
+      "discord_chan"
+    ];
+    ensureUsers = [
+      {
+        name = "discord_chan";
+        ensurePermissions = {
+          "DATABASE discord_chan" = "ALL PRIVILEGES";
+        };
+      }
+    ];
+  };
 }
