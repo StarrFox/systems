@@ -13,6 +13,7 @@
     ../common/services/openssh.nix
     ../common/services/tailscale.nix
     ../common/services/xbanish.nix
+    ../common/services/jellyfin.nix
 
     ../common/nix_daemon.nix
     ../common/timezone.nix
