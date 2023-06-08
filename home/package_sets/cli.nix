@@ -8,8 +8,6 @@
     cava
     croc
     duf
-    drawio
-    feh
     ffmpeg
     htop
     httpie

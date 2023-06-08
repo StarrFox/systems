@@ -17,6 +17,8 @@
     thunderbird-bin
     spotify
     virt-manager
+    drawio
+    feh
 
     starrpkgs.imhex
   ];
