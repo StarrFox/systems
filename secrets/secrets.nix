@@ -3,9 +3,10 @@ let
   users = [starr];
 
   starrnix = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPFzsTqzBjIDhPhvHpOfpfqmXawLs3AU9aYAjesN0iKW";
+  test_vm = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINZnpgZLWi8H1fviWqmQsU2EPzI3sDkVbMlOQX13NL1g";
   systems = [starrnix];
 in {
   # used to test if it's working
   "test.age".publicKeys = users ++ systems;
-  "discord_chan_token.age".publicKeys = [starrnix];
+  "discord_chan_token.age".publicKeys = [starrnix test_vm starr];
 }

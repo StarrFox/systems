@@ -7,6 +7,7 @@
     ../common/environment.nix
 
     ../common/services/openssh.nix
+    ../common/services/discord_chan.nix
 
     ../common/users/starr.nix
 
