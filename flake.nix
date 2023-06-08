@@ -128,6 +128,18 @@
           nix-index-database.hmModules.nix-index
         ];
       };
+
+      "starr@nixtop" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = {
+          inherit inputs;
+          starrpkgs = spkgs;
+        };
+        modules = [
+          ./home/starr_nogui.nix
+          nix-index-database.hmModules.nix-index
+        ];
+      };
     };
   };
 }
