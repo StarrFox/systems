@@ -136,7 +136,8 @@
           starrpkgs = spkgs;
         };
         modules = [
-          ./home/starr_nogui.nix
+          # TODO: switch to starr_nogui when done testing
+          ./home/starr.nix
           nix-index-database.hmModules.nix-index
         ];
       };
