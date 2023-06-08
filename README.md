@@ -10,16 +10,23 @@
 
 3. change [this line](https://github.com/StarrFox/systems/blob/1e193a69551e12c8c4939eebec871f6ed0f6ed7e/os/starrnix/default.nix#L16) to reference the new device
 
-### how to add secrets
+### Secrets
+
+Edit a secret (or create a new one)
 
 ```bash
 cd secrets
-nix run github:ryantm/agenix -- -e file.age -i path/to/key
+agenix -e file.age
 ```
 
-add the public key to secrets/secrets.nix
+rekey secrets (if adding new recepiants)
 
-## resources
+```bash
+cd secrets
+agenix --rekey
+```
+
+## Resources
 
 ### Info sources
 
