@@ -17,7 +17,7 @@
         autoNumlock = true;
       };
     };
-    desktopManager.xfce.enable = true;
+    desktopManager.gnome.enable = true;
   };
 
   environment.systemPackages = with pkgs; [

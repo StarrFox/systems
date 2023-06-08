@@ -4,7 +4,8 @@ _: {
       systemd-boot.enable = true;
       efi = {
         canTouchEfiVariables = true;
-        efiSysMountPoint = "/boot/efi";
+        # TODO: why was this added and why does it make the vm not work
+        #efiSysMountPoint = "/boot/efi";
       };
     };
   };
