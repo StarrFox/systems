@@ -12,7 +12,7 @@
     ../common/users/starr.nix
 
     # to make testing nixtop easier
-    ./services/xorg.nix
+    #./services/xorg.nix
 
     ../../devices/laptop.nix
   ];

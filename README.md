@@ -1,8 +1,8 @@
-# systems
+# Systems
 
-## self docs
+## Self docs
 
-### adding new devices
+### Adding new devices
 
 1. add the hardware configuration to devices/\<device name>.nix
 
@@ -38,13 +38,13 @@ agenix --rekey
 
 [Nixtracker](https://nixtracker.org/): track nix pr status
 
-### changelogs
+### Changelogs
 
 [NixOS](https://nixos.org/manual/nixos/stable/release-notes.html)
 
 [Home Manager](https://nix-community.github.io/home-manager/release-notes.html)
 
-### links
+### Links
 
 [NixOS manual](https://nixos.org/manual/nixos/stable/)
 
@@ -56,7 +56,7 @@ agenix --rekey
 
 [Nixpkgs](https://github.com/NixOS/nixpkgs)
 
-### other configs
+### Other configs
 
 [starter configs](https://github.com/Misterio77/nix-starter-configs): used a lot to start configs
 
