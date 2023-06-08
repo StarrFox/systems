@@ -9,7 +9,7 @@
     ./services/syncthing.nix
     #./services/nfs.nix
 
-    ../common/services/discord_chan.nix
+    #../common/services/discord_chan.nix
     ../common/services/mullvad.nix
     ../common/services/openssh.nix
     ../common/services/tailscale.nix
