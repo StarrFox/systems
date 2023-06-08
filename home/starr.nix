@@ -1,8 +1,5 @@
 {
-  inputs,
   config,
-  pkgs,
-  starrpkgs,
   ...
 }: {
   imports = [
@@ -17,7 +14,12 @@
     ./programs/pass.nix
     ./programs/alacritty.nix
     ./programs/nix-index.nix
+    ./programs/home-manager.nix
+
     ./services/dunst.nix
+
+    ./package_sets/cli.nix
+    ./package_sets/gui.nix
   ];
 
   nixpkgs = {
@@ -33,51 +35,6 @@
     username = "starr";
     homeDirectory = "/home/${config.home.username}";
     stateVersion = "23.05";
-    packages = with pkgs;
-      [
-        # cli
-        bat
-        cava
-        croc
-        duf
-        drawio
-        feh
-        ffmpeg
-        htop
-        httpie
-        neofetch
-        nethogs
-        ncdu
-        ripgrep
-        rsync
-        tldr
-
-        # gui
-        bitwarden
-        #chromium
-        discord
-        flameshot
-        gimp
-        ghidra-bin
-        insomnia # this is the rest api gui thing
-        obsidian
-        mpv
-        the-powder-toy
-        thunderbird-bin
-        spotify
-        virt-manager
-      ]
-      ++ [
-        inputs.nh.packages.${pkgs.system}.default
-        inputs.nix_search.packages.${pkgs.system}.default
-      ]
-      ++ [
-        starrpkgs.imhex
-      ]
-      ++ [
-        python3Packages.ipython
-        python3Packages.howdoi
-      ];
   };
 
   # Nicely reload system units when changing configs
@@ -85,6 +42,4 @@
 
   xdg.enable = true;
   xsession.numlock.enable = true;
-
-  programs.home-manager.enable = true;
 }

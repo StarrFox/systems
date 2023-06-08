@@ -1,4 +1,8 @@
-{lib, inputs, ...}: {
+{
+  lib,
+  inputs,
+  ...
+}: {
   nix = {
     gc = {
       automatic = true;
