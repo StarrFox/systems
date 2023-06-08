@@ -1,6 +1,6 @@
-_: {
+{lib, ...}: {
   programs.home-manager = {
     enable = true;
-    path = "$HOME/systems";
+    path = lib.mkDefault "$HOME/systems";
   };
 }
