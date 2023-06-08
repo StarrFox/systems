@@ -100,6 +100,8 @@
         };
         modules = [
           ./os/nixtop/default.nix
+          agenix.nixosModules.default
+          discord_chan.nixosModules.default
         ];
       };
     };
