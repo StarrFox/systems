@@ -7,6 +7,7 @@
     ./services/postgresql.nix
     ./services/ratbagd.nix
     ./services/syncthing.nix
+    #./services/nfs.nix
 
     ../common/services/discord_chan.nix
     ../common/services/mullvad.nix
