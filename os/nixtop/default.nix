@@ -8,7 +8,7 @@
 
     ../common/services/openssh.nix
     ../common/services/discord_chan.nix
-    ../common/services/cockpit.nix
+    #../common/services/cockpit.nix
 
     ../common/users/starr.nix
 
