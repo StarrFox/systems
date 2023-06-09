@@ -22,6 +22,7 @@
     ../common/environment.nix
     ../common/sound.nix
     ../common/flatpak.nix
+    #../common/bluetooth.nix
 
     ../../devices/main.nix
 
