@@ -21,6 +21,7 @@
     ../common/locale.nix
     ../common/environment.nix
     ../common/sound.nix
+    ../common/flatpak.nix
 
     ../../devices/main.nix
 
