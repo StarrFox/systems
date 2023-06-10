@@ -1,3 +1,4 @@
+# note: this currently expects a config file in /etc/dashy/dashy_config.yml
 _: {
   virtualisation.oci-containers.containers.dashy = {
     image = "lissy93/dashy";
@@ -6,7 +7,7 @@ _: {
     ];
     # TODO: add config module
     volumes = [
-      "/home/starr/dashy_config.yml:/app/public/conf.yml"
+      "/etc/dashy/dashy_config.yml:/app/public/conf.yml"
     ];
   };
 }
