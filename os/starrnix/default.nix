@@ -9,7 +9,6 @@
     ./services/syncthing.nix
     #./services/nfs.nix
 
-    #../common/services/discord_chan.nix
     ../common/services/mullvad.nix
     ../common/services/openssh.nix
     ../common/services/tailscale.nix
@@ -22,7 +21,6 @@
     ../common/environment.nix
     ../common/sound.nix
     ../common/flatpak.nix
-    #../common/bluetooth.nix
 
     ../../devices/main.nix
 
@@ -68,8 +66,8 @@
   programs.dconf.enable = true;
 
   fonts.fonts = with pkgs; [
-    fira-code
-    fira-code-symbols
+    # fira-code
+    # fira-code-symbols
     (nerdfonts.override {fonts = ["FiraCode"];})
     material-icons
   ];
