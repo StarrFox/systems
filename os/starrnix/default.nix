@@ -21,6 +21,8 @@
     ../common/environment.nix
     ../common/sound.nix
     ../common/flatpak.nix
+    ../common/steam.nix
+    ../common/firejail.nix
 
     ../../devices/main.nix
 
@@ -79,13 +81,6 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true;
-  };
-
-  programs.firejail.enable = true;
 
   xdg.portal = {
     enable = true;
