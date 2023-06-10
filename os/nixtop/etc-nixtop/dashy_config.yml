@@ -1,0 +1,52 @@
+# TODO: add this to custom css with firefox supports it
+#form:has(> label[for="filter-tiles"]) {
+#  display: none!important;
+#}
+pageInfo:
+  title: Dashy
+  description: Welcome to your new dashboard!
+  navLinks:
+    - title: GitHub
+      path: https://github.com/Lissy93/dashy
+    - title: Documentation
+      path: https://dashy.to/docs
+appConfig:
+  theme: material
+  layout: auto
+  iconSize: medium
+  language: en
+  customCss: footer,header{display:none!important;}
+  customColors:
+    basic:
+      primary: '#02d100'
+      background: '#030105'
+      background-darker: '#030105'
+sections:
+  - name: Services
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Jellyfin
+        icon: favicon
+        url: http://nixtop:8096/
+        target: newtab
+        statusCheck: true
+        statusCheckAllowInsecure: true
+        id: 0_836_jellyfin
+  - name: Websites
+    displayData:
+      sortBy: most-used
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Youtube
+        icon: favicon
+        url: https://youtube.com
+        statusCheck: true
+        id: 0_838_youtube
