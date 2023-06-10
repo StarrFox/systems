@@ -50,7 +50,11 @@
       };
       "zig.zls.path" = "zls";
       "zig.zls.checkForUpdate" = false;
+      "editor.quickSuggestions" = {
+        "other" = "inline";
+      };
     };
+  
     extensions = with pkgs.vscode-extensions; [
       njpwerner.autodocstring
       tamasfe.even-better-toml
