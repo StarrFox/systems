@@ -6,6 +6,8 @@
     ../common/uefi_boot.nix
     ../common/environment.nix
 
+    ../common/containers/dashy.nix
+
     ../common/services/openssh.nix
     ../common/services/discord_chan.nix
     #../common/services/cockpit.nix
