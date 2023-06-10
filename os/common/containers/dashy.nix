@@ -5,8 +5,8 @@ _: {
       "8080:80"
     ];
     # TODO: add config module
-    # volumes = [
-    #   "/root/my-local-conf.yml:/app/public/conf.yml"
-    # ];
+    volumes = [
+      "/home/starr/dashy_config.yml:/app/public/conf.yml"
+    ];
   };
 }
