@@ -21,7 +21,7 @@
     ../common/environment.nix
     ../common/sound.nix
     ../common/flatpak.nix
-    ../common/steam.nix
+    #../common/steam.nix
     ../common/firejail.nix
 
     ../../devices/main.nix

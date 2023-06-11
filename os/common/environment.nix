@@ -1,11 +1,11 @@
 {pkgs, ...}: {
   environment = {
     systemPackages = with pkgs; [
-      neovim
+      helix
       git
     ];
     variables = {
-      EDITOR = "nvim";
+      EDITOR = "hx";
     };
     sessionVariables = {
       # TODO: find a better way to handle this

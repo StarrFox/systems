@@ -19,6 +19,7 @@
     virt-manager
     drawio
     feh
+    prismlauncher
 
     starrpkgs.imhex
   ];
