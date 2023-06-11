@@ -54,7 +54,7 @@
         "other" = "inline";
       };
     };
-  
+
     extensions = with pkgs.vscode-extensions; [
       njpwerner.autodocstring
       tamasfe.even-better-toml
