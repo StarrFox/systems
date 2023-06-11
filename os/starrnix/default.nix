@@ -2,7 +2,9 @@
   lib,
   pkgs,
   ...
-}: {
+}: let
+  ssh-keys = import ../../ssh-keys.nix;
+in {
   imports = [
     ./services/postgresql.nix
     ./services/ratbagd.nix
@@ -39,6 +41,10 @@
       };
     };
   };
+
+  users.users.starr.openssh.authorizedKeys.keys = [
+    ssh-keys.termux
+  ];
 
   networking = {
     hostName = "starrnix";
