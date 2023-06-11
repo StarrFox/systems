@@ -19,6 +19,7 @@
     virt-manager
     drawio
     feh
+    # TODO: make this always be 6.3 so I have ftb packs (7+ removes them)
     prismlauncher
 
     starrpkgs.imhex
