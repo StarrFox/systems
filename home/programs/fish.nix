@@ -14,7 +14,7 @@ in {
     onefetch
     p7zip
     nnn
-    # erdtree isnt in stable yet
+    # erdree v3
     nixpkgs-unstable.erdtree
   ];
 

@@ -1,18 +1,6 @@
-{
-  inputs,
-  config,
-  pkgs,
-  ...
-}: let
-  nixpkgs-unstable = import inputs.nixpkgs-unstable {
-    system = "${pkgs.system}";
-    inherit (config.nixpkgs) config;
-  };
-in {
+_: {
   programs.helix = {
     enable = true;
-    # the unstable version has a setting I want
-    package = nixpkgs-unstable.helix;
     settings = {
       theme = "base16_transparent";
       editor = {
