@@ -47,3 +47,7 @@
 # delete old store paths
 @gc:
     nix-collect-garbage -d --delete-older-than 1d
+
+# resource overview
+@resources:
+    glances
