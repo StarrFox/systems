@@ -1,26 +1,26 @@
-# TODO: add this to custom css with firefox supports it
+# TODO: add this to custom css when firefox supports it
 #form:has(> label[for="filter-tiles"]) {
 #  display: none!important;
 #}
 pageInfo:
-  title: Dashy
-  description: Welcome to your new dashboard!
+  title: starrnix
+  description: get nixxed
   navLinks:
     - title: GitHub
       path: https://github.com/Lissy93/dashy
     - title: Documentation
       path: https://dashy.to/docs
 appConfig:
-  theme: material
+  theme: basic
   layout: auto
   iconSize: medium
   language: en
   customCss: footer,header{display:none!important;}
   customColors:
     basic:
-      primary: '#02d100'
-      background: '#030105'
-      background-darker: '#030105'
+      primary: '#FFFFFF'
+      background: '#000000'
+      background-darker: '#000000'
 sections:
   - name: Services
     displayData:
@@ -36,7 +36,6 @@ sections:
         target: newtab
         statusCheck: true
         statusCheckAllowInsecure: true
-        id: 0_836_jellyfin
   - name: Websites
     displayData:
       sortBy: most-used
@@ -48,8 +47,12 @@ sections:
       - title: Youtube
         icon: favicon
         url: https://youtube.com
-        statusCheck: true
-        id: 0_838_youtube
       - title: At&t Router
         icon: favicon
         url: http://192.168.1.254
+      - title: Anilist
+        icon: favicon
+        url: https://anilist.co
+      - title: Anichart
+        icon: favicon
+        url: https://anichart.net/airing
