@@ -1,0 +1,23 @@
+name: "update"
+
+on:
+    workflow_dispatch:
+
+jobs:
+    update:
+        runs-on: ubuntu-latest
+    
+        steps:
+            - uses: actions/checkout@v3
+            - name: Install Nix
+              uses: DeterminateSystems/nix-installer-action@main
+
+            - run: nix develop --command just update
+            - name: Create PR
+              uses: peter-evans/create-pull-request@v5
+              with:
+                title: "update lock"
+                branch: update
+                branch-suffix: timestamp
+                delete-branch: true
+                reviewers: StarrFox
