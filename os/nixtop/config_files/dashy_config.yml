@@ -50,3 +50,6 @@ sections:
         url: https://youtube.com
         statusCheck: true
         id: 0_838_youtube
+      - title: At&t Router
+        icon: favicon
+        url: http://192.168.1.254
