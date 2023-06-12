@@ -42,6 +42,8 @@ agenix --rekey
 
 [NixOS](https://nixos.org/manual/nixos/stable/release-notes.html)
 
+[Nix](https://nixos.org/manual/nix/stable/release-notes/release-notes.html)
+
 [Home Manager](https://nix-community.github.io/home-manager/release-notes.html)
 
 ### Links
@@ -65,3 +67,5 @@ agenix --rekey
 [Stu's configs](https://github.com/Stupremee/nix)
 
 [Remi's configs](https://github.com/remi-gelinas/rosetta/)
+
+[Numtide's srvos](https://github.com/numtide/srvos)

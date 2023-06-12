@@ -26,6 +26,8 @@ in {
     ../common/steam.nix
     ../common/firejail.nix
 
+    ../common/roles/desktop/xserver/plasma.nix
+
     ../../devices/main.nix
 
     ../common/users/starr.nix
@@ -52,30 +54,12 @@ in {
     useDHCP = lib.mkDefault true;
   };
 
-  services.xserver = {
-    enable = true;
-    layout = "us";
-    xkbVariant = "";
-    videoDrivers = ["nvidia"];
-    displayManager = {
-      autoLogin = {
-        enable = true;
-        user = "starr";
-      };
-      sddm = {
-        enable = true;
-        autoNumlock = true;
-      };
-    };
-    desktopManager.plasma5.enable = true;
-  };
+  services.xserver.videoDrivers = ["nvidia"];
 
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;
 
   fonts.fonts = with pkgs; [
-    # fira-code
-    # fira-code-symbols
     (nerdfonts.override {fonts = ["FiraCode"];})
     material-icons
   ];

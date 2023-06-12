@@ -1,12 +1,8 @@
-# this is just for testing
-{pkgs, ...}: {
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "";
-  };
-
+_: {
   services.xserver = {
     enable = true;
+    layout = "us";
+    xkbVariant = "";
     displayManager = {
       autoLogin = {
         enable = true;
@@ -17,10 +13,5 @@
         autoNumlock = true;
       };
     };
-    desktopManager.plasma5.enable = true;
   };
-
-  environment.systemPackages = with pkgs; [
-    firefox
-  ];
 }
