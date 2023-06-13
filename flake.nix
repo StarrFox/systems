@@ -10,8 +10,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # TODO: unlock rev
     nh = {
-      url = "github:ViperML/nh";
+      url = "github:ViperML/nh/6eed9a053a60a7a806c3866d6b98d1f48e057ca2";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix_search = {
