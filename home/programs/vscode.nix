@@ -32,7 +32,7 @@
       "python.analysis.inlayHints.functionReturnTypes" = true;
       "python.analysis.inlayHints.variableTypes" = true;
       # NOTE: options are off, basic, and strict
-      "python.analysis.typeCheckingMode" = "basic";
+      "python.analysis.typeCheckingMode" = "strict";
       "python.venvPath" = "~/.cache/pypoetry/virtualenvs";
       "python.formatting.provider" = "black";
       "python.testing.pytestEnabled" = true;
