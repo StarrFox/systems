@@ -33,11 +33,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1686730425,
-        "narHash": "sha256-6AnZBYhVvgVjk2vGf6dk3Yyrwz3dBDB+C0VHf1KLCPI=",
+        "lastModified": 1686730738,
+        "narHash": "sha256-tuX5I9KLGZ5P6QmuXjNNlJQQTHw2+k6IFM0WF9u+/jA=",
         "owner": "StarrFox",
         "repo": "ArcanumBot",
-        "rev": "8ac5b5c97e05bc0c74a0803832a1dfdffe6b2ef7",
+        "rev": "d5fad6932ab89158a610495992e00546e8c6a453",
         "type": "github"
       },
       "original": {
