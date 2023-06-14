@@ -56,3 +56,20 @@ sections:
       - title: Anichart
         icon: favicon
         url: https://anichart.net/airing
+  - name: Smite
+    displayData:
+      sortBy: most-used
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: News
+        icon: favicon
+        url: https://smitegame.com/news
+      - title: SteamDB
+        icon: favicon
+        url: https://steamdb.info/app/386360/
+      - title: Smite Master
+        icon: favicon
+        url: https://smite-master.com/
