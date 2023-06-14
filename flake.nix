@@ -117,10 +117,16 @@
     };
 
     deploy.nodes.nixtop = {
-      hostname = "localhost";
-      profiles.system = {
-        user = "root";
-        path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixtop;
+      hostname = "nixtop";
+      profiles = {
+        system = {
+          user = "root";
+          path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixtop;
+        };
+        home = {
+          user = "starr";
+          path = deploy-rs.lib.x86_64-linux.activate.home-manager self.homeConfigurations."starr@nixtop";
+        };
       };
     };
 

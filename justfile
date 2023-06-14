@@ -51,3 +51,7 @@
 # resource overview
 @resources:
     glances
+
+# deploy all nodes
+@deploy:
+    deploy

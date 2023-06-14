@@ -5,6 +5,7 @@
     owner = "arcanumbot";
   };
 
+  # TODO: make wait until postgresql role is created
   services.arcanumbot = {
     enable = true;
     tokenFile = config.age.secrets.arcanumbot_token.path;
