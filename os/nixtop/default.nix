@@ -12,6 +12,7 @@ in {
 
     ../common/services/openssh.nix
     ../common/services/discord_chan.nix
+    ../common/services/arcanumbot.nix
     ../common/services/jellyfin.nix
 
     ../common/users/starr.nix

@@ -43,6 +43,11 @@
       };
     };
 
+    arcanumbot = {
+      url = "github:StarrFox/ArcanumBot";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -61,6 +66,7 @@
     home-manager,
     agenix,
     discord_chan,
+    arcanumbot,
     nix-index-database,
     deploy-rs,
     ...
@@ -105,6 +111,7 @@
           ./os/nixtop/default.nix
           agenix.nixosModules.default
           discord_chan.nixosModules.default
+          arcanumbot.nixosModules.default
         ];
       };
     };
