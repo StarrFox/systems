@@ -20,7 +20,7 @@
 
     inputs.nh.packages.${pkgs.system}.default
     inputs.nix_search.packages.${pkgs.system}.default
-    inputs.attic.packages.${pkgs.system}.default
+    #inputs.attic.packages.${pkgs.system}.default
 
     python3Packages.ipython
     python3Packages.howdoi
