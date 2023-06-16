@@ -7,4 +7,5 @@ in {
   "test.age".publicKeys = users ++ systems;
   "discord_chan_token.age".publicKeys = with ssh-keys; [starr-starrnix nixtop];
   "arcanumbot_token.age".publicKeys = with ssh-keys; [starr-starrnix nixtop];
+  "attic_creds.age".publicKeys = with ssh-keys; [starr-starrnix nixtop];
 }

@@ -16,6 +16,7 @@ in {
     ../common/services/jellyfin.nix
     #../common/services/grafana.nix
     ../common/services/tailscale.nix
+    ../common/services/attic.nix
 
     ../common/users/starr.nix
 
