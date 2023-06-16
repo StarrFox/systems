@@ -69,3 +69,5 @@ agenix --rekey
 [Remi's configs](https://github.com/remi-gelinas/rosetta/)
 
 [Numtide's srvos](https://github.com/numtide/srvos)
+
+[Nobbz's configs](https://github.com/NobbZ/nixos-config/)

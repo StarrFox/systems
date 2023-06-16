@@ -14,9 +14,10 @@ in {
     ../common/services/discord_chan.nix
     ../common/services/arcanumbot.nix
     ../common/services/jellyfin.nix
-    #../common/services/grafana.nix
+    ../common/services/grafana.nix
     ../common/services/tailscale.nix
     ../common/services/attic.nix
+    ../common/services/nginx.nix
 
     ../common/users/starr.nix
 
