@@ -16,7 +16,8 @@ in {
     ../common/services/jellyfin.nix
     ../common/services/grafana.nix
     ../common/services/tailscale.nix
-    ../common/services/attic.nix
+    # TODO: readd when more stable
+    #../common/services/attic.nix
     ../common/services/nginx.nix
 
     ../common/users/starr.nix

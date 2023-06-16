@@ -59,7 +59,7 @@
     };
 
     # TODO: see if inputs can be followed
-    attic.url = "github:zhaofengli/attic";
+    #attic.url = "github:zhaofengli/attic";
   };
 
   outputs = {
@@ -72,7 +72,7 @@
     arcanumbot,
     nix-index-database,
     deploy-rs,
-    attic,
+    #attic,
     ...
   } @ inputs: {
     devShells.x86_64-linux = {
@@ -116,7 +116,7 @@
           agenix.nixosModules.default
           discord_chan.nixosModules.default
           arcanumbot.nixosModules.default
-          attic.nixosModules.atticd
+          #attic.nixosModules.atticd
         ];
       };
     };
