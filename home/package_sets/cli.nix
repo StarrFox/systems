@@ -11,6 +11,7 @@
     ffmpeg
     htop
     httpie
+    manix
     neofetch
     nethogs
     ncdu
