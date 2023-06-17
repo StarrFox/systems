@@ -39,8 +39,8 @@ terminal = guess_terminal()
 
 
 GROUP_SPAWNS = {
-    "2": ["librewolf", "steam"],
-    "3": ["discord"],
+    # "2": ["librewolf", "steam"],
+    # "3": ["discord"],
 }
 
 GROUP_MATCHES = {
@@ -62,15 +62,14 @@ GROUP_LAYOUTS = {
 
 keys = [
     # A list of available commands that can be bound to keys can be found
-    # at https://docs.qtile.org/en/latest/manual/config/lazy.html
+    # at https://qtile.readthedocs.io/en/stable/manual/config/lazy.html
 
     # Switch between windows
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
-    Key([mod], "space", lazy.layout.next(),
-        desc="Move window focus to other window"),
+    Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
 
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
@@ -107,8 +106,10 @@ keys = [
 
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod], "r", lazy.spawncmd(),
-        desc="Spawn a command using a prompt widget"),
+    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+
+    Key([mod], "d", lazy.spawn("rofi -show combi"), desc="Start a program with rofi"),
+    Key([], "Print", lazy.spawn("flameshot gui"), desc="SS with flameshot"),
 ]
 
 

@@ -1,4 +1,4 @@
-_: {
+{pkgs, ...}: {
   imports = [
     ../common.nix
   ];
@@ -7,4 +7,9 @@ _: {
     enable = true;
     configFile = ./config.py;
   };
+
+  environment.systemPackages = with pkgs; [
+    rofi
+    flameshot
+  ];
 }
