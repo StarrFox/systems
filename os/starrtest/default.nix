@@ -13,7 +13,7 @@ in {
     ../common/firejail.nix
     ../common/uefi_boot.nix
 
-    ../common/roles/desktop/xserver/plasma.nix
+    ../common/roles/desktop/xserver/qtile
 
     ../../devices/vm.nix
 
@@ -33,7 +33,12 @@ in {
 
   nixpkgs.config.allowUnfree = true;
 
-  xdg.portal.enable = true;
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      libsForQt5.xdg-desktop-portal-kde
+    ];
+  };
 
   users.users.starr.openssh.authorizedKeys.keys = [
     ssh-keys.starr-starrnix
