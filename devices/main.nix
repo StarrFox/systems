@@ -18,6 +18,8 @@
     };
   };
 
+  boot.loader.efi.efiSysMountPoint = "/boot/efi";
+
   fileSystems = {
     "/" = {
       device = "/dev/disk/by-uuid/9f21177b-4aca-4fc6-9dcd-28517d9dbc96";

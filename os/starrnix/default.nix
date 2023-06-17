@@ -36,11 +36,8 @@ in {
   boot = {
     loader = {
       systemd-boot.enable = true;
-      efi = {
-        # TODO: change to true eventually
-        canTouchEfiVariables = false;
-        efiSysMountPoint = "/boot/efi";
-      };
+      # TODO: change to true eventually
+      efi.canTouchEfiVariables = false;
     };
   };
 
