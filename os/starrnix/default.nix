@@ -54,8 +54,6 @@ in {
     useDHCP = lib.mkDefault true;
   };
 
-  services.xserver.videoDrivers = ["nvidia"];
-
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;
 
