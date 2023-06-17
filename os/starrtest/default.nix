@@ -1,4 +1,4 @@
-{lib, ...}: let
+{lib, pkgs, ...}: let
   ssh-keys = import ../../ssh-keys.nix;
 in {
   imports = [
@@ -25,6 +25,11 @@ in {
     networkmanager.enable = true;
     useDHCP = lib.mkDefault true;
   };
+
+  fonts.fonts = with pkgs; [
+    (nerdfonts.override {fonts = ["FiraCode"];})
+    material-icons
+  ];
 
   nixpkgs.config.allowUnfree = true;
 
