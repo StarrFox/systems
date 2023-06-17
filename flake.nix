@@ -56,9 +56,6 @@
       url = "github:serokell/deploy-rs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # TODO: see if inputs can be followed
-    #attic.url = "github:zhaofengli/attic";
   };
 
   outputs = {
@@ -71,7 +68,6 @@
     arcanumbot,
     nix-index-database,
     deploy-rs,
-    #attic,
     ...
   } @ inputs: {
     devShells.x86_64-linux = {
@@ -115,7 +111,16 @@
           agenix.nixosModules.default
           discord_chan.nixosModules.default
           arcanumbot.nixosModules.default
-          #attic.nixosModules.atticd
+        ];
+      };
+
+      starrtest = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs;
+        };
+        modules = [
+          ./os/starrtest/default.nix
+          agenix.nixosModules.default
         ];
       };
     };
@@ -162,6 +167,8 @@
           nix-index-database.hmModules.nix-index
         ];
       };
+
+      "starr@starrtest" = self.homeConfigurations."starr@starrnix";
     };
   };
 }
