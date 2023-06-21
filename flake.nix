@@ -125,18 +125,34 @@
       };
     };
 
-    deploy.nodes.nixtop = {
-      hostname = "nixtop";
-      profiles = {
-        system = {
-          user = "root";
-          path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixtop;
-        };
-        home = {
-          user = "starr";
-          path = deploy-rs.lib.x86_64-linux.activate.home-manager self.homeConfigurations."starr@nixtop";
+    deploy.nodes = {
+      nixtop = {
+        hostname = "nixtop";
+        profiles = {
+          system = {
+            user = "root";
+            path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixtop;
+          };
+          home = {
+            user = "starr";
+            path = deploy-rs.lib.x86_64-linux.activate.home-manager self.homeConfigurations."starr@nixtop";
+          };
         };
       };
+      # deploy-rs doesnt have something to skip offline machine yet
+      # starrtest = {
+      #   hostname = "starrtest";
+      #   profiles = {
+      #     system = {
+      #       user = "root";
+      #       path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.starrtest;
+      #     };
+      #     home = {
+      #       user = "starr";
+      #       path = deploy-rs.lib.x86_64-linux.activate.home-manager self.homeConfigurations."starr@starrtest";
+      #     };
+      #   };
+      # };
     };
 
     checks = builtins.mapAttrs (_system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;
