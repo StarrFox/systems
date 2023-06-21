@@ -51,6 +51,10 @@ in {
     useDHCP = lib.mkDefault true;
   };
 
+  networking.hosts = {
+    "192.168.122.214" = ["starrtest"];
+  };
+
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;
 
@@ -58,12 +62,6 @@ in {
     (nerdfonts.override {fonts = ["FiraCode"];})
     material-icons
   ];
-
-  age.secrets.test = {
-    file = ../../secrets/test.age;
-    mode = "400";
-    owner = "starr";
-  };
 
   nixpkgs.config.allowUnfree = true;
 
