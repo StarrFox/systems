@@ -139,7 +139,7 @@
           };
         };
       };
-      # deploy-rs doesnt have something to skip offline machine yet
+      # deploy-rs doesnt have something to skip offline machines yet
       # starrtest = {
       #   hostname = "starrtest";
       #   profiles = {
