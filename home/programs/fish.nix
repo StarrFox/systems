@@ -14,6 +14,7 @@ in {
     onefetch
     p7zip
     nnn
+    hexyl
     # erdree v3
     nixpkgs-unstable.erdtree
   ];
@@ -38,6 +39,7 @@ in {
       extract = "7z x";
       usage = "erd --human";
       files = "nnn -de";
+      hex = "hexyl";
     };
     # wish they'd just remove this garbage
     interactiveShellInit = "set -U fish_greeting";
