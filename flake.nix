@@ -7,7 +7,8 @@
 
     starrpkgs = {
       url = "github:StarrFox/packages";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # we don't follow to avoid cache misses
+      #inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nh = {
