@@ -80,11 +80,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1687135623,
-        "narHash": "sha256-9lIOQJM5PhUsgnZ02N9CXL/FLS5EIiG5no5VKc4NF2Q=",
+        "lastModified": 1687827560,
+        "narHash": "sha256-EQ0whYNxHH4bpd7IXIuA4eOR/V5EYyCARle/CjVP198=",
         "owner": "StarrFox",
         "repo": "Discord-chan",
-        "rev": "17c47fbf86005fa2960d5abea4c8358d61635ead",
+        "rev": "a57bcfb2b1a680ade901e70a6ed13ddf67c73a42",
         "type": "github"
       },
       "original": {
