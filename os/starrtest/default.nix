@@ -13,7 +13,7 @@ in {
     ../common/firejail.nix
     ../common/uefi_boot.nix
 
-    ../common/roles/desktop/xserver/qtile
+    ../common/roles/desktop/xserver/plasma.nix
 
     ../../devices/vm.nix
 

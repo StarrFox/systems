@@ -19,6 +19,7 @@ in {
     # TODO: readd when more stable
     #../common/services/attic.nix
     ../common/services/nginx.nix
+    ../common/services/nextcloud.nix
 
     ../common/users/starr.nix
 
