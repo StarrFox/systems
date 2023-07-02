@@ -1,6 +1,7 @@
 {
   lib,
   pkgs,
+  config,
   ...
 }: let
   ssh-keys = import ../../ssh-keys.nix;
@@ -71,6 +72,11 @@ in {
       libsForQt5.xdg-desktop-portal-kde
     ];
   };
+
+  # for obs virtual camera
+  boot.extraModulePackages = [
+    config.boot.kernelPackages.v4l2loopback
+  ];
 
   system.stateVersion = "23.05";
 }

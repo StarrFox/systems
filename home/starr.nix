@@ -12,6 +12,7 @@
     ./programs/alacritty.nix
     ./programs/nix-index.nix
     ./programs/home-manager.nix
+    ./programs/obs.nix
 
     ./services/dunst.nix
 
