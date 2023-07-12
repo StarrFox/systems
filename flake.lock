@@ -80,11 +80,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1689135958,
-        "narHash": "sha256-pQBvtJm2BZFcNY8a8VrSPY4d8vDIxXt+UMrzU9ASVOE=",
+        "lastModified": 1689139493,
+        "narHash": "sha256-zm+G6Cau0qrK7t6G7oDK9D8nSr5VJrwBtXtYy7Y+b7M=",
         "owner": "StarrFox",
         "repo": "Discord-chan",
-        "rev": "51f124adf3a15374ca71e6232f66daf224a3c85b",
+        "rev": "3a72c710cda0ae71c106789a61b6fceb4ffbce6c",
         "type": "github"
       },
       "original": {
@@ -489,11 +489,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1688939073,
-        "narHash": "sha256-jYhYjeK5s6k8QS3i+ovq9VZqBJaWbxm7awTKNhHL9d0=",
+        "lastModified": 1689048911,
+        "narHash": "sha256-pODI2CkjWbSLo5nPMZoLtkRNJU/Nr3VSITXZqqmNtIk=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "8df7a67abaf8aefc8a2839e0b48f92fdcf69a38b",
+        "rev": "8163a64662b43848802092d52015ef60777d6129",
         "type": "github"
       },
       "original": {
@@ -525,11 +525,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1689056775,
-        "narHash": "sha256-3w7hPdDMTZnAk48B3qMbRJ7Sd3FJ78v7is+3dKPnvXw=",
+        "lastModified": 1689157047,
+        "narHash": "sha256-xae/ymxQst4Q3xA/eaASQVgwRouIB7ksdcYz8bmBtQc=",
         "owner": "StarrFox",
         "repo": "packages",
-        "rev": "c4beee2429d6815e0cf6a9410b4947dea0481fd6",
+        "rev": "8439950f3225e15b27d502bfb415c4872026fec2",
         "type": "github"
       },
       "original": {
