@@ -26,8 +26,11 @@
     git commit -am "bump lock"
     git push
 
-# update-command and switch both
+# update-commit, both
 @update-switch: update-commit both
+
+# update-commit, both, deploy
+@full: update-switch deploy
 
 # format nix code
 @format:
