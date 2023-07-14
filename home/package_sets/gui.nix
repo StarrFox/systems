@@ -24,7 +24,5 @@
     prismlauncher
 
     starrpkgs.imhex
-    # TODO: the unfree garbage hates steam-run
-    #starrpkgs.atlauncher
   ];
 }
