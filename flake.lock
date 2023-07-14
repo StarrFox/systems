@@ -525,11 +525,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1689235220,
-        "narHash": "sha256-b2XmmmO/H4SApmUoeC6FyU6zj5uCiCQa8z2mfh7QbNM=",
+        "lastModified": 1689330548,
+        "narHash": "sha256-3m5952ifo44dxpqp3dEYf3x1FTynslhFz1mw40fcbzs=",
         "owner": "StarrFox",
         "repo": "packages",
-        "rev": "44073e0b19d02809128b9f71a5dd853ca879aa11",
+        "rev": "be5346e640676136c6f8b6918c74f378c6eb5130",
         "type": "github"
       },
       "original": {
