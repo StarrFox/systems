@@ -29,8 +29,11 @@
 # update-commit, both
 @update-switch: update-commit both
 
+@update-flatpak:
+    flatpak update -y
+
 # update-commit, both, deploy
-@full: update-switch deploy
+@full: update-switch update-flatpak deploy
 
 # format nix code
 @format:
