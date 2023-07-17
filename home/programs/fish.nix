@@ -58,6 +58,11 @@ in {
           end
         '';
       };
+      template = {
+        body = ''
+          nix flake init --template github:StarrFox/templates#$argv[1]
+        '';
+      };
     };
   };
 }
