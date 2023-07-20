@@ -7,6 +7,7 @@ in {
     ../common/timezone.nix
     ../common/uefi_boot.nix
     ../common/environment.nix
+    ../common/network_manager.nix
 
     ../common/containers/dashy.nix
 
@@ -39,7 +40,6 @@ in {
   };
 
   networking.hostName = "nixtop";
-  networking.networkmanager.enable = true;
 
   # nixtop is a laptop
   services.logind.lidSwitch = "ignore";

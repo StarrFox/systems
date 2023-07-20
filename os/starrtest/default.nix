@@ -12,6 +12,7 @@ in {
     ../common/sound.nix
     ../common/firejail.nix
     ../common/uefi_boot.nix
+    ../common/network_manager.nix
 
     ../common/roles/desktop/xserver/plasma.nix
 
@@ -22,7 +23,6 @@ in {
 
   networking = {
     hostName = "starrtest";
-    networkmanager.enable = true;
     useDHCP = lib.mkDefault true;
   };
 

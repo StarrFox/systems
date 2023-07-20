@@ -26,6 +26,7 @@ in {
     ../common/flatpak.nix
     #../common/steam.nix
     ../common/firejail.nix
+    ../common/network_manager.nix
 
     ../common/roles/desktop/xserver/plasma.nix
 
@@ -48,7 +49,6 @@ in {
 
   networking = {
     hostName = "starrnix";
-    networkmanager.enable = true;
     useDHCP = lib.mkDefault true;
   };
 
