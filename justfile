@@ -18,7 +18,7 @@
     nix flake check
 
 # update flake
-@update:
+@update: update-flatpak
     nix flake update
 
 # update flake, check it, and commit
@@ -33,7 +33,7 @@
     flatpak update -y
 
 # update-commit, both, deploy
-@full: update-switch update-flatpak deploy
+@full: update-switch deploy
 
 # format nix code
 @format:
