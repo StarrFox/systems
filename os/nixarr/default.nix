@@ -2,6 +2,7 @@
   ssh-keys = import ../../ssh-keys.nix;
 in {
   imports = [
+    ../common/services/mullvad.nix
     ../common/services/openssh.nix
     ../common/services/xbanish.nix
 
@@ -18,6 +19,10 @@ in {
     ../../devices/vm.nix
 
     ../common/users/starr.nix
+
+    ./services/prowlarr.nix
+    ./services/radarr.nix
+    ./services/transmission.nix
   ];
 
   networking = {
