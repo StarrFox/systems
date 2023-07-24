@@ -13,7 +13,7 @@ in {
     ../common/uefi_boot.nix
     ../common/network_manager.nix
 
-    ../common/roles/desktop/xserver/plasma.nix
+    ../common/roles/desktop/xserver/gnome.nix
 
     ../../devices/vm.nix
 
