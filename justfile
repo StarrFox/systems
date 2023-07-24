@@ -6,7 +6,7 @@
 @both: os home
 
 # switch os
-@os:
+@os: && update-flatpak
     nh os switch .
 
 # switch home
@@ -18,7 +18,7 @@
     nix flake check
 
 # update flake
-@update: update-flatpak
+@update:
     nix flake update
 
 # update flake, check it, and commit
