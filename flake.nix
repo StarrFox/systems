@@ -124,6 +124,16 @@
           agenix.nixosModules.default
         ];
       };
+
+      nixarr = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs;
+        };
+        modules = [
+          ./os/nixarr/default.nix
+          agenix.nixosModules.default
+        ];
+      };
     };
 
     deploy.nodes = {
@@ -186,6 +196,7 @@
       };
 
       "starr@starrtest" = self.homeConfigurations."starr@starrnix";
+      "starr@nixarr" = self.homeConfigurations."starr@starrnix";
     };
   };
 }
