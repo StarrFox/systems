@@ -21,6 +21,7 @@ in {
     #../common/services/attic.nix
     ../common/services/nginx.nix
     ../common/services/nextcloud.nix
+    ../common/services/harmonia.nix
 
     ../common/users/starr.nix
 

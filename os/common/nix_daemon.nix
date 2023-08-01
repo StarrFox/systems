@@ -17,9 +17,11 @@
       trusted-users = ["@wheel"];
       substituters = [
         "https://starrfox.cachix.org"
+        "http://nixtop:5000"
       ];
       trusted-public-keys = [
         "starrfox.cachix.org-1:f72kZolyxFrJtrWoLRj12WdEx4xISSOybSlQ21HuhWY="
+        "nixtop:rKqWcytequgtEKVF2QGMEWDJSe3JA0RjwunI/WkkTfY="
       ];
     };
   };

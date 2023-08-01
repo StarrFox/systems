@@ -8,4 +8,5 @@ in {
   "arcanumbot_token.age".publicKeys = deployment;
   "attic_creds.age".publicKeys = deployment;
   "nextcloud_pass.age".publicKeys = deployment;
+  "harmonia_signing_key.age".publicKeys = deployment;
 }
