@@ -30,7 +30,7 @@
 @update-switch: update-commit both
 
 @update-flatpak:
-    which flatpak && flatpak update -y || true
+    which flatpak >> /dev/null && flatpak update -y || true
 
 # update-commit, both, deploy
 @full: update-switch deploy
