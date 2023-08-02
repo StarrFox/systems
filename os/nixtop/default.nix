@@ -26,6 +26,8 @@ in {
     ../../devices/laptop.nix
 
     ../common/roles/server.nix
+
+    ./services/nfs.nix
   ];
 
   users.users.starr.openssh.authorizedKeys.keys = [
