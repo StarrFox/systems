@@ -52,6 +52,11 @@ in {
     useDHCP = lib.mkDefault true;
   };
 
+  fileSystems."/nixtop" = {
+    device = "nixtop:/nfs";
+    fsType = "nfs";
+  };
+
   networking.hosts = {
     "192.168.122.214" = ["starrtest"];
   };
