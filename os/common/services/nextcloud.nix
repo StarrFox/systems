@@ -1,5 +1,9 @@
 # TODO: make apps declaritive after I know which I want
-{pkgs, config, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   age.secrets.nextcloud_pass = {
     file = ../../../secrets/nextcloud_pass.age;
     mode = "400";
@@ -9,7 +13,7 @@
   services.nextcloud = {
     enable = true;
     package = pkgs.nextcloud27;
-    hostName = config.networking.hostName;
+    inherit (config.networking) hostName;
     config = {
       adminuser = "starr";
       adminpassFile = config.age.secrets.nextcloud_pass.path;
