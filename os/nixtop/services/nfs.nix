@@ -10,5 +10,5 @@ _: {
     createMountPoints = true;
   };
 
-  networking.firewall.allowedTCPPorts = [2049 4000 4001 4002];
+  networking.firewall.allowedTCPPorts = [111 2049 4000 4001 4002];
 }
