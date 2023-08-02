@@ -55,7 +55,7 @@ in {
   fileSystems."/nixtop" = {
     device = "nixtop:/nfs";
     fsType = "nfs";
-    options = ["x-systemd.automount" "noauto"];
+    options = ["x-systemd.automount" "noauto" "nfsvers=3"];
   };
 
   networking.hosts = {
