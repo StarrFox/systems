@@ -139,6 +139,9 @@
     deploy.nodes = {
       nixtop = {
         hostname = "nixtop";
+        # these currently break too often (networkmanager-online)
+        autoRollback = false;
+        magicRollback = false;
         profiles = {
           system = {
             user = "root";
