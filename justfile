@@ -29,6 +29,7 @@
 # update-commit, both
 @update-switch: update-commit both
 
+# try to update flatpak if it's installed
 @update-flatpak:
     which flatpak >> /dev/null && flatpak update -y || true
 
@@ -63,3 +64,6 @@
 # deploy all nodes
 @deploy:
     deploy
+
+# delete old generations and gc
+@clean: delete-generations gc
