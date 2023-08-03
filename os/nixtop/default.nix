@@ -14,7 +14,7 @@ in {
     ../common/services/openssh.nix
     ../common/services/discord_chan.nix
     ../common/services/arcanumbot.nix
-    #../common/services/jellyfin.nix
+    ../common/services/jellyfin.nix
     #../common/services/grafana.nix
     ../common/services/tailscale.nix
     ../common/services/nginx.nix
