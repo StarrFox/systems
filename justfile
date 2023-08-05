@@ -31,7 +31,7 @@
 
 # try to update flatpak if it's installed
 @update-flatpak:
-    which flatpak >> /dev/null && flatpak update -y || true
+    which flatpak &> /dev/null && flatpak update -y || true
 
 # update-commit, both, deploy
 @full: update-switch deploy
