@@ -39,7 +39,6 @@
       url = "github:StarrFox/Discord-chan";
       inputs = {
         nixpkgs.follows = "nixpkgs";
-        starrpkgs.follows = "starrpkgs";
       };
     };
 
