@@ -4,21 +4,21 @@
   ...
 }: {
   home.packages = with pkgs; [
-    bitwarden
+    #bitwarden
     #chromium
     discord
     flameshot
     gimp
-    ghidra-bin
-    insomnia # this is the rest api gui thing
+    #ghidra-bin
+    #insomnia # this is the rest api gui thing
     obsidian
     mpv
-    pcsx2
+    #pcsx2
     the-powder-toy
     thunderbird-bin
     spotify
     virt-manager
-    drawio
+    #drawio
     feh
     # TODO: make this always be 6.3 so I have ftb packs (7+ removes them)
     prismlauncher
