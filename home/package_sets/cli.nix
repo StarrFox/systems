@@ -13,6 +13,7 @@
     htop
     httpie
     manix
+    magic-wormhole
     neofetch
     nethogs
     ncdu
