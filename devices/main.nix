@@ -33,6 +33,10 @@
       device = "/dev/disk/by-label/big-drive";
       fsType = "ext4";
     };
+    "/little" = {
+      device = "/dev/disk/by-label/little";
+      fsType = "ext4";
+    };
   };
 
   swapDevices = [
