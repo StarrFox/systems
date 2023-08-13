@@ -68,6 +68,7 @@
     arcanumbot,
     nix-index-database,
     deploy-rs,
+    nixpkgs-unstable,
     ...
   } @ inputs: {
     devShells.x86_64-linux = {
@@ -114,7 +115,7 @@
         ];
       };
 
-      starrtest = nixpkgs.lib.nixosSystem {
+      starrtest = nixpkgs-unstable.lib.nixosSystem {
         specialArgs = {
           inherit inputs;
         };
