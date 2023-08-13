@@ -25,6 +25,8 @@ in {
     ../common/users/starr.nix
   ];
 
+  nix.package = pkgs.nixVersions.unstable;
+
   networking = {
     hostName = "starrtest";
     useDHCP = lib.mkDefault true;
