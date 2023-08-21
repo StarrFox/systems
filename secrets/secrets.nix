@@ -7,5 +7,4 @@ in {
   "discord_chan_token.age".publicKeys = deployment;
   "arcanumbot_token.age".publicKeys = deployment;
   "nextcloud_pass.age".publicKeys = deployment;
-  "harmonia_signing_key.age".publicKeys = deployment;
 }
