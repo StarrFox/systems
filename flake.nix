@@ -37,9 +37,9 @@
 
     discord_chan = {
       url = "github:StarrFox/Discord-chan";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-      };
+      #inputs = {
+      #  nixpkgs.follows = "nixpkgs";
+      #};
     };
 
     arcanumbot = {

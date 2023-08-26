@@ -33,11 +33,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1692650089,
-        "narHash": "sha256-ioERTPl/zArzorpjWd7W7Fvx8V4M4ZR/rNWndtidVJM=",
+        "lastModified": 1693033424,
+        "narHash": "sha256-JazC3pu/ChVw8ZnDdQYsSlt2tQhWQOi0lNEz/atSELE=",
         "owner": "StarrFox",
         "repo": "ArcanumBot",
-        "rev": "3b439a747842a47408dc331138d7cca793896a02",
+        "rev": "203d2cd987237ef681bb7164457c16120c4c9ec8",
         "type": "github"
       },
       "original": {
@@ -72,16 +72,14 @@
       "inputs": {
         "flake-parts": "flake-parts_2",
         "nix-systems": "nix-systems_2",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
+        "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1692649992,
-        "narHash": "sha256-Gk6XIU8L7DsI+zfYpdc4eeoKF5APA/GdsDxIlXAssfY=",
+        "lastModified": 1693033658,
+        "narHash": "sha256-E+8obqMOOd+LRTwQfjsxxZYXVdmY+iiCY3Gl3cLyTb8=",
         "owner": "StarrFox",
         "repo": "Discord-chan",
-        "rev": "7f1a8275d1448cc77c658b74d4309913df2190bc",
+        "rev": "8fc4d1de235a65d5f3790b2144ed02ecc3f8c6aa",
         "type": "github"
       },
       "original": {
@@ -382,16 +380,15 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1692698134,
-        "narHash": "sha256-YtMmZWR/dlTypOcwiZfZTMPr3tj9fwr05QTStfSyDSg=",
-        "owner": "nixos",
+        "lastModified": 1693029596,
+        "narHash": "sha256-jFSmUmXjxBMNYAC+oC3ZfgeNveGd0cjPdu6SXvzSexE=",
+        "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "a16f7eb56e88c8985fcc6eb81dabd6cade4e425a",
+        "rev": "203f0a1f3a41e67f2161aa50acff2a76f32a3f91",
         "type": "github"
       },
       "original": {
-        "owner": "nixos",
-        "ref": "nixos-23.05",
+        "owner": "NixOS",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -470,11 +467,11 @@
     },
     "nixpkgs-unstable": {
       "locked": {
-        "lastModified": 1692734709,
-        "narHash": "sha256-SCFnyHCyYjwEmgUsHDDuU0TsbVMKeU1vwkR+r7uS2Rg=",
+        "lastModified": 1692913444,
+        "narHash": "sha256-1SvMQm2DwofNxXVtNWWtIcTh7GctEVrS/Xel/mdc6iY=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "b85ed9dcbf187b909ef7964774f8847d554fab3b",
+        "rev": "18324978d632ffc55ef1d928e81630c620f4f447",
         "type": "github"
       },
       "original": {
@@ -486,11 +483,27 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1692698134,
-        "narHash": "sha256-YtMmZWR/dlTypOcwiZfZTMPr3tj9fwr05QTStfSyDSg=",
+        "lastModified": 1692896067,
+        "narHash": "sha256-jZ5j5RVhDltTidVnxvCEztTVLBMxx/WRUoz8orMPUWw=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "7419e94880e41304e67184718eb4270461cf15c7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-23.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1692896067,
+        "narHash": "sha256-jZ5j5RVhDltTidVnxvCEztTVLBMxx/WRUoz8orMPUWw=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "a16f7eb56e88c8985fcc6eb81dabd6cade4e425a",
+        "rev": "7419e94880e41304e67184718eb4270461cf15c7",
         "type": "github"
       },
       "original": {
@@ -510,7 +523,7 @@
         "nh": "nh",
         "nix-index-database": "nix-index-database",
         "nix_search": "nix_search",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "starrpkgs": "starrpkgs"
       }
@@ -519,14 +532,14 @@
       "inputs": {
         "flake-parts": "flake-parts_4",
         "nix-systems": "nix-systems_3",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1692870875,
-        "narHash": "sha256-jLiYCUCQcDQayZiWCRaf/6l3KZHG/JvCnPmDsqGc2m0=",
+        "lastModified": 1693033319,
+        "narHash": "sha256-IyqsPm4AhIpl5J6rjgZ1ADn8un2So9mEPh3TbTGh2C0=",
         "owner": "StarrFox",
         "repo": "packages",
-        "rev": "e0210efc5dd57f9899f5d9882ae3338460c9d3dc",
+        "rev": "93bb9bbb441362bbd1ff874a2a7c52e07d1b8c84",
         "type": "github"
       },
       "original": {
