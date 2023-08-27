@@ -1,8 +1,7 @@
 _: {
-  services.transmission = {
+  services.sonarr = {
     enable = true;
     openFirewall = true;
-    downloadDirPermissions = "777";
     group = "arr";
   };
 }

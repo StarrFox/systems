@@ -27,6 +27,7 @@ in {
     ./services/prowlarr.nix
     ./services/radarr.nix
     ./services/transmission.nix
+    ./services/sonarr.nix
   ];
 
   # torrent client
@@ -43,6 +44,9 @@ in {
     (nerdfonts.override {fonts = ["FiraCode"];})
     material-icons
   ];
+
+  # arr services group
+  users.groups.arr = {};
 
   nixpkgs.config.allowUnfree = true;
 
