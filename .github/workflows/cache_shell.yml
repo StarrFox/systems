@@ -1,5 +1,6 @@
 name: "cache shell"
 on:
+  workflow_dispatch:
   push:
     paths:
       - flake.nix
