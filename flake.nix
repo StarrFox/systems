@@ -44,7 +44,7 @@
 
     arcanumbot = {
       url = "github:StarrFox/ArcanumBot";
-      inputs.nixpkgs.follows = "nixpkgs";
+      #inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nix-index-database = {
