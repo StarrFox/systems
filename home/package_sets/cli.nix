@@ -20,6 +20,7 @@
     ripgrep
     rsync
     tldr
+    just
 
     inputs.nh.packages.${pkgs.system}.default
     inputs.nix_search.packages.${pkgs.system}.default
