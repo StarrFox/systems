@@ -28,9 +28,7 @@
       "inputs": {
         "flake-parts": "flake-parts",
         "nix-systems": "nix-systems",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
+        "nixpkgs": "nixpkgs"
       },
       "locked": {
         "lastModified": 1693033424,
@@ -72,7 +70,7 @@
       "inputs": {
         "flake-parts": "flake-parts_2",
         "nix-systems": "nix-systems_2",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs_2"
       },
       "locked": {
         "lastModified": 1693033658,
@@ -380,15 +378,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1693029596,
-        "narHash": "sha256-jFSmUmXjxBMNYAC+oC3ZfgeNveGd0cjPdu6SXvzSexE=",
-        "owner": "NixOS",
+        "lastModified": 1693565476,
+        "narHash": "sha256-ya00zHt7YbPo3ve/wNZ/6nts61xt7wK/APa6aZAfey0=",
+        "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "203f0a1f3a41e67f2161aa50acff2a76f32a3f91",
+        "rev": "aa8aa7e2ea35ce655297e8322dc82bf77a31d04b",
         "type": "github"
       },
       "original": {
-        "owner": "NixOS",
+        "owner": "nixos",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -483,6 +482,21 @@
     },
     "nixpkgs_2": {
       "locked": {
+        "lastModified": 1693029596,
+        "narHash": "sha256-jFSmUmXjxBMNYAC+oC3ZfgeNveGd0cjPdu6SXvzSexE=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "203f0a1f3a41e67f2161aa50acff2a76f32a3f91",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
         "lastModified": 1693341273,
         "narHash": "sha256-wrsPjsIx2767909MPGhSIOmkpGELM9eufqLQOPxmZQg=",
         "owner": "nixos",
@@ -497,7 +511,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_3": {
+    "nixpkgs_4": {
       "locked": {
         "lastModified": 1692896067,
         "narHash": "sha256-jZ5j5RVhDltTidVnxvCEztTVLBMxx/WRUoz8orMPUWw=",
@@ -523,7 +537,7 @@
         "nh": "nh",
         "nix-index-database": "nix-index-database",
         "nix_search": "nix_search",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs_3",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "starrpkgs": "starrpkgs"
       }
@@ -532,7 +546,7 @@
       "inputs": {
         "flake-parts": "flake-parts_4",
         "nix-systems": "nix-systems_3",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_4"
       },
       "locked": {
         "lastModified": 1693033319,
