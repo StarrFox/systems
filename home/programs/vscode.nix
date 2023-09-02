@@ -73,6 +73,7 @@
       starrpkgs.vscord
       starrpkgs.vscode-zig
       github.vscode-github-actions
+      github.vscode-pull-request-github
     ];
   };
 }
