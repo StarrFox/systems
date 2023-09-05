@@ -38,8 +38,7 @@ in {
   boot = {
     loader = {
       systemd-boot.enable = true;
-      # TODO: change to true eventually
-      efi.canTouchEfiVariables = false;
+      efi.canTouchEfiVariables = true;
     };
   };
 
