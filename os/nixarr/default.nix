@@ -40,6 +40,10 @@ in {
     useDHCP = lib.mkDefault true;
   };
 
+  networking.hosts = {
+    "192.168.1.71" = ["starrnix"];
+  };
+
   fonts.fonts = with pkgs; [
     (nerdfonts.override {fonts = ["FiraCode"];})
     material-icons
