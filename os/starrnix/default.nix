@@ -60,6 +60,7 @@ in {
 
   networking.hosts = {
     "192.168.122.214" = ["starrtest"];
+    "192.168.122.189" = ["nixarr"];
   };
 
   virtualisation.libvirtd.enable = true;
