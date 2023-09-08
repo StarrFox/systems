@@ -30,11 +30,6 @@ in {
     ./services/sonarr.nix
   ];
 
-  # torrent client
-  environment.systemPackages = with pkgs; [
-    qbittorrent
-  ];
-
   networking = {
     hostName = "nixarr";
     useDHCP = lib.mkDefault true;
