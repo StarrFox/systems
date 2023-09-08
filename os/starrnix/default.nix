@@ -44,6 +44,7 @@ in {
 
   users.users.starr.openssh.authorizedKeys.keys = [
     ssh-keys.termux
+    ssh-keys.nixarr
   ];
 
   networking = {
