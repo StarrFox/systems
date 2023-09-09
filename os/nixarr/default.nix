@@ -14,7 +14,7 @@ in {
     ../common/timezone.nix
     ../common/locale.nix
     ../common/environment.nix
-    ../common/sound.nix
+    #../common/sound.nix
     ../common/uefi_boot.nix
     ../common/network_manager.nix
 
