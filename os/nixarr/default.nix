@@ -18,7 +18,7 @@ in {
     ../common/uefi_boot.nix
     ../common/network_manager.nix
 
-    ../common/roles/desktop/xserver/plasma.nix
+    ../common/roles/server.nix
 
     ../../devices/vm.nix
 

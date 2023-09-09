@@ -199,7 +199,7 @@
       };
 
       "starr@starrtest" = self.homeConfigurations."starr@starrnix";
-      "starr@nixarr" = self.homeConfigurations."starr@starrnix";
+      "starr@nixarr" = self.homeConfigurations."starr@nixtop";
     };
   };
 }
