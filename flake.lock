@@ -292,15 +292,15 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1693636976,
-        "narHash": "sha256-uyiDao8pK6MgAQKxBEZU/ypMTZBxVbX1NRf5x0oHw+8=",
-        "owner": "ViperML",
+        "lastModified": 1694343898,
+        "narHash": "sha256-XggKtxFYq3LmnZT5nbKwu+aGl68HueyRn5grpP1grzI=",
+        "owner": "StarrFox",
         "repo": "nh",
-        "rev": "5a7b5732c9f7f0db9915cea6a154cf2bc082f895",
+        "rev": "d74a227b7ffd52c2f2f82e1d3026e4d6440b78b2",
         "type": "github"
       },
       "original": {
-        "owner": "ViperML",
+        "owner": "StarrFox",
         "repo": "nh",
         "type": "github"
       }
