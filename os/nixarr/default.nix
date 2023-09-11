@@ -30,6 +30,11 @@ in {
     ./services/sonarr.nix
   ];
 
+  environment.etc.radarr_sync = {
+    source = ./scripts/radarr_sync.py;
+    mode = "555";
+  };
+
   networking = {
     hostName = "nixarr";
     useDHCP = lib.mkDefault true;
