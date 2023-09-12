@@ -9,6 +9,4 @@ _: {
     group = "arr";
     settings.rpc-whitelist-enabled = false;
   };
-
-  users.users.starr.extraGroups = ["transmission"];
 }

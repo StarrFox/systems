@@ -52,6 +52,8 @@ in {
   # arr services group
   users.groups.arr = {};
 
+  users.users.starr.extraGroups = ["arr"];
+
   nixpkgs.config.allowUnfree = true;
 
   xdg.portal = {
