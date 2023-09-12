@@ -6,5 +6,6 @@ _: {
     openRPCPort = true;
     downloadDirPermissions = "777";
     group = "arr";
+    settings.rpc-whitelist-enabled = false;
   };
 }
