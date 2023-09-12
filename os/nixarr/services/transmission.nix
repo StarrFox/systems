@@ -1,4 +1,5 @@
 _: {
+  # TODO: figure out how to access the webui externally
   services.transmission = {
     enable = true;
     openFirewall = true;
@@ -8,4 +9,6 @@ _: {
     group = "arr";
     settings.rpc-whitelist-enabled = false;
   };
+
+  users.users.starr.extraGroups = ["transmission"];
 }
