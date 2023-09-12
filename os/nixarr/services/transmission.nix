@@ -5,4 +5,6 @@ _: {
     downloadDirPermissions = "777";
     group = "arr";
   };
+
+  networking.firewall.allowedTCPPorts = [9091];
 }
