@@ -15,6 +15,8 @@
       experimental-features = ["nix-command" "flakes"];
       auto-optimise-store = true;
       warn-dirty = false;
+      # number of lines shown for failing builds
+      log-lines = 25;
       trusted-users = ["@wheel"];
       substituters = [
         "https://starrfox.cachix.org"
