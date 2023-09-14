@@ -11,4 +11,7 @@ _: {
     # NOTE: this chowns this dir to .user
     dataDir = "/home/starr";
   };
+
+  # webui port
+  networking.firewall.allowedTCPPorts = [8384];
 }

@@ -6,4 +6,7 @@ _: {
     overrideDevices = false;
     openDefaultPorts = true;
   };
+
+  # webui port
+  networking.firewall.allowedTCPPorts = [8384];
 }
