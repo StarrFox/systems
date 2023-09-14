@@ -5,6 +5,9 @@ _: {
     overrideFolders = false;
     overrideDevices = false;
     openDefaultPorts = true;
+    # this allow remote accessing the webui
+    # https://docs.syncthing.net/users/firewall.html#remote-web-gui
+    guiAddress = "0.0.0.0:8384";
   };
 
   # webui port
