@@ -13,7 +13,7 @@
     #insomnia # this is the rest api gui thing
     obsidian
     mpv
-    #pcsx2
+    pcsx2
     the-powder-toy
     thunderbird-bin
     spotify
