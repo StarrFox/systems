@@ -73,11 +73,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1694891623,
-        "narHash": "sha256-RnLaA20S6IQCDLkL+admEWqMPnnmj3erhq8GsJ2XkO0=",
+        "lastModified": 1694892400,
+        "narHash": "sha256-V4I/miB0b3y5N4tS6lqpKEXPSdPi6nPD5r49j6MdXNs=",
         "owner": "StarrFox",
         "repo": "Discord-chan",
-        "rev": "6d68fbbeaff4af9d01123e2ff7e81cb965749f1a",
+        "rev": "0a66cac893d88709f69e56ae5beb356bbaac802c",
         "type": "github"
       },
       "original": {
