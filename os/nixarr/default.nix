@@ -30,6 +30,10 @@ in {
     ./services/sonarr.nix
   ];
 
+  environment.systemPackages = with pkgs; [
+    tremc
+  ];
+
   environment.etc.radarr_sync = {
     source = ./scripts/radarr_sync.py;
     mode = "555";
