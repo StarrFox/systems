@@ -12,8 +12,8 @@
     };
 
     nh = {
-      #url = "github:ViperML/nh";
-      url = "github:StarrFox/nh";
+      url = "github:ViperML/nh";
+      #url = "github:StarrFox/nh";
       #inputs.nixpkgs.follows = "nixpkgs";
     };
     nix_search = {
