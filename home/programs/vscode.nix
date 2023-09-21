@@ -75,6 +75,7 @@
       github.vscode-github-actions
       github.vscode-pull-request-github
       mhutchie.git-graph
+      vadimcn.vscode-lldb
     ];
   };
 }
