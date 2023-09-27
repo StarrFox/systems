@@ -76,6 +76,7 @@
       github.vscode-pull-request-github
       mhutchie.git-graph
       vadimcn.vscode-lldb
+      serayuzgur.crates
     ];
   };
 }
