@@ -77,6 +77,7 @@
       mhutchie.git-graph
       vadimcn.vscode-lldb
       serayuzgur.crates
+      humao.rest-client
     ];
   };
 }
