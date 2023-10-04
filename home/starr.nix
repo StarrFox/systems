@@ -13,6 +13,7 @@
     ./programs/nix-index.nix
     ./programs/home-manager.nix
     ./programs/obs.nix
+    ./programs/kakoune.nix
 
     ./services/dunst.nix
 

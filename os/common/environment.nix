@@ -12,4 +12,8 @@
       FLAKE = "/home/starr/systems";
     };
   };
+
+  # TODO: 23.11
+  # we don't need nano since we have helix
+  #programs.nano.enable = false;
 }

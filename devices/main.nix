@@ -47,11 +47,11 @@
 
   hardware = {
     opengl.enable = true;
+    # nvidia driver
     nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   };
 
   services.xserver.videoDrivers = ["nvidia"];
-
   nixpkgs.hostPlatform = "x86_64-linux";
 }
