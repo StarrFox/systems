@@ -42,6 +42,8 @@ agenix --rekey
 
 [NixOS](https://nixos.org/manual/nixos/stable/release-notes.html)
 
+[NixOs Unstable](https://nixos.org/manual/nixos/unstable/release-notes)
+
 [Nix](https://nixos.org/manual/nix/stable/release-notes/release-notes.html)
 
 [Home Manager](https://nix-community.github.io/home-manager/release-notes.html)
