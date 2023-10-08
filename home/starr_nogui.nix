@@ -3,6 +3,7 @@
     ./programs/helix.nix
     ./programs/fish.nix
     ./programs/git.nix
+    ./programs/kakoune.nix
 
     ./programs/gpg.nix
     ./programs/starship.nix
