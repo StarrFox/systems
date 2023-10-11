@@ -50,9 +50,9 @@
       };
       "zig.zls.path" = "zls";
       "zig.zls.checkForUpdate" = false;
-      "editor.quickSuggestions" = {
-        "other" = "inline";
-      };
+      # "editor.quickSuggestions" = {
+      #   "other" = "inline";
+      # };
     };
 
     extensions = with pkgs.vscode-extensions; [
