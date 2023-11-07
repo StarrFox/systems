@@ -61,6 +61,10 @@
 @resources:
     glances
 
+# system info
+@info:
+    nix shell nixpkgs#{xorg.xdpyinfo,glxinfo,inxi} -c inxi -F
+
 # deploy all nodes
 @deploy:
     deploy
