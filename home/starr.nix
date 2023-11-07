@@ -25,6 +25,11 @@
     config = {
       allowUnfree = true;
       allowUnfreePredicate = _: true;
+
+      # TODO: remove
+      permittedInsecurePackages = [
+        "electron-24.8.6"
+      ];
     };
   };
 
