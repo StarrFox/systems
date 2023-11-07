@@ -67,7 +67,7 @@
 
 # deploy all nodes
 @deploy:
-    deploy
+    deploy --skip-checks
 
 # delete old generations and gc
 @clean: delete-generations gc
