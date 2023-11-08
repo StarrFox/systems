@@ -14,7 +14,7 @@
     httpie
     manix
     magic-wormhole
-    neofetch
+    #neofetch
     nethogs
     ncdu
     ripgrep
