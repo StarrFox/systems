@@ -53,6 +53,11 @@
       # "editor.quickSuggestions" = {
       #   "other" = "inline";
       # };
+      "python.analysis.completeFunctionParens" = true;
+      "python.analysis.autoFormatStrings" = true;
+      "python.analysis.autoImportCompletions" = true;
+      "python.analysis.diagnosticMode" = "workspace";
+      "python.analysis.inlayHints.callArgumentNames" = "all";
     };
 
     extensions = with pkgs.vscode-extensions; [
