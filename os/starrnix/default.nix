@@ -27,6 +27,8 @@ in {
     #../common/steam.nix
     ../common/firejail.nix
     ../common/network_manager.nix
+    ../common/docker.nix
+    ../common/distrobox.nix
 
     ../common/roles/desktop/xserver/plasma.nix
 
