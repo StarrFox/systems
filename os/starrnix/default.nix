@@ -14,7 +14,7 @@ in {
 
     ../common/services/mullvad.nix
     ../common/services/openssh.nix
-    ../common/services/tailscale.nix
+    #../common/services/tailscale.nix
     ../common/services/xbanish.nix
     ../common/services/jellyfin.nix
 

@@ -16,7 +16,7 @@ in {
     ../common/services/arcanumbot.nix
     #../common/services/jellyfin.nix
     #../common/services/grafana.nix
-    ../common/services/tailscale.nix
+    #../common/services/tailscale.nix
     ../common/services/nginx.nix
     ../common/services/nextcloud.nix
     ../common/services/syncthing.nix
