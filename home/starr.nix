@@ -14,6 +14,7 @@
     ./programs/home-manager.nix
     ./programs/obs.nix
     ./programs/kakoune.nix
+    ./programs/kitty.nix
 
     ./services/dunst.nix
 
