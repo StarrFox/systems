@@ -13,11 +13,13 @@ in {
     aria
     onefetch
     p7zip
-    nnn
+    #nnn
     hexyl
     lsof
     # erdree v3
     nixpkgs-unstable.erdtree
+    # TODO: remove unstable when yazi is in the stable channel
+    nixpkgs-unstable.yazi
   ];
 
   programs.exa = {
@@ -39,7 +41,7 @@ in {
       download = "aria2c --split=10";
       extract = "7z x";
       usage = "erd --human";
-      files = "nnn -de";
+      files = "yazi";
       hex = "hexyl";
       ports = "sudo lsof -nP -iTCP -sTCP:LISTEN";
     };
