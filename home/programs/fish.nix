@@ -20,22 +20,24 @@ in {
     nixpkgs-unstable.erdtree
     # TODO: remove unstable when yazi is in the stable channel
     nixpkgs-unstable.yazi
+    # TODO: remove unstable when eza is in the stable channel
+    nixpkgs-unstable.eza
   ];
 
-  programs.exa = {
-    enable = true;
-    extraOptions = [
-      "--no-time"
-      "--color=always"
-      "--group-directories-first"
-    ];
-  };
+  # programs.exa = {
+  #   enable = true;
+  #   extraOptions = [
+  #     "--no-time"
+  #     "--color=always"
+  #     "--group-directories-first"
+  #   ];
+  # };
 
   programs.fish = {
     enable = true;
     shellAliases = {
-      ls = "exa -la";
-      tree = "ls --tree";
+      ls = "eza -FlaM --no-time --icons=always --group-directories-first --git";
+      tree = "ls --tree --git-ignore";
       lt = "tree";
       gi = "onefetch";
       download = "aria2c --split=10";
