@@ -30,9 +30,6 @@ in  {
     prismlauncher
     #mangohud
 
-    # TODO: see if we still want this
-    nixpkgs-unstable.jetbrains.pycharm-community
-
     starrpkgs.imhex
   ];
 }
