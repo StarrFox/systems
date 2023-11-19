@@ -48,7 +48,8 @@ in  {
       "python.testing.pytestEnabled" = true;
       "python.terminal.activateEnvironment" = false;
       "[python]" = {
-        "editor.formatOnType" = true;
+        "editor.formatOnSave" = true;
+        #"editor.formatOnType" = true;
         "editor.defaultFormatter" = "ms-python.black-formatter";
         "editor.codeActionsOnSave" = {
           "source.organizeImports" = true;
