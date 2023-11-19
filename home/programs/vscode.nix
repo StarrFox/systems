@@ -98,8 +98,8 @@ in  {
       starrpkgs.vscode-zig
       starrpkgs.andromeda
 
-      nixpkgs-unstable.ms-python.isort
-      nixpkgs-unstable.ms-python.black-formatter
+      nixpkgs-unstable.vscode-extensions.ms-python.isort
+      nixpkgs-unstable.vscode-extensions.ms-python.black-formatter
     ];
   };
 }
