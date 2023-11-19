@@ -9,6 +9,7 @@
   programs.kitty = {
     enable = true;
     theme = "Adwaita darker";
+    shellIntegration.mode = "disabled";
     font = {
       # TODO: should we use font.package to readd this font?
       name = "FiraCode Nerd Font Mono";
