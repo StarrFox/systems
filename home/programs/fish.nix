@@ -42,7 +42,7 @@ in {
       gi = "onefetch";
       download = "aria2c --split=10";
       extract = "7z x";
-      usage = "erd --human";
+      usage = "erd --human --hidden";
       files = "yazi";
       hex = "hexyl";
       ports = "sudo lsof -nP -iTCP -sTCP:LISTEN";
