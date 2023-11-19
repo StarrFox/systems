@@ -55,7 +55,6 @@
       # };
       "python.analysis.completeFunctionParens" = true;
       "python.analysis.autoFormatStrings" = true;
-      "python.analysis.autoImportCompletions" = true;
       "python.analysis.diagnosticMode" = "workspace";
       "python.analysis.inlayHints.callArgumentNames" = "all";
     };
