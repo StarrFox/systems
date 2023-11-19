@@ -8,7 +8,7 @@
     #chromium
     discord
     flameshot
-    gimp
+    #gimp
     #ghidra-bin
     #insomnia # this is the rest api gui thing
     obsidian
@@ -20,9 +20,11 @@
     virt-manager
     #drawio
     feh
-    # TODO: make this always be 6.3 so I have ftb packs (7+ removes them)
     prismlauncher
-    mangohud
+    #mangohud
+
+    # TODO: see if we still want this
+    jetbrains.pycharm-community
 
     starrpkgs.imhex
   ];
