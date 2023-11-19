@@ -635,11 +635,11 @@
         "nvfetcher": "nvfetcher"
       },
       "locked": {
-        "lastModified": 1700009218,
-        "narHash": "sha256-7sya/BT7gwU4zSv2TTGGjAM6UUar3b1Ps2SbqYmtJmg=",
+        "lastModified": 1700391926,
+        "narHash": "sha256-JRqgxowyd7gQmGyObKhvtNp6VSPunS6yWMtPpkAmjOQ=",
         "owner": "StarrFox",
         "repo": "packages",
-        "rev": "5396ac142aec71865f8a6a79891f4a2fcaa05f86",
+        "rev": "aa16073c2bb2439f9586a116a0a5a703df604d26",
         "type": "github"
       },
       "original": {

@@ -1,8 +1,15 @@
 {
   pkgs,
   starrpkgs,
+  inputs,
+  config,
   ...
-}: {
+}: let
+  nixpkgs-unstable = import inputs.nixpkgs-unstable {
+    system = "${pkgs.system}";
+    inherit (config.nixpkgs) config;
+  };
+in  {
   # TODO: don't do this
   # this is just incase I forget to add them to the enviroment
   home.packages = with pkgs; [
@@ -34,12 +41,18 @@
       # NOTE: options are off, basic, and strict
       "python.analysis.typeCheckingMode" = "basic";
       "python.venvPath" = "~/.cache/pypoetry/virtualenvs";
-      "python.formatting.provider" = "black";
+      # this allows the black extension to work
+      "python.formatting.provider" = "none";
       "python.testing.pytestEnabled" = true;
       "python.terminal.activateEnvironment" = false;
       "[python]" = {
         "editor.formatOnType" = true;
+        "editor.defaultFormatter" = "ms-python.black-formatter";
+        "editor.codeActionsOnSave" = {
+          "source.organizeImports" = true;
+        };
       };
+      "isort.args" = ["--profile" "black" "--skip-gitignore"];
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "nil";
       "[nix]" = {
@@ -74,14 +87,19 @@
       viktorqvarfordt.vscode-pitch-black-theme
       skellock.just
       gruntfuggly.todo-tree
-      starrpkgs.vscord
-      starrpkgs.vscode-zig
       github.vscode-github-actions
       github.vscode-pull-request-github
       mhutchie.git-graph
       vadimcn.vscode-lldb
       serayuzgur.crates
       humao.rest-client
+
+      starrpkgs.vscord
+      starrpkgs.vscode-zig
+      starrpkgs.andromeda
+
+      nixpkgs-unstable.ms-python.isort
+      nixpkgs-unstable.ms-python.black-formatter
     ];
   };
 }
