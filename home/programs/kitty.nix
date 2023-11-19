@@ -9,7 +9,13 @@
   programs.kitty = {
     enable = true;
     theme = "Adwaita darker";
-    shellIntegration.mode = "disabled";
+    # this garbage messes up ssh
+    shellIntegration = {
+      mode = "disabled";
+      enableBashIntegration = false;
+      enableFishIntegration = false;
+      enableZshIntegration = false;
+    };
     font = {
       # TODO: should we use font.package to readd this font?
       name = "FiraCode Nerd Font Mono";
