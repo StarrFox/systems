@@ -34,7 +34,9 @@ in  {
       "git.autofetch" = true;
       "window.zoomLevel" = 1;
       # NOTE: this requires the pitch black theme listed in extensions
-      "workbench.colorTheme" = "Pitch Black";
+      #"workbench.colorTheme" = "Pitch Black";
+      # NOTE: requires andromeda extension below
+      "workbench.colorTheme" = "Andromeda Bordered";
       "workbench.startupEditor" = "none";
       "python.analysis.inlayHints.functionReturnTypes" = true;
       "python.analysis.inlayHints.variableTypes" = true;
