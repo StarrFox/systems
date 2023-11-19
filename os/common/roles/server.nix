@@ -13,6 +13,8 @@
   # Print the URL instead on servers
   environment.variables.BROWSER = "echo";
 
+  environment.variables.TERM = "xterm-256color";
+
   networking.firewall.enable = true;
 
   users.mutableUsers = false;
