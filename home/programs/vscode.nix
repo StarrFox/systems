@@ -27,6 +27,7 @@ in  {
       "editor.fontSize" = 17;
       "editor.fontLigatures" = true;
       "editor.fontFamily" = "'FiraCode Nerd Font Mono', 'Droid Sans Mono', 'monospace'";
+      "editor.formatOnSaveMode" = "file";
       "files.autoSave" = "afterDelay";
       "explorer.confirmDelete" = false;
       "explorer.confirmDragAndDrop" = false;
