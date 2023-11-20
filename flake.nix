@@ -208,7 +208,21 @@
       };
 
       "starr@starrtest" = self.homeConfigurations."starr@starrnix";
-      "starr@nixarr" = self.homeConfigurations."starr@nixtop";
+
+      "starr@nixarr" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = {
+          inherit inputs;
+          starrpkgs = spkgs;
+        };
+        modules = [
+          ./home/starr_nogui.nix
+          nix-index-database.hmModules.nix-index
+          {
+            home.file."justfile".source = ./misc/nixarr_justfile;
+          }
+        ];
+      };
     };
   };
 }
