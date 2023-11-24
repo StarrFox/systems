@@ -17,6 +17,7 @@ in {
     #../common/services/tailscale.nix
     ../common/services/xbanish.nix
     ../common/services/jellyfin.nix
+    ../common/services/jellyseerr.nix
 
     ../common/nix_daemon.nix
     ../common/timezone.nix
