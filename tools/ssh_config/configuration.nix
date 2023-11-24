@@ -83,5 +83,5 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  system.stateVersion = "23.05";
+  system.stateVersion = "23.11";
 }
