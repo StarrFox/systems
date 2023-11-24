@@ -36,7 +36,7 @@ agenix --rekey
 
 [Noogle](https://noogle.dev/): search nix functions
 
-[Nixtracker](https://nixtracker.org/): track nix pr status
+[Nixtracker](https://nixpk.gs/pr-tracker.html): track nix pr status
 
 ### Changelogs
 
