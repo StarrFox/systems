@@ -28,6 +28,8 @@ in {
     ./services/radarr.nix
     ./services/transmission.nix
     ./services/sonarr.nix
+    ./services/lidarr.nix
+    ./services/readarr.nix
   ];
 
   environment.systemPackages = with pkgs; [
