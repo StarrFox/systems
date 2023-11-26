@@ -9,6 +9,7 @@ _: {
     ensureUsers = [
       {
         name = "starr";
+        # TODO: 23.11 ensureClauses (see options page)
         ensurePermissions = {
           "DATABASE smitestat" = "ALL PRIVILEGES";
           "DATABASE arcanumbot" = "ALL PRIVILEGES";
