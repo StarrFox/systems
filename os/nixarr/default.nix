@@ -30,6 +30,7 @@ in {
     ./services/sonarr.nix
     ./services/lidarr.nix
     ./services/readarr.nix
+    ./services/deluge.nix
   ];
 
   environment.systemPackages = with pkgs; [
