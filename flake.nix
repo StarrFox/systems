@@ -2,7 +2,7 @@
   description = "nixos configs";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     starrpkgs = {
       url = "github:StarrFox/packages";
