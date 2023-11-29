@@ -67,7 +67,7 @@ in {
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     (nerdfonts.override {fonts = ["FiraCode"];})
     material-icons
   ];
