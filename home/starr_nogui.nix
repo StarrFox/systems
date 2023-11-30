@@ -8,6 +8,7 @@
     ./programs/gpg.nix
     ./programs/starship.nix
     ./programs/direnv.nix
+    ./programs/poetry.nix
 
     ./programs/nix-index.nix
     ./programs/home-manager.nix
