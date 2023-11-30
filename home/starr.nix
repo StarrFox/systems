@@ -14,6 +14,7 @@
     #./programs/obs.nix
     ./programs/kakoune.nix
     ./programs/kitty.nix
+    ./programs/poetry.nix
 
     ./services/dunst.nix
 
