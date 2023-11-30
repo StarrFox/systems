@@ -9,6 +9,7 @@ in {
     enable = true;
     source = nixpkgs-unstable.writers.writeTOML "config.toml" {
       virtualenvs.in-project = true;
+      virtualenvs.prefer-active-python = true;
     };
   };
 }
