@@ -65,6 +65,7 @@ in  {
         "editor.formatOnSave" = true;
         "editor.formatOnType" = true;
       };
+      "zig.path" = "";
       "zig.zls.path" = "zls";
       "zig.zls.checkForUpdate" = false;
       # "editor.quickSuggestions" = {
