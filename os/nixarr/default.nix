@@ -64,13 +64,6 @@ in {
 
   nixpkgs.config.allowUnfree = true;
 
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [
-      libsForQt5.xdg-desktop-portal-kde
-    ];
-  };
-
   users.users.starr.openssh.authorizedKeys.keys = [
     ssh-keys.starr-starrnix
   ];
