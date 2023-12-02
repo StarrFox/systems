@@ -75,6 +75,7 @@ in  {
       "python.analysis.autoFormatStrings" = true;
       "python.analysis.diagnosticMode" = "workspace";
       "python.analysis.inlayHints.callArgumentNames" = "all";
+      "lldb.suppressUpdateNotifications" = true;
     };
 
     extensions = with pkgs.vscode-extensions; [
