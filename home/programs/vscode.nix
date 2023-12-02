@@ -28,35 +28,21 @@ in  {
       "editor.fontLigatures" = true;
       "editor.fontFamily" = "'FiraCode Nerd Font Mono', 'Droid Sans Mono', 'monospace'";
       "editor.formatOnSaveMode" = "file";
+      "window.zoomLevel" = 1;
       "files.autoSave" = "afterDelay";
       "explorer.confirmDelete" = false;
       "explorer.confirmDragAndDrop" = false;
       "git.confirmSync" = false;
       "git.autofetch" = true;
-      "window.zoomLevel" = 1;
       # NOTE: this requires the pitch black theme listed in extensions
       #"workbench.colorTheme" = "Pitch Black";
       # NOTE: requires andromeda extension below
       "workbench.colorTheme" = "Andromeda Bordered";
       "workbench.startupEditor" = "none";
-      "python.analysis.inlayHints.functionReturnTypes" = true;
-      "python.analysis.inlayHints.variableTypes" = true;
-      # NOTE: options are off, basic, and strict
-      "python.analysis.typeCheckingMode" = "basic";
-      "python.venvPath" = "~/.cache/pypoetry/virtualenvs";
-      # this allows the black extension to work
-      "python.formatting.provider" = "none";
-      "python.testing.pytestEnabled" = true;
-      "python.terminal.activateEnvironment" = false;
-      "[python]" = {
-        "editor.formatOnSave" = true;
-        #"editor.formatOnType" = true;
-        "editor.defaultFormatter" = "ms-python.black-formatter";
-        "editor.codeActionsOnSave" = {
-          "source.organizeImports" = true;
-        };
-      };
-      "isort.args" = ["--profile" "black" "--skip-gitignore"];
+      # "editor.quickSuggestions" = {
+      #   "other" = "inline";
+      # };
+  
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "nil";
       "[nix]" = {
@@ -65,17 +51,39 @@ in  {
         "editor.formatOnSave" = true;
         "editor.formatOnType" = true;
       };
+
       "zig.path" = "";
       "zig.zls.path" = "zls";
       "zig.zls.checkForUpdate" = false;
-      # "editor.quickSuggestions" = {
-      #   "other" = "inline";
-      # };
+
+      "isort.args" = ["--profile" "black" "--skip-gitignore"];
+      "[python]" = {
+        "editor.formatOnSave" = true;
+        #"editor.formatOnType" = true;
+        "editor.defaultFormatter" = "ms-python.black-formatter";
+        "editor.codeActionsOnSave" = {
+          "source.organizeImports" = true;
+        };
+      };
+      "python.analysis.inlayHints.functionReturnTypes" = true;
+      "python.analysis.inlayHints.variableTypes" = true;
+      # NOTE: options are off, basic, and strict
+      "python.analysis.typeCheckingMode" = "basic";
+      "python.venvPath" = "~/.cache/pypoetry/virtualenvs";
+      "python.testing.pytestEnabled" = true;
+      "python.terminal.activateEnvironment" = false;
       "python.analysis.completeFunctionParens" = true;
       "python.analysis.autoFormatStrings" = true;
       "python.analysis.diagnosticMode" = "workspace";
       "python.analysis.inlayHints.callArgumentNames" = "all";
+      "python.analysis.inlayHints.pytestParameters" = true;
+      "python.analysis.exclude" = ["result"];
+      "autoDocstring.docstringFormat" = "google-notypes";
+
       "lldb.suppressUpdateNotifications" = true;
+      #"workbench.sideBar.location" = "right";
+      "editor.multiCursorModifier" = "ctrlCmd";
+      "direnv.restart.automatic" = true;
     };
 
     extensions = with pkgs.vscode-extensions; [
