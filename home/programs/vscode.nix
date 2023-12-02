@@ -82,7 +82,7 @@ in  {
 
       "lldb.suppressUpdateNotifications" = true;
       #"workbench.sideBar.location" = "right";
-      "editor.multiCursorModifier" = "ctrlCmd";
+      #"editor.multiCursorModifier" = "ctrlCmd";
       "direnv.restart.automatic" = true;
     };
 
