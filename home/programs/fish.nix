@@ -1,14 +1,4 @@
-{
-  inputs,
-  config,
-  pkgs,
-  ...
-}: let
-  nixpkgs-unstable = import inputs.nixpkgs-unstable {
-    system = "${pkgs.system}";
-    inherit (config.nixpkgs) config;
-  };
-in {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     aria
     onefetch
@@ -16,12 +6,9 @@ in {
     #nnn
     hexyl
     lsof
-    # erdree v3
-    nixpkgs-unstable.erdtree
-    # TODO: remove unstable when yazi is in the stable channel
-    nixpkgs-unstable.yazi
-    # TODO: remove unstable when eza is in the stable channel
-    nixpkgs-unstable.eza
+    erdtree
+    yazi
+    eza
   ];
 
   # programs.exa = {

@@ -9,12 +9,9 @@ _: {
     ensureUsers = [
       {
         name = "starr";
-        # TODO: 23.11 ensureClauses (see options page)
-        ensurePermissions = {
-          "DATABASE smitestat" = "ALL PRIVILEGES";
-          "DATABASE arcanumbot" = "ALL PRIVILEGES";
-          "DATABASE discord_chan" = "ALL PRIVILEGES";
-        };
+        # NOTE: imparitive changes are preserved; i.e. changing this will not
+        #  change an existing user
+        ensureClauses.superuser = true;
       }
     ];
   };
