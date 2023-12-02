@@ -509,16 +509,16 @@
     },
     "nixpkgs_5": {
       "locked": {
-        "lastModified": 1701053011,
-        "narHash": "sha256-8QQ7rFbKFqgKgLoaXVJRh7Ik5LtI3pyBBCfOnNOGkF0=",
+        "lastModified": 1701263465,
+        "narHash": "sha256-lNXUIlkfyDyp9Ox21hr+wsEf/IBklLvb6bYcyeXbdRc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "5b528f99f73c4fad127118a8c1126b5e003b01a9",
+        "rev": "50aa30a13c4ab5e7ba282da460a3e3d44e9d0eb3",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-23.05",
+        "ref": "nixos-23.11",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -582,11 +582,11 @@
         "nvfetcher": "nvfetcher"
       },
       "locked": {
-        "lastModified": 1701413963,
-        "narHash": "sha256-RsC0YmWaUqntbWz/tg5vOElsJL7D25ZLaWev/ML0YX4=",
+        "lastModified": 1701519861,
+        "narHash": "sha256-0E5hBSoKdiQ6NTSSuhINNipVZTHMF5BUnJwvbNZ7eSo=",
         "owner": "StarrFox",
         "repo": "packages",
-        "rev": "a8e7108676266e67bb4fb3b2ac885e19d10bd0d0",
+        "rev": "fc29636e6b5d1cbedd0afeeb515451646747c605",
         "type": "github"
       },
       "original": {
