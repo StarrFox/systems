@@ -32,7 +32,6 @@ in {
     ./services/readarr.nix
     ./services/deluge.nix
     ./services/bazarr.nix
-    ./services/sabnzbd.nix
   ];
 
   environment.systemPackages = with pkgs; [
