@@ -1,13 +1,7 @@
-{pkgs, inputs, config, ...}: let
-  nixpkgs-unstable = import inputs.nixpkgs-unstable {
-    system = "${pkgs.system}";
-    inherit (config.nixpkgs) config;
-  };
-in {
-  # TODO: 23.11 unstable no longer needed
+{pkgs, ...}: {
   xdg.configFile."pypoetry/config.toml" = {
     enable = true;
-    source = nixpkgs-unstable.writers.writeTOML "config.toml" {
+    source = pkgs.writers.writeTOML "config.toml" {
       virtualenvs.in-project = true;
       virtualenvs.prefer-active-python = true;
     };

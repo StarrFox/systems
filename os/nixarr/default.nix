@@ -52,7 +52,7 @@ in {
     "192.168.1.71" = ["starrnix"];
   };
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     (nerdfonts.override {fonts = ["FiraCode"];})
     material-icons
   ];
@@ -75,5 +75,5 @@ in {
     ssh-keys.starr-starrnix
   ];
 
-  system.stateVersion = "23.05";
+  system.stateVersion = "23.11";
 }

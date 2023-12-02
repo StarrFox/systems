@@ -13,7 +13,6 @@
     };
   };
 
-  # TODO: 23.11
   # we don't need nano since we have helix
-  #programs.nano.enable = false;
+  programs.nano.enable = false;
 }

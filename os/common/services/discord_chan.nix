@@ -18,10 +18,7 @@
     ensureUsers = [
       {
         name = "discord_chan";
-        # TODO: 23.11 switch to ensureDBOwnership i.e. ensureDBOwnership = true;
-        ensurePermissions = {
-          "DATABASE discord_chan" = "ALL PRIVILEGES";
-        };
+        ensureDBOwnership = true;
       }
     ];
   };

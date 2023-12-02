@@ -28,6 +28,8 @@ in {
     #../common/steam.nix
     ../common/firejail.nix
     ../common/network_manager.nix
+    ../common/docker.nix
+    ../common/distrobox.nix
 
     ../common/roles/desktop/xserver/plasma.nix
 
@@ -67,7 +69,7 @@ in {
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     (nerdfonts.override {fonts = ["FiraCode"];})
     material-icons
   ];
@@ -86,5 +88,5 @@ in {
     config.boot.kernelPackages.v4l2loopback
   ];
 
-  system.stateVersion = "23.05";
+  system.stateVersion = "23.11";
 }

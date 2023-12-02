@@ -19,9 +19,7 @@
     ensureUsers = [
       {
         name = "arcanumbot";
-        ensurePermissions = {
-          "DATABASE arcanumbot" = "ALL PRIVILEGES";
-        };
+        ensureDBOwnership = true;
       }
     ];
   };
