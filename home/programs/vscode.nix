@@ -65,6 +65,7 @@ in  {
         "editor.formatOnSave" = true;
         "editor.formatOnType" = true;
       };
+      "zig.path" = "";
       "zig.zls.path" = "zls";
       "zig.zls.checkForUpdate" = false;
       # "editor.quickSuggestions" = {
@@ -74,6 +75,7 @@ in  {
       "python.analysis.autoFormatStrings" = true;
       "python.analysis.diagnosticMode" = "workspace";
       "python.analysis.inlayHints.callArgumentNames" = "all";
+      "lldb.suppressUpdateNotifications" = true;
     };
 
     extensions = with pkgs.vscode-extensions; [
