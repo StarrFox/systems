@@ -3,7 +3,7 @@ default:
 	just --list
 
 # sync movies and tv shows
-sync: sync-movies sync-tv
+sync: sync-movies sync-tv sync-music
 
 # sync tv shows
 sync-tv:
@@ -12,3 +12,7 @@ sync-tv:
 # sync movies
 sync-movies:
 	mullvad-exclude rsync --recursive --progress /data/ "starrnix:/big/media/Movies"
+
+# sync music
+sync-music:
+	mullvad-exclude rsync --recursive --progress /data_music/ "starrnix:/big/media/Music"	
