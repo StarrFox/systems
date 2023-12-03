@@ -20,6 +20,7 @@ in {
     ../common/services/nginx.nix
     ../common/services/nextcloud.nix
     ../common/services/syncthing.nix
+    ../common/services/postgresql_backup.nix
 
     ../common/users/starr.nix
 
