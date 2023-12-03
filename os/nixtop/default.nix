@@ -1,4 +1,4 @@
-_: let
+{pkgs, ...}: let
   ssh-keys = import ../../ssh-keys.nix;
 in {
   imports = [
@@ -42,9 +42,12 @@ in {
 
   networking.hostName = "nixtop";
 
+  # TODO: update
+  services.postgresql.package = pkgs.postgresql_14;
+
   # nixtop is a laptop
   services.logind.lidSwitch = "ignore";
   nixpkgs.config.allowUnfree = true;
   # NOTE: make sure to double backup postgres before changing
-  system.stateVersion = "23.05";
+  system.stateVersion = "23.11";
 }
