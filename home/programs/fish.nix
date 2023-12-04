@@ -36,6 +36,7 @@
       files = "yazi";
       hex = "hexyl";
       ports = "sudo lsof -nP -iTCP -sTCP:LISTEN";
+      branches = "git branch -a";
     };
     # wish they'd just remove this garbage
     interactiveShellInit = "set -U fish_greeting";
