@@ -2,9 +2,15 @@
   lib,
   pkgs,
   config,
+  inputs,
   ...
 }: let
   ssh-keys = import ../../ssh-keys.nix;
+
+  nixpkgs-unstable = import inputs.nixpkgs-unstable {
+    system = "${pkgs.system}";
+    inherit (config.nixpkgs) config;
+  }; 
 in {
   imports = [
     ./services/postgresql.nix
@@ -69,13 +75,14 @@ in {
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;
 
-  fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["FiraCode"];})
+  fonts.packages = with nixpkgs-unstable; [
+    (nerdfonts.override {fonts = ["FiraCode" "Monaspace"];})
     material-icons
   ];
 
   nixpkgs.config.allowUnfree = true;
 
+  # TODO: figure out what that warning about portals is about
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
