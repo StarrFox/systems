@@ -9,6 +9,9 @@
     erdtree
     yazi
     eza
+
+    # used by template
+    cookiecutter
   ];
 
   # programs.exa = {
@@ -53,7 +56,7 @@
       };
       template = {
         body = ''
-          nix flake init --template github:StarrFox/templates#$argv[1]
+          cookiecutter gh:StarrFox/templates --directory $argv[1]
         '';
       };
     };
