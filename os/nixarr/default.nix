@@ -26,12 +26,12 @@ in {
 
     ./services/prowlarr.nix
     ./services/radarr.nix
-    ./services/transmission.nix
+    #./services/transmission.nix
     ./services/sonarr.nix
     ./services/lidarr.nix
     ./services/readarr.nix
     ./services/deluge.nix
-    ./services/bazarr.nix
+    #./services/bazarr.nix
   ];
 
   environment.systemPackages = with pkgs; [
