@@ -17,11 +17,9 @@ in {
     #../common/services/jellyfin.nix
     #../common/services/grafana.nix
     #../common/services/tailscale.nix
-    ../common/services/nginx.nix
     ../common/services/nextcloud.nix
     ../common/services/syncthing.nix
     ../common/services/postgresql_backup.nix
-    ../common/services/gitea.nix
 
     ../common/users/starr.nix
 
@@ -30,6 +28,8 @@ in {
     ../common/roles/server.nix
 
     ./services/nfs.nix
+    ./services/nginx.nix
+    ./services/gitea.nix
   ];
 
   users.users.starr.openssh.authorizedKeys.keys = [
