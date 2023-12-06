@@ -111,6 +111,7 @@ in  {
       starrpkgs.vscord
       starrpkgs.vscode-zig
       starrpkgs.andromeda
+      starrpkgs.vscode-coconut
 
       nixpkgs-unstable.vscode-extensions.ms-python.isort
       nixpkgs-unstable.vscode-extensions.ms-python.black-formatter
