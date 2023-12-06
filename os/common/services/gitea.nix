@@ -3,6 +3,6 @@
   services.gitea = {
     enable = true;
     dump.enable = true;
-    server.DOMAIN = config.networking.hostName;
+    settings.server.DOMAIN = config.networking.hostName;
   };
 }
