@@ -125,6 +125,7 @@
         modules = [
           ./os/nixarr/default.nix
           agenix.nixosModules.default
+          ./misc/flood_module.nix
         ];
       };
     };

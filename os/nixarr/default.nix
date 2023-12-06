@@ -14,7 +14,6 @@ in {
     ../common/timezone.nix
     ../common/locale.nix
     ../common/environment.nix
-    #../common/sound.nix
     ../common/uefi_boot.nix
     ../common/network_manager.nix
 
@@ -32,6 +31,7 @@ in {
     ./services/readarr.nix
     ./services/deluge.nix
     #./services/bazarr.nix
+    ./services/flood.nix
   ];
 
   environment.systemPackages = with pkgs; [
