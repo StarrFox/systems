@@ -16,6 +16,7 @@
     userName = "StarrFox";
     userEmail = "StarrFox6312@gmail.com";
     delta.enable = true;
+    lfs.enable = true;
     extraConfig = {
       push.autoSetupRemote = true;
       pull.rebase = true;
