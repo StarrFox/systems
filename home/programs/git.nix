@@ -18,6 +18,7 @@
     delta.enable = true;
     extraConfig = {
       push.autoSetupRemote = true;
+      pull.rebase = true;
       init.defaultBranch = "main";
       url = {
         "https://github.com/" = {
