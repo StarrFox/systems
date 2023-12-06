@@ -1,6 +1,6 @@
 _: {
   # TODO: use postgres for database
-  services.gita = {
+  services.gitea = {
     enable = true;
     dump.enable = true;
   };
