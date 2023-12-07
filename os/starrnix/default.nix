@@ -37,7 +37,8 @@ in {
     ../common/docker.nix
     ../common/distrobox.nix
 
-    ../common/roles/desktop/xserver/plasma.nix
+    #../common/roles/desktop/xserver/plasma.nix
+    ../common/roles/desktop/wayland/hyperland.nix
 
     ../../devices/main.nix
 
