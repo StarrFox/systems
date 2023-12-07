@@ -3,5 +3,8 @@ _: {
     ./common.nix
   ];
 
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    enableNvidiaPatches = true;
+  };
 }
