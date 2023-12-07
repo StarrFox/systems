@@ -21,5 +21,10 @@
       name = "FiraCode Nerd Font Mono";
       size = 18;
     };
+    keybindings = {
+      # this is the only reason we dont like alacritty
+      # see: https://github.com/alacritty/alacritty/issues/1919#issuecomment-876695473
+      "ctrl+c" = "copy_or_interrupt";
+    };
   };
 }
