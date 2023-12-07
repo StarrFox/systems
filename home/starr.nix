@@ -15,6 +15,7 @@
     ./programs/kakoune.nix
     ./programs/kitty.nix
     ./programs/poetry.nix
+    ./programs/zoxide.nix
 
     ./services/dunst.nix
 

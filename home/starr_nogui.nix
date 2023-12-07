@@ -9,6 +9,7 @@
     ./programs/starship.nix
     ./programs/direnv.nix
     ./programs/poetry.nix
+    ./programs/zoxide.nix
 
     ./programs/nix-index.nix
     ./programs/home-manager.nix
