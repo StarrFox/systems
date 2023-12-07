@@ -1,15 +1,17 @@
-_: {
+_: let
+  url = "nixtop.attlocal.net";
+in {
   # TODO: use postgres for database
   services.gitea = {
     enable = true;
     dump.enable = true;
     settings.server = {
-        DOMAIN = "git.nixtop.attlocal.net";
-        ROOT_URL = "https://git.nixtop.attlocal.net/";
+        DOMAIN = url;
+        ROOT_URL = "https://${url}/";
     };
   };
 
-  services.nginx.virtualHosts."git.nixtop.attlocal.net" = {
+  services.nginx.virtualHosts.${url} = {
     enableACME = true;
     forceSSL = true;
     locations."/" = {

@@ -14,7 +14,7 @@ in {
     acceptTerms = true;
     defaults.email = email;
     certs = {
-      "git.nixtop.attlocal.net".email = email;
+      "nixtop.attlocal.net".email = email;
     };
   };
 
