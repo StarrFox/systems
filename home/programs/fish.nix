@@ -23,6 +23,7 @@
   #   ];
   # };
 
+  # TODO: use string replace for packages, like clip
   programs.fish = {
     enable = true;
     shellAliases = {
@@ -37,6 +38,7 @@
       hex = "hexyl";
       ports = "sudo lsof -nP -iTCP -sTCP:LISTEN";
       branches = "git branch -a";
+      clip = "${pkgs.xsel}/bin/xsel -ib";
     };
     # wish they'd just remove this garbage
     interactiveShellInit = "set -U fish_greeting";
