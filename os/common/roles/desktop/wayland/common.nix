@@ -5,10 +5,11 @@ _: {
     layout = "us";
     xkbVariant = "";
     displayManager = {
-      autoLogin = {
-        enable = true;
-        user = "starr";
-      };
+      # TODO: reenable
+      # autoLogin = {
+      #   enable = true;
+      #   user = "starr";
+      # };
       sddm = {
         enable = true;
         autoNumlock = true;
