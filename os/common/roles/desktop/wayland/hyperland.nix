@@ -14,8 +14,8 @@ _: {
     WLR_NO_HARDWARE_CURSORS = "1";
 
     # NOTE: these two can apparently cause issues
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    GBM_BACKEND = "nvidia-drm";
+    #__GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    #GBM_BACKEND = "nvidia-drm";
   };
 
   # TODO: remove
