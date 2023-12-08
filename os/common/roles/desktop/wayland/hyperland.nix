@@ -15,7 +15,7 @@ _: {
 
     # NOTE: these two can apparently cause issues
     #__GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    #GBM_BACKEND = "nvidia-drm";
+    GBM_BACKEND = "nvidia-drm";
   };
 
   # TODO: remove
