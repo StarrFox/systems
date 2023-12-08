@@ -2,6 +2,7 @@
   config,
   lib,
   modulesPath,
+  pkgs,
   ...
 }: {
   imports = [
@@ -46,12 +47,27 @@
   ];
 
   hardware = {
-    opengl.enable = true;
-    # nvidia driver
-    nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+    opengl = {
+      enable = true;
+      # no idea what this does, but everyone else uses it
+      driSupport32Bit = true;
+
+      # something about nvdec whatever that is
+      extraPackages = with pkgs; [nvidia-vaapi-driver];
+    };
+
+    nvidia = {
+      # nvidia driver
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      # enables drm 
+      # NOTE: drm does not refer to the copyright type of drm
+      # see: https://en.wikipedia.org/wiki/Direct_Rendering_Manager
+      modesetting.enable = true;
+    };
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   };
 
   services.xserver.videoDrivers = ["nvidia"];
+
   nixpkgs.hostPlatform = "x86_64-linux";
 }
