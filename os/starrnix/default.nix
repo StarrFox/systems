@@ -2,15 +2,9 @@
   lib,
   pkgs,
   config,
-  inputs,
   ...
 }: let
   ssh-keys = import ../../ssh-keys.nix;
-
-  nixpkgs-unstable = import inputs.nixpkgs-unstable {
-    system = "${pkgs.system}";
-    inherit (config.nixpkgs) config;
-  }; 
 in {
   imports = [
     ./services/postgresql.nix
@@ -75,8 +69,8 @@ in {
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;
 
-  fonts.packages = with nixpkgs-unstable; [
-    (nerdfonts.override {fonts = ["FiraCode" "Monaspace"];})
+  fonts.packages = with pkgs; [
+    (nerdfonts.override {fonts = ["FiraCode"];})
     material-icons
   ];
 
