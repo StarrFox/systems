@@ -52,11 +52,6 @@ in {
     "192.168.1.71" = ["starrnix"];
   };
 
-  fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["FiraCode"];})
-    material-icons
-  ];
-
   # arr services group
   users.groups.arr = {};
 

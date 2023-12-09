@@ -17,6 +17,7 @@ in {
     ../common/firejail.nix
     ../common/uefi_boot.nix
     ../common/network_manager.nix
+    ../common/fonts.nix
 
     ../common/roles/desktop/xserver/plasma.nix
 
@@ -31,11 +32,6 @@ in {
     hostName = "starrtest";
     useDHCP = lib.mkDefault true;
   };
-
-  fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["FiraCode"];})
-    material-icons
-  ];
 
   nixpkgs.config.allowUnfree = true;
 

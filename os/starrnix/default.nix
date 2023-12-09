@@ -30,6 +30,7 @@ in {
     ../common/network_manager.nix
     ../common/docker.nix
     ../common/distrobox.nix
+    ../common/fonts.nix
 
     ../common/roles/desktop/xserver/plasma.nix
     #../common/roles/desktop/wayland/hyperland.nix
@@ -68,11 +69,6 @@ in {
 
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;
-
-  fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["FiraCode"];})
-    material-icons
-  ];
 
   nixpkgs.config.allowUnfree = true;
 
