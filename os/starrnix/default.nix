@@ -1,6 +1,5 @@
 {
   lib,
-  pkgs,
   config,
   ...
 }: let
@@ -69,8 +68,6 @@ in {
 
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;
-
-  nixpkgs.config.allowUnfree = true;
 
   # for obs virtual camera
   boot.extraModulePackages = [

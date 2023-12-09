@@ -49,7 +49,7 @@ in {
 
   # nixtop is a laptop
   services.logind.lidSwitch = "ignore";
-  nixpkgs.config.allowUnfree = true;
+
   # NOTE: make sure to double backup postgres before changing
   system.stateVersion = "23.11";
 }

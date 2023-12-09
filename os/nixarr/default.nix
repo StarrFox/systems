@@ -57,8 +57,6 @@ in {
 
   users.users.starr.extraGroups = ["arr"];
 
-  nixpkgs.config.allowUnfree = true;
-
   users.users.starr.openssh.authorizedKeys.keys = [
     ssh-keys.starr-starrnix
   ];

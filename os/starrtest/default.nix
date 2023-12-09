@@ -33,8 +33,6 @@ in {
     useDHCP = lib.mkDefault true;
   };
 
-  nixpkgs.config.allowUnfree = true;
-
   users.users.starr.openssh.authorizedKeys.keys = [
     ssh-keys.starr-starrnix
   ];
