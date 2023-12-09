@@ -72,14 +72,6 @@ in {
 
   nixpkgs.config.allowUnfree = true;
 
-  # TODO: figure out what that warning about portals is about
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [
-      libsForQt5.xdg-desktop-portal-kde
-    ];
-  };
-
   # for obs virtual camera
   boot.extraModulePackages = [
     config.boot.kernelPackages.v4l2loopback
