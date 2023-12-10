@@ -27,11 +27,11 @@ in {
     ./services/radarr.nix
     ./services/transmission.nix
     ./services/sonarr.nix
-    ./services/lidarr.nix
-    ./services/readarr.nix
-    ./services/deluge.nix
+    #./services/lidarr.nix
+    #./services/readarr.nix
+    #./services/deluge.nix
     #./services/bazarr.nix
-    ./services/flood.nix
+    #./services/flood.nix
   ];
 
   environment.systemPackages = with pkgs; [
