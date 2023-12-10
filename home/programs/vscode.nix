@@ -84,6 +84,7 @@ in  {
       #"workbench.sideBar.location" = "right";
       #"editor.multiCursorModifier" = "ctrlCmd";
       "direnv.restart.automatic" = true;
+      "cmake.showOptionsMovedNotification" = false;
     };
 
     extensions = with pkgs.vscode-extensions; [
