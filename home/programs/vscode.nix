@@ -107,6 +107,9 @@ in  {
       vadimcn.vscode-lldb
       serayuzgur.crates
       humao.rest-client
+      ms-vscode.cpptools
+      twxs.cmake
+      ms-vscode.cmake-tools
 
       starrpkgs.vscord
       starrpkgs.vscode-zig
