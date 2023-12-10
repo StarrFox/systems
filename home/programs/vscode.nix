@@ -85,6 +85,7 @@ in  {
       #"editor.multiCursorModifier" = "ctrlCmd";
       "direnv.restart.automatic" = true;
       "cmake.showOptionsMovedNotification" = false;
+      "cmake.configureOnOpen" = false;
     };
 
     extensions = with pkgs.vscode-extensions; [
