@@ -110,6 +110,7 @@ in  {
       ms-vscode.cpptools
       twxs.cmake
       ms-vscode.cmake-tools
+      ms-vscode.makefile-tools
 
       starrpkgs.vscord
       starrpkgs.vscode-zig
