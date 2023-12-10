@@ -86,6 +86,11 @@ in  {
       "direnv.restart.automatic" = true;
       "cmake.showOptionsMovedNotification" = false;
       "cmake.configureOnOpen" = false;
+
+      "terminal.integrated.commandsToSkipShell" = [
+        "workbench.action.terminal.copySelection"
+        "workbench.action.terminal.paste"
+      ];
     };
 
     extensions = with pkgs.vscode-extensions; [
