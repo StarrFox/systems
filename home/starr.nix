@@ -16,6 +16,7 @@
     ./programs/kitty.nix
     ./programs/poetry.nix
     ./programs/zoxide.nix
+    ./programs/wezterm
 
     ./services/dunst.nix
 
