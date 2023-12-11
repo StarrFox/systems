@@ -77,6 +77,8 @@
             nil
             statix
             glances
+            nix-tree
+
             inputs.nh.packages.x86_64-linux.default
             inputs.agenix.packages.x86_64-linux.default
             deploy-rs.packages.x86_64-linux.default

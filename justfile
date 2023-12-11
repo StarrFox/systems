@@ -13,6 +13,11 @@
 @home:
     nh home switch .
 
+# browse dependency tree
+@tree:
+    # NOTE: home-manager: ~/.nix-profile os: /var/run/current-system
+    nix-tree
+
 # check flake
 @check:
     nix flake check
