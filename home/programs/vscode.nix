@@ -77,7 +77,12 @@ in  {
       "python.analysis.diagnosticMode" = "workspace";
       "python.analysis.inlayHints.callArgumentNames" = "all";
       "python.analysis.inlayHints.pytestParameters" = true;
-      "python.analysis.exclude" = ["result" ".direnv"];
+      "python.analysis.exclude" = [
+        "result"
+        ".direnv"
+        ".venv"
+        "venv"
+      ];
       "autoDocstring.docstringFormat" = "google-notypes";
 
       "lldb.suppressUpdateNotifications" = true;
