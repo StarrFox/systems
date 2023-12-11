@@ -37,13 +37,13 @@ config.keys = {
           pane)
       end
     end)
-  }
+  },
   -- paste
   {
     key="v",
     mods="CTRL",
-    action = wezterm.action.PasteFrom "Clipboard"
-  }
+    action = wezterm.action.PasteFrom "Clipboard",
+  },
 }
 
 -- For example, changing the color scheme:
