@@ -13,9 +13,9 @@ in {
   security.acme = {
     acceptTerms = true;
     defaults.email = email;
-    certs = {
-      "nixtop.attlocal.net".email = email;
-    };
+    # certs = {
+    #   "nixtop.attlocal.net".email = email;
+    # };
   };
 
   networking.firewall.allowedTCPPorts = [80 443];
