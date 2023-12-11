@@ -43,25 +43,30 @@
     # wish they'd just remove this garbage
     interactiveShellInit = "set -U fish_greeting";
     functions = {
-      md = {
-        body = ''
-          command mkdir $argv
-          if test $status = 0
-              switch $argv[(count $argv)]
-                  case '-*'
+      md.body = ''
+        command mkdir $argv
+        if test $status = 0
+            switch $argv[(count $argv)]
+                case '-*'
 
-                  case '*'
-                      cd $argv[(count $argv)]
-                      return
-              end
-          end
-        '';
-      };
-      template = {
-        body = ''
-          cookiecutter gh:StarrFox/templates --directory $argv[1]
-        '';
-      };
+                case '*'
+                    cd $argv[(count $argv)]
+                    return
+            end
+        end
+      '';
+      template.body = ''
+        cookiecutter gh:StarrFox/templates --directory $argv[1]
+      '';
+      img.body = ''
+        if test ! -z "$KITTY_INSTALLATION_DIR"
+          kitty +icat $argv
+        else if test ! -z "$WEZTERM_EXECUTABLE"
+          wezterm imgcat $argv
+        else
+          echo "wezterm nor kitty detected"
+        end
+      '';
     };
   };
 }
