@@ -73,7 +73,7 @@ in  {
       "python.testing.pytestEnabled" = true;
       "python.terminal.activateEnvironment" = false;
       "python.analysis.completeFunctionParens" = true;
-      "python.analysis.autoFormatStrings" = true;
+      #"python.analysis.autoFormatStrings" = true;
       "python.analysis.diagnosticMode" = "workspace";
       "python.analysis.inlayHints.callArgumentNames" = "all";
       "python.analysis.inlayHints.pytestParameters" = true;
