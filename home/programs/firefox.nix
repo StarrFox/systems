@@ -11,7 +11,7 @@
           "browser.toolbars.bookmarks.visibility" = "always";
         };
         userChrome = ''
-          :root[titlepreface="no bar"] #navigator-toolbox-background {
+          :root[titlepreface="no bar"] #navigator-toolbox {
             visibility: hidden;
             height: 0;
           }
