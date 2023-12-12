@@ -14,6 +14,8 @@ end
 
 -- This is where you actually apply your config choices
 
+config.enable_wayland = false
+
 config.font = wezterm.font 'FiraCode Nerd Font Mono'
 config.font_size = 18.0
 
