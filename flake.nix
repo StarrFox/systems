@@ -4,16 +4,11 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    starrpkgs = {
-      url = "github:StarrFox/packages";
-      # we don't follow to avoid cache misses
-      #inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nh = {
-      url = "github:ViperML/nh";
-      #url = "github:StarrFox/nh";
-      #inputs.nixpkgs.follows = "nixpkgs";
-    };
+    starrpkgs.url = "github:StarrFox/packages";
+    nh.url = "github:ViperML/nh";
+    discord_chan.url = "github:StarrFox/Discord-chan";
+    arcanumbot.url = "github:StarrFox/ArcanumBot";
+
     nix_search = {
       url = "github:peterldowns/nix-search-cli";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -31,22 +26,16 @@
         darwin.follows = "";
       };
     };
-    discord_chan = {
-      url = "github:StarrFox/Discord-chan";
-      #inputs = {
-      #  nixpkgs.follows = "nixpkgs";
-      #};
-    };
-    arcanumbot = {
-      url = "github:StarrFox/ArcanumBot";
-      #inputs.nixpkgs.follows = "nixpkgs";
-    };
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     deploy-rs = {
       url = "github:serokell/deploy-rs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixos-generators = {
+      url = "github:nix-community/nixos-generators";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -62,6 +51,7 @@
     nix-index-database,
     deploy-rs,
     nixpkgs-unstable,
+    nixos-generators,
     ...
   } @ inputs: {
     devShells.x86_64-linux = {
@@ -84,6 +74,14 @@
             deploy-rs.packages.x86_64-linux.default
           ];
         };
+    };
+
+    packages.x86_64-linux.vm = nixos-generators.nixosGenerate {
+      system = "x86_64-linux";
+      # for some reason this doesn't take a nixosconfig
+      modules = self.nixosConfigurations.starrnix._module.args.modules;
+      specialArgs = self.nixosConfigurations.starrnix._module.specialArgs;
+      format = "vm";
     };
 
     nixosConfigurations = {
