@@ -16,10 +16,16 @@ end
 
 config.enable_wayland = false
 
-config.font = wezterm.font 'FiraCode Nerd Font Mono'
+config.font = wezterm.font "FiraCode Nerd Font Mono"
 config.font_size = 18.0
 
 config.hide_tab_bar_if_only_one_tab = true
+
+config.window_close_confirmation = "NeverPrompt"
+
+config.check_for_updates = false
+
+config.default_cursor_style = "SteadyBar"
 
 config.keys = {
   -- smart copy
