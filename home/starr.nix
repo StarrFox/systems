@@ -17,6 +17,7 @@
     ./programs/poetry.nix
     ./programs/zoxide.nix
     ./programs/wezterm
+    ./programs/rio.nix
 
     ./services/dunst.nix
 
