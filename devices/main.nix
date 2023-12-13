@@ -68,7 +68,10 @@
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   };
 
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [
+    "nouveau"
+    #"nvidia"
+  ];
 
   nixpkgs.hostPlatform = "x86_64-linux";
 }
