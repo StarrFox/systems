@@ -1,4 +1,4 @@
-{config, ...}: {
+{config, inputs, ...}: {
   imports = [
     ./programs/helix.nix
     ./programs/fish.nix
@@ -15,14 +15,9 @@
     ./programs/home-manager.nix
 
     ./package_sets/cli.nix
-  ];
 
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-      allowUnfreePredicate = _: true;
-    };
-  };
+    inputs.nix-index-database.hmModules.nix-index
+  ];
 
   # NOTE: if switching from plasma consider adding handlr to handle default apps
 

@@ -1,4 +1,4 @@
-{config, ...}: {
+{config, inputs, ...}: {
   imports = [
     ./programs/helix.nix
     ./programs/fish.nix
@@ -23,19 +23,10 @@
 
     ./package_sets/cli.nix
     ./package_sets/gui.nix
+
+    # TODO: use nixos module instead
+    inputs.nix-index-database.hmModules.nix-index
   ];
-
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-      allowUnfreePredicate = _: true;
-
-      # TODO: remove
-      permittedInsecurePackages = [
-        "electron-24.8.6"
-      ];
-    };
-  };
 
   # NOTE: if switching from plasma consider adding handlr to handle default apps
 

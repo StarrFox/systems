@@ -84,49 +84,50 @@
       format = "vm";
     };
 
-    nixosConfigurations = {
-      starrnix = nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          inherit inputs;
-        };
-        modules = [
-          ./os/starrnix/default.nix
-          agenix.nixosModules.default
-          discord_chan.nixosModules.default
-        ];
+    nixosConfigurations = let
+      mkNixosConfig = {
+        extraModules ? [],
+        enableGui ? true,
+      }: nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs;
+          };
+          modules = [
+            agenix.nixosModules.default
+            home-manager.nixosModules.default
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.starr = if enableGui then import ./home/starr.nix else import ./home/starr_nogui.nix;
+
+              home-manager.extraSpecialArgs = {inherit inputs;};
+            }
+          ] ++ extraModules;
+      };
+  in {
+      starrnix = mkNixosConfig {
+        extraModules = [./os/starrnix/default.nix];
       };
 
-      nixtop = nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          inherit inputs;
-        };
-        modules = [
+      starrtest = mkNixosConfig {
+        extraModules = [./os/starrtest/default.nix];
+      };
+
+      nixtop = mkNixosConfig {
+        extraModules = [
           ./os/nixtop/default.nix
-          agenix.nixosModules.default
           discord_chan.nixosModules.default
           arcanumbot.nixosModules.default
         ];
+        enableGui = false;
       };
 
-      starrtest = nixpkgs-unstable.lib.nixosSystem {
-        specialArgs = {
-          inherit inputs;
-        };
-        modules = [
-          ./os/starrtest/default.nix
-          agenix.nixosModules.default
-        ];
-      };
-
-      nixarr = nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          inherit inputs;
-        };
-        modules = [
+      nixarr = mkNixosConfig {
+        extraModules = [
           ./os/nixarr/default.nix
-          agenix.nixosModules.default
           ./misc/flood_module.nix
         ];
+        enableGui = false;
       };
     };
 
@@ -141,10 +142,6 @@
             user = "root";
             path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixtop;
           };
-          home = {
-            user = "starr";
-            path = deploy-rs.lib.x86_64-linux.activate.home-manager self.homeConfigurations."starr@nixtop";
-          };
         };
       };
 
@@ -157,10 +154,6 @@
             user = "root";
             path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixarr;
           };
-          home = {
-            user = "starr";
-            path = deploy-rs.lib.x86_64-linux.activate.home-manager self.homeConfigurations."starr@nixarr";
-          };
         };
       };
       # deploy-rs doesnt have something to skip offline machines yet
@@ -171,59 +164,10 @@
       #       user = "root";
       #       path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.starrtest;
       #     };
-      #     home = {
-      #       user = "starr";
-      #       path = deploy-rs.lib.x86_64-linux.activate.home-manager self.homeConfigurations."starr@starrtest";
-      #     };
       #   };
       # };
     };
 
     checks = builtins.mapAttrs (_system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;
-
-    homeConfigurations = let
-      spkgs = starrpkgs.packages.x86_64-linux;
-    in {
-      "starr@starrnix" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = {
-          inherit inputs;
-          starrpkgs = spkgs;
-        };
-        modules = [
-          ./home/starr.nix
-          nix-index-database.hmModules.nix-index
-        ];
-      };
-
-      "starr@nixtop" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = {
-          inherit inputs;
-          starrpkgs = spkgs;
-        };
-        modules = [
-          ./home/starr_nogui.nix
-          nix-index-database.hmModules.nix-index
-        ];
-      };
-
-      "starr@starrtest" = self.homeConfigurations."starr@starrnix";
-
-      "starr@nixarr" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = {
-          inherit inputs;
-          starrpkgs = spkgs;
-        };
-        modules = [
-          ./home/starr_nogui.nix
-          nix-index-database.hmModules.nix-index
-          {
-            home.file."justfile".source = ./misc/nixarr_justfile;
-          }
-        ];
-      };
-    };
   };
 }
