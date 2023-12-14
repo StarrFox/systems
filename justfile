@@ -43,13 +43,15 @@
 # list current generations
 @list-generations:
     # the new nix command for this is: nix profile history --profile /nix/var/nix/profiles/system
-    sudo nix-env -p /nix/var/nix/profiles/system --list-generations 
+    #sudo nix-env -p /nix/var/nix/profiles/system --list-generations
+    nixos-rebuild list-generation
 
 # delete all but the last generation
 @delete-generations:
     # the new nix command for this is: sudo nix profile wipe-history --profile /nix/var/nix/profiles/system
     # +2 means keep the last 2 generations
-    sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +1
+    #sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +1
+    sudo nix profile wipe-history --profile /nix/var/nix/profiles/system
 
 # delete old store paths
 @gc:
