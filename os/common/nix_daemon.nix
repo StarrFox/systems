@@ -25,6 +25,8 @@
       trusted-public-keys = [
         "starrfox.cachix.org-1:f72kZolyxFrJtrWoLRj12WdEx4xISSOybSlQ21HuhWY="
       ];
+
+      channels.enable = false;
     };
   };
 
