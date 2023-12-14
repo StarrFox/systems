@@ -11,6 +11,8 @@
     ./programs/wezterm
     ./programs/rio.nix
     ./services/dunst.nix
+    ./programs/vscode.nix
+    #./programs/obs.nix
     ./package_sets/gui.nix
   ] else [];
 in {
@@ -18,13 +20,11 @@ in {
     ./programs/helix.nix
     ./programs/fish.nix
     ./programs/git.nix
-    ./programs/vscode.nix
     ./programs/gpg.nix
     ./programs/starship.nix
     ./programs/direnv.nix
     ./programs/nix-index.nix
     #./programs/home-manager.nix
-    #./programs/obs.nix
     ./programs/kakoune.nix
     ./programs/poetry.nix
     ./programs/zoxide.nix
