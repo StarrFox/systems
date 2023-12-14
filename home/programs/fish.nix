@@ -1,4 +1,4 @@
-{pkgs, lib, ...}: {
+{pkgs, lib, config, ...}: {
   programs.fish = {
     enable = true;
     shellAliases = {
@@ -12,8 +12,8 @@
       files = "${lib.getExe pkgs.yazi}";
       hex = "${lib.getExe pkgs.hexyl}";
       ports = "sudo ${lib.getExe pkgs.lsof} -nP -iTCP -sTCP:LISTEN";
-      branches = "git branch -a";
-      clip = "${pkgs.xsel}/bin/xsel -ib";
+      branches = "${lib.getExe config.programs.git.package} branch -a";
+      clip = "${lib.getExe pkgs.xsel} -ib";
     };
     # wish they'd just remove this garbage
     interactiveShellInit = "set -U fish_greeting";
