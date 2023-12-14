@@ -111,7 +111,6 @@ in {
       editorconfig.editorconfig
       matklad.rust-analyzer
       kamadorueda.alejandra
-      viktorqvarfordt.vscode-pitch-black-theme
       skellock.just
       gruntfuggly.todo-tree
       github.vscode-github-actions
@@ -127,8 +126,12 @@ in {
 
       starrpkgs.vscord
       starrpkgs.vscode-zig
-      starrpkgs.andromeda
       starrpkgs.vscode-coconut
+
+      # themes
+      viktorqvarfordt.vscode-pitch-black-theme
+      starrpkgs.andromeda
+      starrpkgs.monokai-highcontrast
 
       nixpkgs-unstable.vscode-extensions.ms-python.isort
       nixpkgs-unstable.vscode-extensions.ms-python.black-formatter
