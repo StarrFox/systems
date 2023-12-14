@@ -97,10 +97,7 @@
               {
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
-                home-manager.users.starr =
-                  if enableGui
-                  then import ./home/starr.nix
-                  else import ./home/starr_nogui.nix;
+                home-manager.users.starr = import ./home/starr.nix {guiEnabled = enableGui;};
 
                 home-manager.extraSpecialArgs = {inherit inputs;};
               }
