@@ -1,12 +1,14 @@
-{pkgs, ...}: {
+{pkgs, lib, ...}: {
   environment = {
     systemPackages = with pkgs; [
       helix
       git
     ];
+    # set when shell is opened
     variables = {
-      EDITOR = "hx";
+      EDITOR = lib.getExe pkgs.helix;
     };
+    # set during login
     sessionVariables = {
       # TODO: find a better way to handle this
       FLAKE = "/home/starr/systems";
