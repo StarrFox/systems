@@ -13,6 +13,7 @@
       url = "github:peterldowns/nix-search-cli";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # NOTE: should be the same release version as nixpkgs version
     home-manager = {
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -156,16 +157,6 @@
           };
         };
       };
-      # deploy-rs doesnt have something to skip offline machines yet
-      # starrtest = {
-      #   hostname = "starrtest";
-      #   profiles = {
-      #     system = {
-      #       user = "root";
-      #       path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.starrtest;
-      #     };
-      #   };
-      # };
     };
 
     checks = builtins.mapAttrs (_system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;
