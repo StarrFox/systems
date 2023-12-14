@@ -2,16 +2,9 @@
 @default:
     just --list
 
-# switch both os and home
-@both: os home
-
 # switch os
 @os: && update-flatpak
     nh os switch .
-
-# switch home
-@home:
-    nh home switch .
 
 # browse dependency tree
 @tree:
@@ -31,14 +24,14 @@
     git commit -am "bump lock"
     git push
 
-# update-commit, both
-@update-switch: update-commit both
+# update-commit, os
+@update-switch: update-commit os
 
 # try to update flatpak if it's installed
 @update-flatpak:
     which flatpak &> /dev/null && flatpak update -y || true
 
-# update-commit, both, deploy
+# update-commit, os, deploy
 @full: update-switch deploy
 
 # format nix code

@@ -1,8 +1,12 @@
-{inputs, pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   # TODO: remove when kitty-themes updates
   nixpkgs.overlays = [
-    (final: prev: {
-      kitty-themes = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.kitty-themes;
+    (_final: _prev: {
+      inherit (inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}) kitty-themes;
     })
   ];
 

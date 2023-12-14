@@ -1,15 +1,16 @@
 {
   pkgs,
-  starrpkgs,
   inputs,
-  config,
+  osConfig,
   ...
 }: let
   nixpkgs-unstable = import inputs.nixpkgs-unstable {
     system = "${pkgs.system}";
-    inherit (config.nixpkgs) config;
+    inherit (osConfig.nixpkgs) config;
   };
-in  {
+
+  starrpkgs = inputs.starrpkgs.packages.${pkgs.system};
+in {
   # TODO: don't do this
   # this is just incase I forget to add them to the enviroment
   home.packages = with pkgs; [
@@ -42,7 +43,7 @@ in  {
       # "editor.quickSuggestions" = {
       #   "other" = "inline";
       # };
-  
+
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "nil";
       "[nix]" = {

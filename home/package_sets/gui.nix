@@ -1,15 +1,10 @@
 {
   pkgs,
-  starrpkgs,
   inputs,
-  config,
   ...
 }: let
-  nixpkgs-unstable = import inputs.nixpkgs-unstable {
-    system = "${pkgs.system}";
-    inherit (config.nixpkgs) config;
-  };
-in  {
+  starrpkgs = inputs.starrpkgs.packages.${pkgs.system};
+in {
   home.packages = with pkgs; [
     #bitwarden
     #chromium

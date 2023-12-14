@@ -1,8 +1,10 @@
 {
   pkgs,
-  starrpkgs,
+  inputs,
   ...
-}: {
+}: let
+  starrpkgs = inputs.starrpkgs.packages.${pkgs.system};
+in {
   programs.gh = {
     enable = true;
     extensions = [

@@ -7,8 +7,12 @@ in {
     enable = true;
     dump.enable = true;
     settings.server = {
-        DOMAIN = url;
-        ROOT_URL = "http${if https then "s" else ""}://${url}/";
+      DOMAIN = url;
+      ROOT_URL = "http${
+        if https
+        then "s"
+        else ""
+      }://${url}/";
     };
   };
 

@@ -1,9 +1,10 @@
 {
   pkgs,
   inputs,
-  starrpkgs,
   ...
-}: {
+}: let
+  starrpkgs = inputs.starrpkgs.packages.${pkgs.system};
+in {
   home.packages = with pkgs; [
     bat
     cava
