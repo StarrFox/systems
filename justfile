@@ -2,16 +2,9 @@
 @default:
     just --list
 
-# switch both os and home
-@both: os home
-
 # switch os
 @os: && update-flatpak
     nh os switch .
-
-# switch home
-@home:
-    nh home switch .
 
 # browse dependency tree
 @tree:
