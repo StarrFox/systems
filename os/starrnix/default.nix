@@ -30,6 +30,7 @@ in {
     ../common/docker.nix
     ../common/distrobox.nix
     ../common/fonts.nix
+    ../common/stylix.nix
 
     ../common/roles/desktop/xserver/plasma.nix
     #../common/roles/desktop/wayland/hyperland.nix

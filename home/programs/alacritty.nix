@@ -20,7 +20,7 @@ _: {
           family = "FiraCode Nerd Font Mono";
           style = "Italic";
         };
-        size = 16;
+        #size = 16;
         draw_bold_text_with_bright_colors = true;
       };
       colors = {

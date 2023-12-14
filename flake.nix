@@ -8,6 +8,7 @@
     nh.url = "github:ViperML/nh";
     discord_chan.url = "github:StarrFox/Discord-chan";
     arcanumbot.url = "github:StarrFox/ArcanumBot";
+    stylix.url = "github:danth/stylix";
 
     nix_search = {
       url = "github:peterldowns/nix-search-cli";
@@ -50,6 +51,7 @@
     arcanumbot,
     deploy-rs,
     nixos-generators,
+    stylix,
     ...
   } @ inputs: {
     devShells.x86_64-linux = {
@@ -95,6 +97,7 @@
             [
               agenix.nixosModules.default
               home-manager.nixosModules.default
+              stylix.nixosModules.stylix
               {
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;

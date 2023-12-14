@@ -2,7 +2,8 @@ _: {
   programs.helix = {
     enable = true;
     settings = {
-      theme = "base16_transparent";
+      # set by stylix
+      #theme = "base16_transparent";
       editor = {
         line-number = "relative";
         bufferline = "multiple";
