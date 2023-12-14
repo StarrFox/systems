@@ -1,20 +1,20 @@
 # flood module from https://github.com/NixOS/nixpkgs/pull/269726
 # because I didn't want to wait
-
 # TODO: remove when flood module is in stable
-
-{ config, lib, pkgs, ... }:
-
-let
-  cfg = config.services.flood;
-in
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: let
+  cfg = config.services.flood;
+in {
   options = {
     services = {
       flood = {
         enable = lib.mkEnableOption (lib.mdDoc "Flood daemon");
 
-        package = lib.mkPackageOptionMD pkgs "flood" { };
+        package = lib.mkPackageOptionMD pkgs "flood" {};
 
         baseUrl = lib.mkOption {
           type = lib.types.str;
@@ -93,7 +93,7 @@ in
 
         allowedPaths = lib.mkOption {
           type = lib.types.listOf lib.types.path;
-          default = [ ];
+          default = [];
           description = lib.mdDoc ''
             List of allowed paths for file operations.
           '';
@@ -204,89 +204,88 @@ in
     };
   };
 
-  config =
-    let
-      addAuthOpt = prefix: opt:
-        lib.mapAttrsToList
-          (k: v:
-            "--${prefix}${toString k} ${toString v}")
-          (lib.filterAttrs (k: v: !isNull v) opt);
-      delugeAuth = addAuthOpt "de" cfg.auth.deluge;
-      rtorrentAuth = addAuthOpt "rt" cfg.auth.rtorrent;
-      qbittorrentAuth = addAuthOpt "qb" cfg.auth.qbittorrent;
-      transmissionAuth = addAuthOpt "tr" cfg.auth.transmission;
-      authOpts = lib.lists.findSingle (x: x != [ ]) [ ] [ null ] [ delugeAuth rtorrentAuth qbittorrentAuth transmissionAuth ];
-      args = [
+  config = let
+    addAuthOpt = prefix: opt:
+      lib.mapAttrsToList
+      (k: v: "--${prefix}${toString k} ${toString v}")
+      (lib.filterAttrs (_k: v: v != null) opt);
+    delugeAuth = addAuthOpt "de" cfg.auth.deluge;
+    rtorrentAuth = addAuthOpt "rt" cfg.auth.rtorrent;
+    qbittorrentAuth = addAuthOpt "qb" cfg.auth.qbittorrent;
+    transmissionAuth = addAuthOpt "tr" cfg.auth.transmission;
+    authOpts = lib.lists.findSingle (x: x != []) [] [null] [delugeAuth rtorrentAuth qbittorrentAuth transmissionAuth];
+    args =
+      [
         "--rundir %S/flood"
         "--baseuri ${cfg.baseUrl}"
         "--host ${cfg.address}"
         "--port ${toString cfg.port}"
       ]
-      ++ lib.optionals cfg.ssl.enable [ "--ssl" ]
-      ++ lib.optionals (cfg.ssl.enable && (!isNull cfg.ssl.key)) [ "--sslkey ${cfg.ssl.key}" ]
-      ++ lib.optionals (cfg.ssl.enable && (!isNull cfg.ssl.cert)) [ "--sslcert ${cfg.ssl.cert}" ]
-      ++ lib.optionals (authOpts != [ ]) [ "--auth none" ]
+      ++ lib.optionals cfg.ssl.enable ["--ssl"]
+      ++ lib.optionals (cfg.ssl.enable && (cfg.ssl.key != null)) ["--sslkey ${cfg.ssl.key}"]
+      ++ lib.optionals (cfg.ssl.enable && (cfg.ssl.cert != null)) ["--sslcert ${cfg.ssl.cert}"]
+      ++ lib.optionals (authOpts != []) ["--auth none"]
       ++ authOpts
       ++ map (x: "--allowedpath ${toString x}") cfg.allowedPaths;
-    in
+  in
     lib.mkIf cfg.enable {
       assertions = [
         {
-          assertion = authOpts != [ null ];
+          assertion = authOpts != [null];
           message = "Only one client authentication must be configured";
         }
       ];
-      systemd.services.flood =
-        {
-          after = [ "network.target" ];
-          description = "Flood Daemon";
-          wantedBy = [ "multi-user.target" ];
-          path = [ pkgs.mediainfo ];
-          serviceConfig = {
-            ExecStart = "${cfg.package}/bin/flood ${lib.concatStringsSep " " args}";
-            Restart = "on-failure";
-            UMask = "077";
-            DynamicUser = true;
-            User = cfg.user;
-            Group = cfg.group;
-            StateDirectory = "flood";
-            ReadWritePaths = cfg.allowedPaths ++
-              lib.optionals (!isNull cfg.auth.rtorrent.socket) [ "-${cfg.auth.rtorrent.socket}" ];
+      systemd.services.flood = {
+        after = ["network.target"];
+        description = "Flood Daemon";
+        wantedBy = ["multi-user.target"];
+        path = [pkgs.mediainfo];
+        serviceConfig = {
+          ExecStart = "${cfg.package}/bin/flood ${lib.concatStringsSep " " args}";
+          Restart = "on-failure";
+          UMask = "077";
+          DynamicUser = true;
+          User = cfg.user;
+          Group = cfg.group;
+          StateDirectory = "flood";
+          ReadWritePaths =
+            cfg.allowedPaths
+            ++ lib.optionals (cfg.auth.rtorrent.socket != null) ["-${cfg.auth.rtorrent.socket}"];
 
-            AmbientCapabilities = [ "" ];
-            CapabilityBoundingSet = [ "" ];
-            DevicePolicy = "closed";
-            ProtectSystem = "full";
-            LockPersonality = true;
-            NoNewPrivileges = true;
-            PrivateDevices = true;
-            PrivateTmp = true;
-            PrivateUsers = true;
-            ProtectClock = true;
-            ProtectControlGroups = true;
-            ProtectHome = true;
-            ProtectHostname = true;
-            ProtectKernelLogs = true;
-            ProtectKernelModules = true;
-            ProtectKernelTunables = true;
-            ProcSubset = "pid";
-            ProtectProc = "invisible";
-            RemoveIPC = true;
-            RestrictAddressFamilies = [ "AF_UNIX" "AF_INET" "AF_INET6" ];
-            RestrictNamespaces = true;
-            RestrictRealtime = true;
-            RestrictSUIDSGID = true;
-            SystemCallArchitectures = "native";
-            SystemCallFilter = [
-              "~@cpu-emulation"
-              "~@debug"
-              "~@mount"
-              "~@obsolete"
-              "~@privileged"
-              "~@resources"
-            ];
-          };
+          AmbientCapabilities = [""];
+          CapabilityBoundingSet = [""];
+          DevicePolicy = "closed";
+          ProtectSystem = "full";
+          LockPersonality = true;
+          NoNewPrivileges = true;
+          PrivateDevices = true;
+          PrivateTmp = true;
+          PrivateUsers = true;
+          ProtectClock = true;
+          ProtectControlGroups = true;
+          ProtectHome = true;
+          ProtectHostname = true;
+          ProtectKernelLogs = true;
+          ProtectKernelModules = true;
+          ProtectKernelTunables = true;
+          ProcSubset = "pid";
+          ProtectProc = "invisible";
+          RemoveIPC = true;
+          RestrictAddressFamilies = ["AF_UNIX" "AF_INET" "AF_INET6"];
+          RestrictNamespaces = true;
+          RestrictRealtime = true;
+          RestrictSUIDSGID = true;
+          SystemCallArchitectures = "native";
+          SystemCallFilter = [
+            "~@cpu-emulation"
+            "~@debug"
+            "~@mount"
+            "~@obsolete"
+            "~@privileged"
+            "~@resources"
+          ];
         };
-      networking.firewall.allowedTCPPorts = lib.mkIf cfg.openFirewall [ cfg.port ];
+      };
+      networking.firewall.allowedTCPPorts = lib.mkIf cfg.openFirewall [cfg.port];
     };
 }

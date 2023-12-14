@@ -5,8 +5,8 @@ _: {
     xkbVariant = "";
     displayManager = {
       autoLogin = {
-       enable = true;
-       user = "starr";
+        enable = true;
+        user = "starr";
       };
       sddm = {
         enable = true;

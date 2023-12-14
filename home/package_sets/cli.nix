@@ -2,7 +2,7 @@
   pkgs,
   inputs,
   ...
-}: let 
+}: let
   starrpkgs = inputs.starrpkgs.packages.${pkgs.system};
 in {
   home.packages = with pkgs; [

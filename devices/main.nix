@@ -59,7 +59,7 @@
     nvidia = {
       # nvidia driver
       package = config.boot.kernelPackages.nvidiaPackages.stable;
-      # enables drm 
+      # enables drm
       # NOTE: drm does not refer to the copyright type of drm
       # see: https://en.wikipedia.org/wiki/Direct_Rendering_Manager
       modesetting.enable = true;

@@ -1,4 +1,8 @@
-{config, inputs, ...}: {
+{
+  config,
+  inputs,
+  ...
+}: {
   imports = [
     ./programs/helix.nix
     ./programs/fish.nix

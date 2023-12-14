@@ -43,14 +43,11 @@
   outputs = {
     self,
     nixpkgs,
-    starrpkgs,
     home-manager,
     agenix,
     discord_chan,
     arcanumbot,
-    nix-index-database,
     deploy-rs,
-    nixpkgs-unstable,
     nixos-generators,
     ...
   } @ inputs: {
@@ -79,8 +76,8 @@
     packages.x86_64-linux.vm = nixos-generators.nixosGenerate {
       system = "x86_64-linux";
       # for some reason this doesn't take a nixosconfig
-      modules = self.nixosConfigurations.starrnix._module.args.modules;
-      specialArgs = self.nixosConfigurations.starrnix._module.specialArgs;
+      inherit (self.nixosConfigurations.starrnix._module.args) modules;
+      inherit (self.nixosConfigurations.starrnix._module) specialArgs;
       format = "vm";
     };
 
@@ -88,23 +85,29 @@
       mkNixosConfig = {
         extraModules ? [],
         enableGui ? true,
-      }: nixpkgs.lib.nixosSystem {
+      }:
+        nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit inputs;
           };
-          modules = [
-            agenix.nixosModules.default
-            home-manager.nixosModules.default
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.starr = if enableGui then import ./home/starr.nix else import ./home/starr_nogui.nix;
+          modules =
+            [
+              agenix.nixosModules.default
+              home-manager.nixosModules.default
+              {
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
+                home-manager.users.starr =
+                  if enableGui
+                  then import ./home/starr.nix
+                  else import ./home/starr_nogui.nix;
 
-              home-manager.extraSpecialArgs = {inherit inputs;};
-            }
-          ] ++ extraModules;
-      };
-  in {
+                home-manager.extraSpecialArgs = {inherit inputs;};
+              }
+            ]
+            ++ extraModules;
+        };
+    in {
       starrnix = mkNixosConfig {
         extraModules = [./os/starrnix/default.nix];
       };

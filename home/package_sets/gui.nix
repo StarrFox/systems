@@ -4,7 +4,7 @@
   ...
 }: let
   starrpkgs = inputs.starrpkgs.packages.${pkgs.system};
-in  {
+in {
   home.packages = with pkgs; [
     #bitwarden
     #chromium
