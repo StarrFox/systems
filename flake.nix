@@ -102,6 +102,9 @@
 
                 home-manager.extraSpecialArgs = {inherit inputs;};
               }
+              {
+                system.configurationRevision = self.rev or "dirty";
+              }
             ]
             ++ extraModules;
         };
