@@ -38,7 +38,8 @@ in {
       # NOTE: this requires the pitch black theme listed in extensions
       #"workbench.colorTheme" = "Pitch Black";
       # NOTE: requires andromeda extension below
-      "workbench.colorTheme" = "Andromeda Bordered";
+      #"workbench.colorTheme" = "Andromeda Bordered";
+      "workbench.colorTheme" = "Monokai High Contrast";
       "workbench.startupEditor" = "none";
       # "editor.quickSuggestions" = {
       #   "other" = "inline";
