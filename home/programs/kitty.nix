@@ -1,15 +1,4 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: {
-  # TODO: remove when kitty-themes updates
-  nixpkgs.overlays = [
-    (_final: _prev: {
-      inherit (inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}) kitty-themes;
-    })
-  ];
-
+_: {
   programs.kitty = {
     enable = true;
     theme = "Adwaita darker";
