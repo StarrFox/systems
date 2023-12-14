@@ -44,7 +44,7 @@
 @list-generations:
     # the new nix command for this is: nix profile history --profile /nix/var/nix/profiles/system
     #sudo nix-env -p /nix/var/nix/profiles/system --list-generations
-    nixos-rebuild list-generation
+    nixos-rebuild list-generations
 
 # delete all but the last generation
 @delete-generations:
