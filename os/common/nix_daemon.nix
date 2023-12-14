@@ -7,7 +7,7 @@
     gc = {
       automatic = true;
       dates = "weekly";
-      options = ["--delete-old"];
+      options = "--delete-old";
     };
     # this makes nix * commands use the same nixpkgs versions as the system
     registry = lib.mapAttrs (_: value: {flake = value;}) inputs;
