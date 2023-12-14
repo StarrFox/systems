@@ -1,42 +1,17 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [
-    aria
-    onefetch
-    p7zip
-    #nnn
-    hexyl
-    lsof
-    erdtree
-    yazi
-    eza
-
-    # used by template
-    cookiecutter
-  ];
-
-  # programs.exa = {
-  #   enable = true;
-  #   extraOptions = [
-  #     "--no-time"
-  #     "--color=always"
-  #     "--group-directories-first"
-  #   ];
-  # };
-
-  # TODO: use string replace for packages, like clip
+{pkgs, lib, ...}: {
   programs.fish = {
     enable = true;
     shellAliases = {
-      ls = "eza -FlaM --no-time --icons=always --group-directories-first --git";
+      ls = "${lib.getExe pkgs.eza} -FlaM --no-time --icons=always --group-directories-first --git";
       tree = "ls --tree --git-ignore";
       lt = "tree";
-      gi = "onefetch";
-      download = "aria2c --split=10";
-      extract = "7z x";
-      usage = "erd --human --hidden";
-      files = "yazi";
-      hex = "hexyl";
-      ports = "sudo lsof -nP -iTCP -sTCP:LISTEN";
+      gi = "${lib.getExe pkgs.onefetch}";
+      download = "${lib.getExe pkgs.aria} --split=10";
+      extract = "${lib.getExe pkgs.p7zip} x";
+      usage = "${lib.getExe pkgs.erdtree} --human --hidden";
+      files = "${lib.getExe pkgs.yazi}";
+      hex = "${lib.getExe pkgs.hexyl}";
+      ports = "sudo ${lib.getExe pkgs.lsof} -nP -iTCP -sTCP:LISTEN";
       branches = "git branch -a";
       clip = "${pkgs.xsel}/bin/xsel -ib";
     };
@@ -56,8 +31,10 @@
         end
       '';
       template.body = ''
-        cookiecutter gh:StarrFox/templates --directory $argv[1]
+        ${lib.getExe pkgs.cookiecutter} gh:StarrFox/templates --directory $argv[1]
       '';
+      # we don't use string interpolation here on purpose
+      # since not having kitty or wezterm installed in an acceptable state
       img.body = ''
         if test ! -z "$KITTY_INSTALLATION_DIR"
           kitty +icat $argv
