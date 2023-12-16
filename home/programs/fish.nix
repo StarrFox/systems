@@ -1,6 +1,9 @@
 {pkgs, lib, config, ...}: {
   programs.fish = {
     enable = true;
+    # nixpkgs doesn't have meta.mainProgram set for some of these
+    # and I was tired of getting warnings about it
+    # so we just do /bin/<name> for them
     shellAliases = {
       ls = "${lib.getExe pkgs.eza} -FlaM --no-time --icons=always --group-directories-first --git";
       tree = "ls --tree --git-ignore";
@@ -9,9 +12,9 @@
       download = "${lib.getExe pkgs.aria} --split=10";
       extract = "${lib.getExe pkgs.p7zip} x";
       usage = "${lib.getExe pkgs.erdtree} --human --hidden";
-      files = "${lib.getExe pkgs.yazi}";
+      files = "${pkgs.yazi}/bin/yazi";
       hex = "${lib.getExe pkgs.hexyl}";
-      ports = "sudo ${lib.getExe pkgs.lsof} -nP -iTCP -sTCP:LISTEN";
+      ports = "sudo ${pkgs.lsof}/bin/lsof -nP -iTCP -sTCP:LISTEN";
       branches = "${lib.getExe config.programs.git.package} branch -a";
       clip = "${lib.getExe pkgs.xsel} -ib";
     };
@@ -31,7 +34,7 @@
         end
       '';
       template.body = ''
-        ${lib.getExe pkgs.cookiecutter} gh:StarrFox/templates --directory $argv[1]
+        ${pkgs.cookiecutter}/bin/cookiecutter gh:StarrFox/templates --directory $argv[1]
       '';
       # we don't use string interpolation here on purpose
       # since not having kitty or wezterm installed in an acceptable state
