@@ -31,11 +31,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1701426097,
-        "narHash": "sha256-Xu3tdrxUT5QQwgWAAK3wHJ71VR5k8Az/4irQNbwSGPc=",
+        "lastModified": 1702696538,
+        "narHash": "sha256-C9h/MaPsY8szbalL5l/UNEWacX/+EHQAT4QQgIni47M=",
         "owner": "StarrFox",
         "repo": "ArcanumBot",
-        "rev": "67949c88dc491add50f6dcaf14f846faf550b432",
+        "rev": "609e7814e4dfd98808fba538a5f94f1b8a4eacbf",
         "type": "github"
       },
       "original": {
@@ -310,11 +310,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1702195709,
-        "narHash": "sha256-+zRjWkm5rKqQ57PuLZ3JF3xi3vPMiOJzItb1m/43Cq4=",
+        "lastModified": 1702676849,
+        "narHash": "sha256-XqcREaTS38/QOsN8fk8PP325/UXHyF9enbP5ZPw5aiA=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "6761b8188b860f374b457eddfdb05c82eef9752f",
+        "rev": "aa99c2f4e9847cbb7e46fac0844ea1eb164b3b3a",
         "type": "github"
       },
       "original": {
@@ -730,11 +730,11 @@
         "nvfetcher": "nvfetcher"
       },
       "locked": {
-        "lastModified": 1702586338,
-        "narHash": "sha256-dvXLDmFo61X211aj5SGs02QbULsZCDKC2FLxi6fnU0I=",
+        "lastModified": 1702694895,
+        "narHash": "sha256-BJNiLFbZxQsAbcXYD5R20QlrAtVDp3dgXFj4MTljKv4=",
         "owner": "StarrFox",
         "repo": "packages",
-        "rev": "e81b4ca92539392cd1065fb9af29b1ed0377cdfd",
+        "rev": "dd286ee73a2e324ea3668b4a66b5316f5c5cfbaf",
         "type": "github"
       },
       "original": {
