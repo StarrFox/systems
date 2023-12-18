@@ -32,11 +32,11 @@
         "poetry2nix": "poetry2nix"
       },
       "locked": {
-        "lastModified": 1702824618,
-        "narHash": "sha256-wlbzU2LejAv7KJEVsVY4Bs73FIB8sY7EJAfFZBJBOAA=",
+        "lastModified": 1702825218,
+        "narHash": "sha256-1yweOHhO7ZwaesPZZE3lXGAw3ty+S36Gf4cfjrkzgNg=",
         "owner": "StarrFox",
         "repo": "ArcanumBot",
-        "rev": "0812efc011737bc7e2420806adc441037d5f8eb8",
+        "rev": "5fd0238e3333c6246c1ea794f9d157de902d5251",
         "type": "github"
       },
       "original": {
