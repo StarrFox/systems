@@ -32,6 +32,10 @@ in {
     #./services/deluge.nix
     #./services/bazarr.nix
     #./services/flood.nix
+
+    # containers
+    ../common/docker.nix
+    ../common/containers/dashdot.nix
   ];
 
   environment.systemPackages = with pkgs; [

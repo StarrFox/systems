@@ -1,4 +1,6 @@
 {config, ...}: {
+  # TODO: set authKeyFile
+  # it's in tailscale settings to get one
   services.tailscale.enable = true;
 
   # trust tailscale interface
