@@ -138,28 +138,30 @@
       };
     };
 
-    deploy.nodes = {
-      nixtop = {
-        hostname = "nixtop";
-        # these currently break too often (networkmanager-online)
-        autoRollback = false;
-        magicRollback = false;
-        profiles = {
-          system = {
-            user = "root";
-            path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixtop;
+    deploy = {
+      fastConnection = true;
+      # these currently break too often (networkmanager-online)
+      # autoRollback = false;
+      # magicRollback = false;
+
+      nodes = {
+        nixtop = {
+          hostname = "nixtop";
+          profiles = {
+            system = {
+              user = "root";
+              path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixtop;
+            };
           };
         };
-      };
 
-      nixarr = {
-        hostname = "nixarr";
-        autoRollback = false;
-        magicRollback = false;
-        profiles = {
-          system = {
-            user = "root";
-            path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixarr;
+        nixarr = {
+          hostname = "nixarr";
+          profiles = {
+            system = {
+              user = "root";
+              path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixarr;
+            };
           };
         };
       };
