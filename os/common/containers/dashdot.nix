@@ -1,4 +1,8 @@
 _: {
+  imports = [
+    ./docker.nix
+  ];
+
   virtualisation.oci-containers.containers.dashy = {
     image = "mauricenino/dashdot";
     ports = [

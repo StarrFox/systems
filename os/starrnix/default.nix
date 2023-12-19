@@ -27,7 +27,6 @@ in {
     #../common/steam.nix
     ../common/firejail.nix
     ../common/network_manager.nix
-    ../common/docker.nix
     ../common/distrobox.nix
     ../common/fonts.nix
 

@@ -18,7 +18,6 @@ in {
     ../common/services/syncthing.nix
     ../common/services/postgresql_backup.nix
 
-    ../common/docker.nix
     ../common/containers/portainer.nix
 
     ../common/users/starr.nix

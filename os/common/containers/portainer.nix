@@ -1,4 +1,8 @@
 _: {
+  imports = [
+    ./docker.nix
+  ];
+
   virtualisation.oci-containers.containers.portainer = {
     image = "portainer/portainer-ce:latest";
     ports = [
