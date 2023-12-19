@@ -27,8 +27,9 @@ in {
     #../common/steam.nix
     ../common/firejail.nix
     ../common/network_manager.nix
-    ../common/distrobox.nix
     ../common/fonts.nix
+
+    ../common/containers/distrobox.nix
 
     ../common/roles/desktop/xserver/plasma.nix
     #../common/roles/desktop/wayland/hyperland.nix
