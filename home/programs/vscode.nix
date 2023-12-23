@@ -55,8 +55,8 @@ in {
       };
 
       "zig.path" = "";
-      "zig.zls.path" = "zls";
-      "zig.zls.checkForUpdate" = false;
+      "zig.zls.path" = "${nixpkgs-unstable.zls}/bin/zls";
+      "zig.initialSetupDone" = true;
 
       "isort.args" = ["--profile" "black" "--skip-gitignore"];
       "[python]" = {
