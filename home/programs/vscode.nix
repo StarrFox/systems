@@ -17,7 +17,6 @@ in {
     nil
     black
     rust-analyzer
-    zls
   ];
 
   programs.vscode = {
