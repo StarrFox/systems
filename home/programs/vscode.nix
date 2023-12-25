@@ -129,6 +129,7 @@ in {
       starrpkgs.vscord
       starrpkgs.vscode-zig
       starrpkgs.vscode-coconut
+      starrpkgs.vscode-lark
 
       # themes
       viktorqvarfordt.vscode-pitch-black-theme
