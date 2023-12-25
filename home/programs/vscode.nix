@@ -14,8 +14,6 @@ in {
   # TODO: don't do this
   # this is just incase I forget to add them to the enviroment
   home.packages = with pkgs; [
-    nil
-    black
     rust-analyzer
   ];
 
@@ -45,7 +43,7 @@ in {
       # };
 
       "nix.enableLanguageServer" = true;
-      "nix.serverPath" = "nil";
+      "nix.serverPath" = "${pkgs.nil}/bin/nil";
       "[nix]" = {
         "editor.defaultFormatter" = "kamadorueda.alejandra";
         "editor.formatOnPaste" = true;
