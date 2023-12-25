@@ -131,7 +131,7 @@ in {
 
       # themes
       viktorqvarfordt.vscode-pitch-black-theme
-      starrpkgs.andromeda
+      #starrpkgs.andromeda
       starrpkgs.monokai-highcontrast
 
       nixpkgs-unstable.vscode-extensions.ms-python.isort
