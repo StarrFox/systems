@@ -33,6 +33,7 @@ in {
 
   users.users.starr.openssh.authorizedKeys.keys = [
     ssh-keys.starr-starrnix
+    ssh-keys.starrnix
   ];
 
   networking.hostName = "nixtop";
