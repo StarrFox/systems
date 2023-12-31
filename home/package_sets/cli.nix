@@ -8,16 +8,16 @@ in {
   home.packages = with pkgs; [
     bat
     cava
-    croc
+    #croc
     duf
     fastfetch
     ffmpeg
     htop
     httpie
-    manix
+    #manix
     magic-wormhole
     #neofetch
-    nethogs
+    #nethogs
     ncdu
     ripgrep
     rsync
