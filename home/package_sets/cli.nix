@@ -10,7 +10,6 @@ in {
     cava
     #croc
     duf
-    fastfetch
     ffmpeg
     htop
     httpie

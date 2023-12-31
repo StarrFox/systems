@@ -18,6 +18,7 @@
       branches = "${lib.getExe config.programs.git.package} branch -a";
       clip = "${lib.getExe pkgs.xsel} -ib";
       c = "clear";
+      fetch = "${lib.getExe pkgs.fastfetch}";
     };
     # wish they'd just remove this garbage
     interactiveShellInit = "set -U fish_greeting";
