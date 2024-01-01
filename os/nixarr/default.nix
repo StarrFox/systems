@@ -16,6 +16,7 @@ in {
     ../common/environment.nix
     ../common/uefi_boot.nix
     ../common/network_manager.nix
+    ../common/sudo.nix
 
     ../common/roles/server.nix
 

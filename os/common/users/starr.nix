@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   programs.fish.enable = true;
   services.getty.autologinUser = "starr";
-  security.sudo.wheelNeedsPassword = false;
   users.users.starr = {
     isNormalUser = true;
     description = "starr";

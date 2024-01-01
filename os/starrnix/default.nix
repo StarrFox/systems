@@ -28,6 +28,7 @@ in {
     ../common/firejail.nix
     ../common/network_manager.nix
     ../common/fonts.nix
+    ../common/sudo.nix
 
     ../common/roles/desktop/xserver/plasma.nix
     #../common/roles/desktop/wayland/hyperland.nix
