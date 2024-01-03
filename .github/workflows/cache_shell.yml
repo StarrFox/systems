@@ -5,9 +5,10 @@ on:
     paths:
       - flake.nix
       - flake.lock
+      - .github/workflows/cache_shell.yml
 
 jobs:
-    build:
+    cache:
         runs-on: ubuntu-latest
         steps:
         - uses: actions/checkout@v4
