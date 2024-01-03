@@ -1,4 +1,4 @@
-name: update-flake-lock
+name: monthly lock update
 on:
   workflow_dispatch:
   schedule:
@@ -15,7 +15,7 @@ jobs:
       - name: Update flake.lock
         uses: DeterminateSystems/update-flake-lock@v20
         with:
-          pr-title: "Update flake.lock" # Title of PR to be created
-          pr-labels: |                  # Labels to be set on the PR
+          pr-title: "Monthly lock update"
+          pr-labels: |
             lock
             automated
