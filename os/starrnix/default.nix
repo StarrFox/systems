@@ -29,6 +29,7 @@ in {
     ../common/network_manager.nix
     ../common/fonts.nix
     ../common/sudo.nix
+    ../common/hosts.nix
 
     ../common/roles/desktop/xserver/plasma.nix
     #../common/roles/desktop/wayland/hyperland.nix
@@ -58,11 +59,6 @@ in {
     device = "nixtop:/nfs";
     fsType = "nfs";
     options = ["x-systemd.automount" "noauto" "nfsvers=3"];
-  };
-
-  networking.hosts = {
-    "192.168.122.214" = ["starrtest"];
-    "192.168.122.189" = ["nixarr"];
   };
 
   virtualisation.libvirtd.enable = true;

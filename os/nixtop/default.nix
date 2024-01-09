@@ -9,6 +9,7 @@ in {
     ../common/environment.nix
     ../common/network_manager.nix
     ../common/sudo.nix
+    ../common/hosts.nix
 
     ../common/services/openssh.nix
     ../common/services/discord_chan.nix

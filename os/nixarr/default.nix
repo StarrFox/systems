@@ -17,6 +17,7 @@ in {
     ../common/uefi_boot.nix
     ../common/network_manager.nix
     ../common/sudo.nix
+    ../common/hosts.nix
 
     ../common/roles/server.nix
 
@@ -47,10 +48,6 @@ in {
   networking = {
     hostName = "nixarr";
     useDHCP = lib.mkDefault true;
-  };
-
-  networking.hosts = {
-    "192.168.1.71" = ["starrnix"];
   };
 
   # arr services group

@@ -19,6 +19,7 @@ in {
     ../common/network_manager.nix
     ../common/fonts.nix
     ../common/sudo.nix
+    ../common/hosts.nix
 
     ../common/roles/desktop/xserver/plasma.nix
 
