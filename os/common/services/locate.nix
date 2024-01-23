@@ -1,3 +1,6 @@
 _: {
-  services.locate.enable = true;
+  services.locate = {
+    enable = true;
+    localuser = "root";
+  };
 }
