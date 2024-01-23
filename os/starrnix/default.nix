@@ -17,6 +17,7 @@ in {
     ../common/services/xbanish.nix
     ../common/services/jellyfin.nix
     ../common/services/jellyseerr.nix
+    ../common/services/locate.nix
 
     ../common/nix_daemon.nix
     ../common/timezone.nix
