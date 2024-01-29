@@ -11,6 +11,7 @@
       gi = "${lib.getExe pkgs.onefetch}";
       download = "${lib.getExe pkgs.aria} --split=10";
       extract = "${lib.getExe pkgs.p7zip} x";
+      list = "${lib.getExe pkgs.p7zip} l";
       usage = "${lib.getExe pkgs.erdtree} --human --hidden";
       files = "${pkgs.yazi}/bin/yazi";
       hex = "${lib.getExe pkgs.hexyl}";
