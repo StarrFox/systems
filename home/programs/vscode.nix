@@ -63,7 +63,7 @@ in {
         #"editor.formatOnType" = true;
         "editor.defaultFormatter" = "ms-python.black-formatter";
         "editor.codeActionsOnSave" = {
-          "source.organizeImports" = true;
+          "source.organizeImports" = "explicit";
         };
       };
       "python.analysis.inlayHints.functionReturnTypes" = true;
