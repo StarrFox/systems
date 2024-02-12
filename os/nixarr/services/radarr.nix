@@ -1,10 +1,13 @@
-{inputs, ...}: let
-  unstable = import inputs.nixpkgs-unstable {};
+{inputs, config, pkgs, ...}: let
+  nixpkgs-unstable = import inputs.nixpkgs-unstable {
+    system = "${pkgs.system}";
+    inherit (config.nixpkgs) config;
+  };
 in {
   services.radarr = {
     enable = true;
     openFirewall = true;
     group = "arr";
-    package = unstable.radarr;
+    package = nixpkgs-unstable.radarr;
   };
 }
