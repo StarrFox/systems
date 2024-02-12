@@ -26,7 +26,7 @@ in {
     ../common/environment.nix
     ../common/sound.nix
     ../common/flatpak.nix
-    #../common/steam.nix
+    ../common/steam.nix
     ../common/firejail.nix
     ../common/network_manager.nix
     ../common/fonts.nix
@@ -62,8 +62,6 @@ in {
     fsType = "nfs";
     options = ["x-systemd.automount" "noauto" "nfsvers=3"];
   };
-
-  environment.systemPackages = [pkgs.steam-run];
 
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;
