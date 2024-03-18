@@ -5,7 +5,7 @@
     # and I was tired of getting warnings about it
     # so we just do /bin/<name> for them
     shellAliases = {
-      ls = "${lib.getExe pkgs.eza} -FlaM --no-time --icons=always --group-directories-first --git";
+      ls = "${lib.getExe pkgs.eza} -F -laM --no-time --icons=always --group-directories-first --git";
       tree = "ls --tree --git-ignore";
       lt = "tree";
       gi = "${lib.getExe pkgs.onefetch}";
