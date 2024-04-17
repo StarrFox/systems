@@ -7,7 +7,7 @@ sync: sync-movies sync-tv sync-music
 
 # sync tv shows
 sync-tv:
-	mullvad-exclude sudo rsync --ignore-existing --remove-source-files --recursive --progress /data_tv/ "starrnix:/big/media/TV Shows"
+	mullvad-exclude sudo rsync --ignore-existing --recursive --progress /data_tv/ "starrnix:/big/media/TV Shows"
 
 # sync movies
 sync-movies:
