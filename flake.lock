@@ -76,11 +76,11 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1709837210,
-        "narHash": "sha256-lQDtSRI1ZpBlmdQl0MFgXqmT0od1sbq48JMZI+JiZZM=",
+        "lastModified": 1713997746,
+        "narHash": "sha256-JKAThFJSN5lb+RAYnUd0OcdVGyUOm94t8k3Y0Nfd4/g=",
         "owner": "StarrFox",
         "repo": "Discord-chan",
-        "rev": "fbbb672385445fd9e985fb90193f0c7f22463f80",
+        "rev": "63b834c5d621f8433962c22154cec5c244ed5d45",
         "type": "github"
       },
       "original": {
