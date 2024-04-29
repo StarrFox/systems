@@ -9,7 +9,7 @@
     ./programs/alacritty.nix
     ./programs/kitty.nix
     ./programs/wezterm
-    ./programs/rio.nix
+    #./programs/rio.nix
     ./services/dunst.nix
     ./programs/vscode.nix
     #./programs/obs.nix
