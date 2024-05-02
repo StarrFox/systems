@@ -14,6 +14,7 @@ in {
     #ghidra-bin
     #insomnia # this is the rest api gui thing
     obsidian
+    lutris
     mpv
     pcsx2
     the-powder-toy
