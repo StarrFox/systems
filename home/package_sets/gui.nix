@@ -20,6 +20,7 @@ in {
     the-powder-toy
     thunderbird-bin
     spotify
+    helvum
     virt-manager
     #drawio
     feh
