@@ -32,6 +32,7 @@ in {
     ../common/fonts.nix
     ../common/sudo.nix
     ../common/hosts.nix
+    ../common/bluetooth.nix
 
     ../common/roles/desktop/xserver/plasma.nix
     #../common/roles/desktop/wayland/hyperland.nix
