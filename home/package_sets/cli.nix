@@ -22,6 +22,7 @@ in {
     rsync
     tldr
     just
+    wine
 
     inputs.nh.packages.${pkgs.system}.default
     inputs.nix_search.packages.${pkgs.system}.default
