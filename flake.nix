@@ -142,8 +142,8 @@
       # this is too slow
       #fastConnection = true;
       # these currently break too often (networkmanager-online)
-      # autoRollback = false;
-      # magicRollback = false;
+      autoRollback = false;
+      magicRollback = false;
 
       nodes = {
         nixtop = {
