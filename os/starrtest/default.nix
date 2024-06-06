@@ -28,7 +28,7 @@ in {
     ../common/users/starr.nix
   ];
 
-  nix.package = pkgs.nixVersions.unstable;
+  nix.package = pkgs.nixVersions.latest;
 
   networking = {
     hostName = "starrtest";

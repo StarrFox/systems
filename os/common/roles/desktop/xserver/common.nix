@@ -1,9 +1,13 @@
 _: {
   services.xserver = {
     enable = true;
-    layout = "us";
-    xkbVariant = "";
-    displayManager = {
+    xkb = {
+      layout = "us";
+      variant = "";
+    };
+  };
+
+  services.displayManager = {
       autoLogin = {
         enable = true;
         user = "starr";
@@ -12,6 +16,5 @@ _: {
         enable = true;
         autoNumlock = true;
       };
-    };
   };
 }
