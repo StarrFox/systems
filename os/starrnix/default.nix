@@ -12,7 +12,7 @@ in {
     ./services/syncthing.nix
     #./services/nfs.nix
 
-    ../common/services/mullvad.nix
+    #../common/services/mullvad.nix
     ../common/services/openssh.nix
     #../common/services/tailscale.nix
     ../common/services/xbanish.nix
