@@ -1,7 +1,13 @@
-_: {
+{inputs, pkgs, config, ...}: let
+  nixpkgs-old = import inputs.nixpkgs-old {
+    system = "${pkgs.system}";
+    inherit (config.nixpkgs) config;
+  };
+in {
   #services.blueman.enable = true;
   hardware.bluetooth = {
     enable = true;
+    package = nixpkgs-old.bluez;
     powerOnBoot = true;
     settings = {
       General = {
