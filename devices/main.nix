@@ -17,6 +17,9 @@
       availableKernelModules = ["xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod"];
       kernelModules = [];
     };
+    # TODO: remove this line when it works
+    # manually set 6.2 to try and fix bluetooth
+    kernelPackages = pkgs.linuxPackages_6_2;
   };
 
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
