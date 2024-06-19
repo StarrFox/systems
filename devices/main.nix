@@ -19,7 +19,7 @@
     };
     # TODO: remove this line when it works
     # manually set 6.2 to try and fix bluetooth
-    kernelPackages = pkgs.linuxPackages_6_2;
+    kernelPackages = pkgs.linuxPackages_latest;
   };
 
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
