@@ -21,6 +21,7 @@ in {
     thunderbird-bin
     spotify
     helvum
+    heroic
     virt-manager
     #drawio
     feh
