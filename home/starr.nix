@@ -10,7 +10,7 @@
     ./programs/kitty.nix
     ./programs/wezterm
     #./programs/rio.nix
-    ./services/dunst.nix
+    #./services/dunst.nix
     ./programs/vscode.nix
     #./programs/obs.nix
     ./package_sets/gui.nix
