@@ -12,7 +12,6 @@ in {
     flameshot
     #gimp
     #ghidra-bin
-    #insomnia # this is the rest api gui thing
     obsidian
     lutris
     mpv

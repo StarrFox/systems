@@ -1,13 +1,14 @@
-{inputs, pkgs, config, ...}: let
-  nixpkgs-old = import inputs.nixpkgs-old {
-    system = "${pkgs.system}";
-    inherit (config.nixpkgs) config;
-  };
-in {
+# {inputs, pkgs, config, ...}: let
+#   nixpkgs-old = import inputs.nixpkgs-old {
+#     system = "${pkgs.system}";
+#     inherit (config.nixpkgs) config;
+#   };
+# in
+_: {
   #services.blueman.enable = true;
   hardware.bluetooth = {
     enable = true;
-    package = nixpkgs-old.bluez;
+    #package = nixpkgs-old.bluez;
     powerOnBoot = true;
     settings = {
       General = {
@@ -19,7 +20,7 @@ in {
 
   hardware.pulseaudio.extraConfig = ''
   .ifexists module-bluetooth-policy.so
-  load-module module-bluetooth-policy auto_switch=false  # <---- !
+  load-module module-bluetooth-policy auto_switch=false
   .endif
   '';
 }
