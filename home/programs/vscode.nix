@@ -118,7 +118,8 @@ in {
       github.vscode-pull-request-github
       mhutchie.git-graph
       vadimcn.vscode-lldb
-      serayuzgur.crates
+      #serayuzgur.crates
+      nixpkgs-unstable.fill-labs.dependi
       humao.rest-client
       ms-vscode.cpptools
       twxs.cmake
