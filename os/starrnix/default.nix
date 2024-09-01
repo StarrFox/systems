@@ -8,7 +8,8 @@
 in {
   imports = [
     ./services/postgresql.nix
-    ./services/ratbagd.nix
+    #./services/ratbagd.nix
+    ./services/ckb.nix
     ./services/syncthing.nix
     #./services/nfs.nix
 

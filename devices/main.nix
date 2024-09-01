@@ -59,6 +59,9 @@
       extraPackages = with pkgs; [nvidia-vaapi-driver];
     };
 
+    # corsair mouse config
+    ckb-next.enable = true;
+
     nvidia = {
       # nvidia driver
       package = config.boot.kernelPackages.nvidiaPackages.stable;
