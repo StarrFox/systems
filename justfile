@@ -2,6 +2,11 @@
 @default:
     just --list
 
+@update-dc: os
+    nix flake lock --update-input discord_chan
+    git commit -am "update dc"
+    git push
+
 # switch os
 @os: && update-flatpak
     nh os switch .
