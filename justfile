@@ -2,7 +2,8 @@
 @default:
     just --list
 
-@update-dc: os
+# update dc and push the change
+@update-dc: && os
     nix flake lock --update-input discord_chan
     git commit -am "update dc"
     git push
