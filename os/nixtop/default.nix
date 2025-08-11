@@ -36,6 +36,7 @@ in {
     ssh-keys.starr-starrnix
     ssh-keys.starrnix
     ssh-keys.starrwin
+    ssh-keys.nixarr
   ];
 
   networking.hostName = "nixtop";
