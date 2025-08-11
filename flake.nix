@@ -130,7 +130,6 @@
       nixarr = mkNixosConfig {
         extraModules = [
           ./os/nixarr/default.nix
-          ./misc/flood_module.nix
           {
             home-manager.users.starr.home.file."justfile".source = ./misc/nixarr_justfile;
           }
