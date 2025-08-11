@@ -7,12 +7,12 @@ sync: sync-movies sync-tv sync-music
 
 # sync tv shows
 sync-tv:
-	mullvad-exclude rsync --ignore-existing --recursive --progress /data_tv/ "starrnix:/big/media/TV Shows"
+	mullvad-exclude rsync --ignore-existing --recursive --progress /data_tv/ "nixarr:/big/media/TV Shows"
 
 # sync movies
 sync-movies:
-	mullvad-exclude rsync --ignore-existing --recursive --progress /data/ "starrnix:/big/media/Movies"
+	mullvad-exclude rsync --ignore-existing --recursive --progress /data/ "nixarr:/big/media/Movies"
 
 # sync music
 sync-music:
-	mullvad-exclude rsync --ignore-existing --recursive --progress /data_music/ "starrnix:/big/media/Music"
+	mullvad-exclude rsync --ignore-existing --recursive --progress /data_music/ "nixarr:/big/media/Music"
