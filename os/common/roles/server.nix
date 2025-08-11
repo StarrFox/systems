@@ -8,7 +8,7 @@
 
   # No need for these on a server
   fonts.fontconfig.enable = lib.mkDefault false;
-  sound.enable = false;
+  #sound.enable = false;
 
   # Print the URL instead on servers
   environment.variables.BROWSER = "echo";

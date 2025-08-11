@@ -12,10 +12,11 @@
 
   services.nextcloud = {
     enable = true;
-    package = pkgs.nextcloud29;
+    package = pkgs.nextcloud31;
     inherit (config.networking) hostName;
     config = {
       adminuser = "starr";
+      dbtype = "sqlite";
       adminpassFile = config.age.secrets.nextcloud_pass.path;
     };
   };
