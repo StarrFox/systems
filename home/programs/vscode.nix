@@ -110,7 +110,7 @@ in {
       ms-python.vscode-pylance
       mkhl.direnv
       editorconfig.editorconfig
-      matklad.rust-analyzer
+      rust-lang.rust-analyzer
       kamadorueda.alejandra
       skellock.just
       gruntfuggly.todo-tree
