@@ -7,11 +7,11 @@ sync: sync-movies sync-tv sync-music
 
 # sync tv shows
 sync-tv:
-	mullvad-exclude rsync --ignore-existing --recursive --progress /media/shows "nixtop:/big/media/TV Shows"
+	mullvad-exclude rsync --ignore-existing --recursive --progress /media/shows/ "nixtop:/big/media/TV Shows"
 
 # sync movies
 sync-movies:
-	mullvad-exclude rsync --ignore-existing --recursive --progress /media/movies "nixtop:/big/media/Movies"
+	mullvad-exclude rsync --ignore-existing --recursive --progress /media/movies/ "nixtop:/big/media/Movies"
 
 # sync music
 sync-music:
