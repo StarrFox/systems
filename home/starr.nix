@@ -32,7 +32,7 @@ in {
     ./package_sets/cli.nix
 
     # TODO: use nixos module instead
-    inputs.nix-index-database.hmModules.nix-index
+    inputs.nix-index-database.homeModules.nix-index
   ] ++ extraModules;
 
   # NOTE: if switching from plasma consider adding handlr to handle default apps
