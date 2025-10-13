@@ -75,13 +75,13 @@
         };
     };
 
-    packages.x86_64-linux.vm = nixos-generators.nixosGenerate {
-      system = "x86_64-linux";
-      # for some reason this doesn't take a nixosconfig
-      inherit (self.nixosConfigurations.starrnix._module.args) modules;
-      inherit (self.nixosConfigurations.starrnix._module) specialArgs;
-      format = "vm";
-    };
+    #packages.x86_64-linux.vm = nixos-generators.nixosGenerate {
+    #  system = "x86_64-linux";
+    #  # for some reason this doesn't take a nixosconfig
+    #  inherit (self.nixosConfigurations.starrnix._module.args) modules;
+    #  inherit (self.nixosConfigurations.starrnix._module) specialArgs;
+    #  format = "vm";
+    #};
 
     nixosConfigurations = let
       mkNixosConfig = {
