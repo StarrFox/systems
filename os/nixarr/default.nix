@@ -34,6 +34,7 @@ in {
     #./services/deluge.nix
     ./services/bazarr.nix
     #./services/flood.nix
+    ./services/flaresolverr.nix
   ];
 
   environment.systemPackages = with pkgs; [
