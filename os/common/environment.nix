@@ -11,7 +11,7 @@
     # set during login
     sessionVariables = {
       # TODO: find a better way to handle this
-      FLAKE = "/home/starr/systems";
+      NH_FLAKE = "/home/starr/systems";
     };
   };
 

@@ -7,7 +7,7 @@
     ./programs/vscode.nix
     ./programs/firefox.nix
     ./programs/alacritty.nix
-    ./programs/kitty.nix
+    #./programs/kitty.nix
     ./programs/wezterm
     #./programs/rio.nix
     #./services/dunst.nix

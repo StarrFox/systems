@@ -23,7 +23,7 @@ in {
 
     ../common/roles/desktop/xserver/plasma.nix
 
-    ../../devices/vm.nix
+    ../../devices/starrtest.nix
 
     ../common/users/starr.nix
   ];

@@ -18,7 +18,7 @@ _: {
     };
   };
 
-  hardware.pulseaudio.extraConfig = ''
+  services.pulseaudio.extraConfig = ''
   .ifexists module-bluetooth-policy.so
   load-module module-bluetooth-policy auto_switch=false
   .endif

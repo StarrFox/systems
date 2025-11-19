@@ -50,10 +50,10 @@
   ];
 
   hardware = {
-    opengl = {
+    graphics = {
       enable = true;
       # no idea what this does, but everyone else uses it
-      driSupport32Bit = true;
+      enable32Bit = true;
 
       # something about nvdec whatever that is
       extraPackages = with pkgs; [nvidia-vaapi-driver];
@@ -63,6 +63,7 @@
     ckb-next.enable = true;
 
     nvidia = {
+      open = true;
       # nvidia driver
       package = config.boot.kernelPackages.nvidiaPackages.stable;
       # enables drm

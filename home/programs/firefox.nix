@@ -4,7 +4,7 @@
     profiles = {
       ${config.home.username} = {
         search = {
-          default = "DuckDuckGo";
+          default = "ddg";
           force = true;
         };
         settings = {
