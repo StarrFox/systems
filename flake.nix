@@ -6,7 +6,6 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-old.url = "github:nixos/nixpkgs/nixos-23.11";
     starrpkgs.url = "github:StarrFox/packages";
-    nh.url = "github:ViperML/nh";
     discord_chan.url = "github:StarrFox/Discord-chan";
     arcanumbot.url = "github:StarrFox/ArcanumBot";
 
@@ -67,11 +66,11 @@
             statix
             glances
             nix-tree
-
             nh
+
+            # disambiguate from the function argument
             pkgs.deploy-rs
 
-            #inputs.nh.packages.x86_64-linux.default
             inputs.agenix.packages.x86_64-linux.default
             #deploy-rs.packages.x86_64-linux.default
           ];

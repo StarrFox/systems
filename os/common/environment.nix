@@ -9,10 +9,13 @@
       EDITOR = lib.getExe pkgs.helix;
     };
     # set during login
-    sessionVariables = {
-      # TODO: find a better way to handle this
-      NH_FLAKE = "/home/starr/systems";
-    };
+    #sessionVariables = {
+    #};
+  };
+
+  programs.nh = {
+    enable = true;
+    flake = "/home/starr/systems";
   };
 
   # we don't need nano since we have helix
