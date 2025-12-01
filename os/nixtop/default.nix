@@ -46,7 +46,7 @@ in {
   services.postgresql.package = pkgs.postgresql_14;
 
   # nixtop is a laptop
-  services.logind.lidSwitch = "ignore";
+  services.logind.settings.Login.HandleLidSwitch = "ignore";
 
   # NOTE: make sure to double backup postgres before changing
   system.stateVersion = "23.11";

@@ -5,11 +5,11 @@
   ...
 }: let
   nixpkgs-unstable = import inputs.nixpkgs-unstable {
-    system = "${pkgs.system}";
+    system = "${pkgs.stdenv.hostPlatform.system}";
     inherit (osConfig.nixpkgs) config;
   };
 
-  starrpkgs = inputs.starrpkgs.packages.${pkgs.system};
+  starrpkgs = inputs.starrpkgs.packages.${pkgs.stdenv.hostPlatform.system};
 in {
   # TODO: don't do this
   # this is just incase I forget to add them to the enviroment

@@ -1,6 +1,6 @@
 # {inputs, pkgs, config, ...}: let
 #   nixpkgs-old = import inputs.nixpkgs-old {
-#     system = "${pkgs.system}";
+#     system = "${pkgs.stdenv.hostPlatform.system}";
 #     inherit (config.nixpkgs) config;
 #   };
 # in
@@ -19,8 +19,8 @@ _: {
   };
 
   services.pulseaudio.extraConfig = ''
-  .ifexists module-bluetooth-policy.so
-  load-module module-bluetooth-policy auto_switch=false
-  .endif
+    .ifexists module-bluetooth-policy.so
+    load-module module-bluetooth-policy auto_switch=false
+    .endif
   '';
 }
