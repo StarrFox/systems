@@ -12,7 +12,7 @@
 
   services.nextcloud = {
     enable = true;
-    package = pkgs.nextcloud31;
+    package = pkgs.nextcloud32;
     inherit (config.networking) hostName;
     config = {
       adminuser = "starr";

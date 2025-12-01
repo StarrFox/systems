@@ -3,7 +3,7 @@
   inputs,
   ...
 }: let
-  starrpkgs = inputs.starrpkgs.packages.${pkgs.system};
+  starrpkgs = inputs.starrpkgs.packages.${pkgs.stdenv.hostPlatform.system};
 in {
   home.packages = with pkgs; [
     #bitwarden
