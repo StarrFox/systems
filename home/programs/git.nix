@@ -3,7 +3,7 @@
   inputs,
   ...
 }: let
-  starrpkgs = inputs.starrpkgs.packages.${pkgs.system};
+  starrpkgs = inputs.starrpkgs.packages.${pkgs.stdenv.hostPlatform.system};
 in {
   programs.gh = {
     enable = true;
@@ -13,13 +13,19 @@ in {
     ];
   };
 
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
+  };
+
   programs.git = {
     enable = true;
-    userName = "StarrFox";
-    userEmail = "StarrFox6312@gmail.com";
-    delta.enable = true;
     lfs.enable = true;
-    extraConfig = {
+    settings = {
+      user = {
+        name = "StarrFox";
+        email = "StarrFox6312@gmail.com";
+      };
       push.autoSetupRemote = true;
       pull.rebase = true;
       init.defaultBranch = "main";

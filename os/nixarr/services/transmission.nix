@@ -1,4 +1,4 @@
-_: {
+{pkgs, ...}: {
   # TODO: figure out how to access the webui externally
   services.transmission = {
     enable = true;
@@ -7,6 +7,8 @@ _: {
     openRPCPort = true;
     downloadDirPermissions = "777";
     group = "arr";
+
+    package = pkgs.transmission_4;
 
     settings = {
       rpc-whitelist-enabled = false;

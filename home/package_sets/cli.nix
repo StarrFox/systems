@@ -3,7 +3,7 @@
   inputs,
   ...
 }: let
-  starrpkgs = inputs.starrpkgs.packages.${pkgs.system};
+  starrpkgs = inputs.starrpkgs.packages.${pkgs.stdenv.hostPlatform.system};
 in {
   home.packages = with pkgs; [
     bat
@@ -24,7 +24,7 @@ in {
     just
     wine
 
-    inputs.nix_search.packages.${pkgs.system}.default
+    inputs.nix_search.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     python3Packages.ipython
     python3Packages.howdoi

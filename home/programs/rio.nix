@@ -5,7 +5,7 @@
 }: {
   home.packages = [
     # nixpkgs cucks removed builtins.currentSystem
-    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.rio
+    inputs.nixpkgs-unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.rio
   ];
 
   xdg.configFile."rio/config.toml" = {
