@@ -57,7 +57,7 @@ in {
   users.users.starr.extraGroups = ["arr"];
 
   users.users.starr.openssh.authorizedKeys.keys = [
-    ssh-keys.starr-starrnix
+    ssh-keys.starr-nixmain
     ssh-keys.starrwin
   ];
 

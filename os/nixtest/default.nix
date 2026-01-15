@@ -36,7 +36,7 @@ in {
   };
 
   users.users.starr.openssh.authorizedKeys.keys = [
-    ssh-keys.starr-starrnix
+    ssh-keys.starr-nixmain
   ];
 
   system.stateVersion = "25.11";

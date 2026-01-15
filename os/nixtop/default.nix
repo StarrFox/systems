@@ -34,8 +34,8 @@ in {
   ];
 
   users.users.starr.openssh.authorizedKeys.keys = [
-    ssh-keys.starr-starrnix
-    ssh-keys.starrnix
+    ssh-keys.starr-nixmain
+    ssh-keys.nixmain
     ssh-keys.starrwin
     ssh-keys.nixarr
   ];

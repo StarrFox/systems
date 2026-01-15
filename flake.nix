@@ -80,8 +80,8 @@
     #packages.x86_64-linux.vm = nixos-generators.nixosGenerate {
     #  system = "x86_64-linux";
     #  # for some reason this doesn't take a nixosconfig
-    #  inherit (self.nixosConfigurations.starrnix._module.args) modules;
-    #  inherit (self.nixosConfigurations.starrnix._module) specialArgs;
+    #  inherit (self.nixosConfigurations.nixmain._module.args) modules;
+    #  inherit (self.nixosConfigurations.nixmain._module) specialArgs;
     #  format = "vm";
     #};
 
@@ -112,8 +112,8 @@
             ++ extraModules;
         };
     in {
-      starrnix = mkNixosConfig {
-        extraModules = [./os/starrnix/default.nix];
+      nixmain = mkNixosConfig {
+        extraModules = [./os/nixmain/default.nix];
       };
 
       nixtest = mkNixosConfig {

@@ -16,7 +16,7 @@
       rpc-bind-address = "0.0.0.0";
       rpc-username = "starr";
       rpc-whitelist = "127.0.0.1,::1,192.168.1.71";
-      #rpc-host-whitelist = "starrnix";
+      #rpc-host-whitelist = "nixmain";
     };
   };
 }
