@@ -116,8 +116,8 @@
         extraModules = [./os/starrnix/default.nix];
       };
 
-      starrtest = mkNixosConfig {
-        extraModules = [./os/starrtest/default.nix];
+      nixtest = mkNixosConfig {
+        extraModules = [./os/nixtest/default.nix];
       };
 
       nixtop = mkNixosConfig {
