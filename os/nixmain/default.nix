@@ -55,7 +55,7 @@ in {
   ];
 
   networking = {
-    hostName = "starrnix";
+    hostName = "nixmain";
     useDHCP = lib.mkDefault true;
   };
 

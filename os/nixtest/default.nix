@@ -31,7 +31,7 @@ in {
   nix.package = pkgs.nixVersions.latest;
 
   networking = {
-    hostName = "starrtest";
+    hostName = "nixtest";
     useDHCP = lib.mkDefault true;
   };
 
@@ -39,5 +39,5 @@ in {
     ssh-keys.starr-starrnix
   ];
 
-  system.stateVersion = "23.11";
+  system.stateVersion = "25.11";
 }
