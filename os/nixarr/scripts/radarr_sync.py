@@ -4,7 +4,7 @@
 from os import environ, system
 
 
-SYNC_COMMAND = "mullvad-exclude rsync --recursive --progress /data/ \"starrnix:/big/media/Movies\""
+SYNC_COMMAND = "mullvad-exclude rsync --recursive --progress /data/ \"nixmain:/big/media/Movies\""
 
 
 def on_download():

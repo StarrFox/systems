@@ -73,5 +73,5 @@ in {
     config.boot.kernelPackages.v4l2loopback
   ];
 
-  system.stateVersion = "23.11";
+  system.stateVersion = "25.11";
 }
