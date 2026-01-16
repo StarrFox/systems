@@ -34,14 +34,14 @@
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
-    #"/big" = {
-    #  device = "/dev/disk/by-label/big";
-    #  fsType = "ext4";
-    #};
-    #"/big_fast" = {
-    #  device = "/dev/disk/by-label/big_fast";
-    #  fsType = "ext4";
-    #};
+    "/big" = {
+     device = "/dev/disk/by-label/big";
+     fsType = "ext4";
+    };
+    "/big_fast" = {
+     device = "/dev/disk/by-label/big_fast";
+     fsType = "ext4";
+    };
   };
 
   swapDevices = [
