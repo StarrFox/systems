@@ -26,7 +26,7 @@ in {
     ../common/environment.nix
     ../common/sound.nix
     ../common/flatpak.nix
-    ../common/steam.nix
+    #../common/steam.nix
     ../common/firejail.nix
     ../common/network_manager.nix
     ../common/fonts.nix
