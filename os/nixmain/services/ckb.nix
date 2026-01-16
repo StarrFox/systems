@@ -1,4 +1,4 @@
 {pkgs, ...}: {
   # graphical frontend
-  environment.systemPackages = [pkgs.ckb-next];
+ # environment.systemPackages = [pkgs.ckb-next];
 }

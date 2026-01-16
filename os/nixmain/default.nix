@@ -59,11 +59,11 @@ in {
     useDHCP = lib.mkDefault true;
   };
 
-  fileSystems."/nixtop" = {
-    device = "nixtop:/nfs";
-    fsType = "nfs";
-    options = ["x-systemd.automount" "noauto" "nfsvers=3"];
-  };
+  #fileSystems."/nixtop" = {
+  #  device = "nixtop:/nfs";
+  #  fsType = "nfs";
+  #  options = ["x-systemd.automount" "noauto" "nfsvers=3"];
+  #};
 
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;

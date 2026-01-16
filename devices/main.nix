@@ -22,30 +22,31 @@
     kernelPackages = pkgs.linuxPackages_latest;
   };
 
-  boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  #boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-uuid/9f21177b-4aca-4fc6-9dcd-28517d9dbc96";
+      device = "/dev/disk/by-uuid/b8bfd5d6-f08e-4321-b779-e18e287a8e0d";
       fsType = "ext4";
     };
-    "/boot/efi" = {
-      device = "/dev/disk/by-uuid/6806-5F13";
+    "/boot" = {
+      device = "/dev/disk/by-uuid/E3D2-CE34";
       fsType = "vfat";
+      options = [ "fmask=0077" "dmask=0077" ];
     };
-    "/big" = {
-      device = "/dev/disk/by-label/big-drive";
-      fsType = "ext4";
-    };
-    "/little" = {
-      device = "/dev/disk/by-label/little";
-      fsType = "ext4";
-    };
+    #"/big" = {
+    #  device = "/dev/disk/by-label/big";
+    #  fsType = "ext4";
+    #};
+    #"/big_fast" = {
+    #  device = "/dev/disk/by-label/big_fast";
+    #  fsType = "ext4";
+    #};
   };
 
   swapDevices = [
     {
-      device = "/dev/disk/by-uuid/050acb3c-9365-4f58-9af8-d53d59dd9c73";
+      device = "/dev/disk/by-uuid/bad4f116-113d-4ce1-9f52-1adf4051ecb2";
     }
   ];
 
@@ -60,7 +61,7 @@
     };
 
     # corsair mouse config
-    ckb-next.enable = true;
+    #ckb-next.enable = true;
 
     nvidia = {
       open = true;
