@@ -55,7 +55,7 @@
     description = "starr";
     extraGroups = ["networkmanager" "wheel"];
     openssh.authorizedKeys.keys = [
-      "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCViqZxkOWaP9R0DgLLbgarWKnN1SjkQcboqK6fqnBNeSDl9dcKvmqi6nBSSHCGOkKPdlzZtN17CmRzbMFqU4honvEjA5LmeC1q8bS11xz2DDcjR94xX31DSr933aO/T8GJVO0t04j7kJrpEuK+LyeQuPDgAJKbge6x+s7aXp/nuHbmfPTogUpMKJdDiM7SWfhgIAQkCWqo7kcc3xgN7JDWjW418wNjmJdnR9PlPCCJ3ec+xSEuph3cS+N6/IaTTMxSk/PotrIWaGYbMg0XOji/xFn/OzNTME4Bm8+AvN9iywyIZdiNTd26JPMeemXoPIDb8W0pBjK32qHcRrgaVECzXeL4K0/7aOba4yb+m/jZPQwEbhUBgcXXG3mMQp7n376G4TfLT0mezHpUmEQzw+jTO6y4fuFQP2CBmFXE82vu5kD6pZmwoglNPVu+ADdQw3t47DYIkKLHsWTNNXcSMfWxpMalkVprS9mrotLk+fue2rgnBkc/zcIASSfrNSW5Z7M= starr@nixmain"
+      "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDKitn2TYaX+Szl9LpMm7Zyyj9388VP/jytDGe41d0MNPSiKEMtZpwyx2pqrtayMYI2vr92UpPUJ/l80X/37MNXdPqb4eyNbysJvDqPksCejUTMccLaVXMxKv/FlkTZye5C88YqO9MrEpYfK0qKoyPIIOnMTybFEneAO2WOSMSM/GaRzQtBnhE7Yqx4hqL/2zyiM2RPAIZGQxVAm5mJqtzlLUlBbYiuRPOxyH19M0LBsdx/3HShbaf4ZRHAMPtii07NKgnr/GDKAqcoDWwnN1bBosI89sVWRSnBXz3DEoG+2m+xtq/U+fUwjr29eGTA0v7wTuKRt3VoprRyT8reOAnkeNhd/UrtsZLJCSoW+PDsIdqofwUwo5zZavzeFtxXrHgFOcHFsjLbT69Sv5UPVb93IbKrcNQmmM2j7FjCytVgJ64SruzS+9B7FyaVDAo5R66e4HI1twC7YORhf8lZN2deWX74Ylwi9Eehswj4Gjrm7rrh3d3ZYdB+GrRDpKRwWjs= starr@nixmain"
     ];
   };
   security.sudo.wheelNeedsPassword = false;
@@ -83,5 +83,5 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  system.stateVersion = "23.11";
+  system.stateVersion = "25.11";
 }
