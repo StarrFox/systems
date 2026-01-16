@@ -60,8 +60,13 @@
       extraPackages = with pkgs; [nvidia-vaapi-driver];
     };
 
-    # corsair mouse config
-    #ckb-next.enable = true;
+    # corsair mouse driver
+    ckb-next = {
+      enable = true;
+      package = (pkgs.ckb-next.overrideAttrs (finalAttrs: prevAttrs: {
+        cmakeFlags = ["-DUSE_DBUS_MENU=0"] ++ prevAttrs.cmakeFlags;
+      }));
+    };
 
     nvidia = {
       open = true;
@@ -74,6 +79,9 @@
     };
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   };
+
+  # ckb-next needs this to see usb devices
+  environment.systemPackages = [pkgs.usbutils];
 
   services.xserver.videoDrivers = ["nvidia"];
 

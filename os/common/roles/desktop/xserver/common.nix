@@ -8,10 +8,10 @@ _: {
   };
 
   services.displayManager = {
-      # autoLogin = {
-      #   enable = true;
-      #   user = "starr";
-      # };
+      autoLogin = {
+        enable = true;
+        user = "starr";
+      };
       sddm = {
         enable = true;
         autoNumlock = true;
