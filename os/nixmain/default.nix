@@ -10,6 +10,7 @@ in {
     #./services/ratbagd.nix
     ./services/syncthing.nix
     #./services/nfs.nix
+    #./services/openlinkhub.nix
 
     #../common/services/mullvad.nix
     ../common/services/openssh.nix
