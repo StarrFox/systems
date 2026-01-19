@@ -69,7 +69,7 @@
     };
 
     nvidia = {
-      open = true;
+      open = false;
       # nvidia driver
       package = config.boot.kernelPackages.nvidiaPackages.stable;
       # enables drm
