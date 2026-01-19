@@ -5,6 +5,7 @@
 }: let
   ssh-keys = import ../../ssh-keys.nix;
 in {
+  # please change name :)
   imports = [
     ./services/postgresql.nix
     #./services/ratbagd.nix
@@ -16,8 +17,8 @@ in {
     ../common/services/openssh.nix
     #../common/services/tailscale.nix
     ../common/services/xbanish.nix
-    ../common/services/jellyfin.nix
-    ../common/services/jellyseerr.nix
+    #../common/services/jellyfin.nix
+    #../common/services/jellyseerr.nix
     ../common/services/locate.nix
 
     ../common/nix_daemon.nix
