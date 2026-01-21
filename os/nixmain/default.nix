@@ -13,7 +13,7 @@ in {
     #./services/nfs.nix
     #./services/openlinkhub.nix
 
-    #../common/services/mullvad.nix
+    ../common/services/mullvad.nix
     ../common/services/openssh.nix
     #../common/services/tailscale.nix
     ../common/services/xbanish.nix
