@@ -11,7 +11,7 @@ in {
     discord
     flameshot
     #gimp
-    #ghidra-bin
+    ghidra-bin
     obsidian
     lutris
     mpv
