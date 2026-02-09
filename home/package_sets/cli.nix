@@ -22,7 +22,7 @@ in {
     rsync
     tldr
     just
-    wine
+    #wine
 
     inputs.nix_search.packages.${pkgs.stdenv.hostPlatform.system}.default
 
