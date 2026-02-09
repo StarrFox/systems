@@ -9,6 +9,7 @@ in {
     ../common/services/mullvad.nix
     ../common/services/openssh.nix
     ../common/services/xbanish.nix
+    ../common/services/jellyseerr.nix
 
     ../common/nix_daemon.nix
     ../common/timezone.nix
@@ -30,9 +31,9 @@ in {
     ./services/transmission.nix
     ./services/sonarr.nix
     #./services/lidarr.nix
-    ./services/readarr.nix
+    #./services/readarr.nix
     #./services/deluge.nix
-    ./services/bazarr.nix
+    #./services/bazarr.nix
     #./services/flood.nix
     #./services/flaresolverr.nix
   ];
