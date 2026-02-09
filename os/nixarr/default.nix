@@ -30,6 +30,7 @@ in {
     ./services/radarr.nix
     ./services/transmission.nix
     ./services/sonarr.nix
+    ./services/jellyseerr_split_tunnel.nix
     #./services/lidarr.nix
     #./services/readarr.nix
     #./services/deluge.nix
@@ -42,10 +43,10 @@ in {
     tremc
   ];
 
-  environment.etc.radarr_sync = {
-    source = ./scripts/radarr_sync.py;
-    mode = "555";
-  };
+  # environment.etc.radarr_sync = {
+  #   source = ./scripts/radarr_sync.py;
+  #   mode = "555";
+  # };
 
   networking = {
     hostName = "nixarr";
@@ -59,8 +60,7 @@ in {
 
   users.users.starr.openssh.authorizedKeys.keys = [
     ssh-keys.starr-nixmain
-    ssh-keys.starrwin
   ];
 
-  system.stateVersion = "23.11";
+  system.stateVersion = "25.11";
 }
