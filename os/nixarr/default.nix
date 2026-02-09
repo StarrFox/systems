@@ -9,7 +9,7 @@ in {
     ../common/services/mullvad.nix
     ../common/services/openssh.nix
     ../common/services/xbanish.nix
-    ../common/services/jellyseerr.nix
+    #../common/services/jellyseerr.nix
 
     ../common/nix_daemon.nix
     ../common/timezone.nix
@@ -36,6 +36,7 @@ in {
     #./services/bazarr.nix
     #./services/flood.nix
     #./services/flaresolverr.nix
+    ./services/jellyseerr.nix
   ];
 
   environment.systemPackages = with pkgs; [

@@ -1,0 +1,20 @@
+{
+  inputs,
+  config,
+  pkgs,
+  lib,
+  ...
+}: let
+  nixpkgs-unstable = import inputs.nixpkgs-unstable {
+    system = "${pkgs.stdenv.hostPlatform.system}";
+    inherit (config.nixpkgs) config;
+  };
+in {
+  services.jellyseerr = {
+    enable = true;
+    openFirewall = true;
+    package = nixpkgs-unstable.jellyseerr;
+  };
+
+  systemd.services.jellyseerr.serviceConfig.ExecStart = "mullvad-exclude ${lib.getExe config.services.jellyfin.package}";
+}
