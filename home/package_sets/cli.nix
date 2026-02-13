@@ -17,7 +17,8 @@ in {
     magic-wormhole
     #neofetch
     #nethogs
-    ncdu
+    ncdu # usage gui
+    dua # usage gui
     ripgrep
     rsync
     tldr
