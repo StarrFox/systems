@@ -75,5 +75,9 @@
 @deploy:
     deploy --skip-checks
 
+# deploy specific node
+@deploy_node node:
+    deploy --skip-checks .#{{node}}
+
 # delete old generations and gc
 @clean: delete-generations gc

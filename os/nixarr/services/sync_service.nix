@@ -3,7 +3,7 @@
     description = "Sync media";
     serviceConfig = {
       User = "starr";
-      Environment = "HOME=/home/starr";
+      WorkingDirectory = "/home/starr";
       ExecStart = "${ lib.getExe pkgs.fish } -c 'just sync'";
     };
     wantedBy = [ "multi-user.target" ];
