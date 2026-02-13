@@ -26,6 +26,7 @@ in {
     feh
     prismlauncher
     #mangohud
+    element-desktop
 
     starrpkgs.imhex
   ];
