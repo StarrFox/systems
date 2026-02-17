@@ -20,7 +20,6 @@
       clip = "${lib.getExe pkgs.xsel} -ib";
       c = "clear";
       fetch = "${lib.getExe pkgs.fastfetch}";
-      code = "codium";
     };
     # wish they'd just remove this garbage
     interactiveShellInit = "set -U fish_greeting";
