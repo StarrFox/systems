@@ -28,6 +28,6 @@ in {
     #mangohud
     element-desktop
 
-    starrpkgs.imhex
+    #starrpkgs.imhex
   ];
 }
