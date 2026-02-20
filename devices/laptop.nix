@@ -27,6 +27,7 @@
       device = "/dev/disk/by-uuid/f43fb9a4-7712-40dc-b799-8eeaf2f2c40f";
       fsType = "ext4";
     };
+    # todo: why is this ntfs
     "/big" = {
       device = "/dev/disk/by-uuid/426AFB966AFB8547";
       fsType = "ntfs";

@@ -5,4 +5,5 @@
   nixtop = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICDG/jkO8jyhWk1SloOCRo1nxFNKsh1ETX5SGnQJwTcs root@nixtop";
   nixarr = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGciI4Uw6cYMhKHyxc8PJgVxt/eAGW3PPFcsE1dfKjP9 starr@nixarr";
   starrwin = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDJHkm1qTW8KrpXtqRsZZo7cLaLBVvyBm9Dw1OLsyY43bjIYYT+cV9nLNB1kr9qN0D1MRKTso8sshf3nSLNoCvL95SMj7yChDcK8D89aN3KQ8/03g2G6CaUSLgV/wZtGFvQzq0M8/MqTnEMOeB+Pz4C057G0DmMMF7RZb1BTG+Cd4DkldUdldoxh9/Wm6szhm7WNUn6m2fpWki/BLNG99gddrwPK8lHk2ocOt1JvYlmW5f+7PSmjB1UMhOVdTBpxNsUMZJbYyjREpo0uD16JKbXz/a2zPsjw5xvoHeVZgVseGKb0Wz/w6X8qVFUZL2n0+bg8hnq7sgKcN95yARfjpshii14aijKwL82ppaNdvwMiZ2Hqa3hVwJPsS1QP6ahVwyA3HGi9a0fzl4YpgBJmVmz2dywB5+syoTmxgLIXCj8mwgYgn2teXOzf/cusA2ZiDpdAbVuQQaqEw8iOJASye+18Yjsl3mQ1xdqtFke4az4A1TL0hVQOPRP9DH3esi/HUU= starr@starrwin";
+  nixcell = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFkhc/bSm0WlW9W/DWdWaIXhnSbxorXXXnqXWZ++zayk starr@nixcell";
 }
