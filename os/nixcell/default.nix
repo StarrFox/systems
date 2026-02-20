@@ -24,7 +24,7 @@ in {
 
     ../common/users/starr.nix
 
-    #../../devices/laptop.nix
+    ../../devices/nixcell.nix
 
     ../common/roles/server.nix
 
