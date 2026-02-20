@@ -30,7 +30,7 @@ in {
 
     #./services/nfs.nix
     #./services/nginx.nix
-    ./services/gitea.nix
+    #./services/gitea.nix
   ];
 
   users.users.starr.openssh.authorizedKeys.keys = [
