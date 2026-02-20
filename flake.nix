@@ -7,8 +7,6 @@
     nixpkgs-old.url = "github:nixos/nixpkgs/nixos-23.11";
     starrpkgs.url = "github:StarrFox/packages";
     discord_chan.url = "github:StarrFox/Discord-chan";
-    arcanumbot.url = "github:StarrFox/ArcanumBot";
-
     nix_search = {
       url = "github:peterldowns/nix-search-cli";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -47,7 +45,6 @@
     home-manager,
     agenix,
     discord_chan,
-    arcanumbot,
     deploy-rs,
     nixos-generators,
     ...
@@ -124,7 +121,6 @@
         extraModules = [
           ./os/nixtop/default.nix
           discord_chan.nixosModules.default
-          arcanumbot.nixosModules.default
         ];
         enableGui = false;
       };
@@ -135,6 +131,13 @@
           {
             home-manager.users.starr.home.file."justfile".source = ./misc/nixarr_justfile;
           }
+        ];
+        enableGui = false;
+      };
+
+      nixcell = mkNixosConfig {
+        extraModules = [
+          ./os/nixcell/default.nix
         ];
         enableGui = false;
       };
