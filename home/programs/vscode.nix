@@ -48,6 +48,7 @@ in {
         "chat.agent.enabled" = false;
         "chat.disableAIFeatures" = true;
         "chat.commandCenter.enabled" = false;
+        "editor.aiStats.enabled" = false;
 
         "nix.enableLanguageServer" = true;
         "nix.serverPath" = "${pkgs.nil}/bin/nil";
