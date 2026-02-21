@@ -44,6 +44,11 @@ in {
         #   "other" = "inline";
         # };
 
+        # disable ai garbage
+        "chat.agent.enabled" = false;
+        "chat.disableAIFeatures" = true;
+        "chat.commandCenter.enabled" = false;
+
         "nix.enableLanguageServer" = true;
         "nix.serverPath" = "${pkgs.nil}/bin/nil";
         "[nix]" = {
