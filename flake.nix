@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-old.url = "github:nixos/nixpkgs/nixos-23.11";
+    #nixpkgs-old.url = "github:nixos/nixpkgs/nixos-23.11";
     starrpkgs.url = "github:StarrFox/packages";
     discord_chan.url = "github:StarrFox/Discord-chan";
     nix_search = {
@@ -33,10 +33,10 @@
       url = "github:serokell/deploy-rs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixos-generators = {
-      url = "github:nix-community/nixos-generators";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nixos-generators = {
+    #   url = "github:nix-community/nixos-generators";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs = {
@@ -46,7 +46,7 @@
     agenix,
     discord_chan,
     deploy-rs,
-    nixos-generators,
+    #nixos-generators,
     ...
   } @ inputs: {
     devShells.x86_64-linux = {
