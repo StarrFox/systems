@@ -12,7 +12,7 @@ in {
     ../common/hosts.nix
 
     ../common/services/openssh.nix
-    #../common/services/discord_chan.nix
+    ../common/services/discord_chan.nix
     ../common/services/jellyfin.nix
     #../common/services/tailscale.nix
     #../common/services/nextcloud.nix

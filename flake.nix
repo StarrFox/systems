@@ -138,6 +138,7 @@
       nixcell = mkNixosConfig {
         extraModules = [
           ./os/nixcell/default.nix
+          discord_chan.nixosModules.default
         ];
         enableGui = false;
       };
