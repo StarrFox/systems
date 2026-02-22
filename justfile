@@ -3,8 +3,8 @@
     just --list
 
 # update dc and push the change
-@update-dc: && os
-    nix flake lock --update-input discord_chan
+@update-dc:
+    nix flake update discord_chan
     git commit -am "update dc"
     git push
 
