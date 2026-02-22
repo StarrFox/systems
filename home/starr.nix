@@ -40,7 +40,7 @@ in {
   home = {
     username = "starr";
     homeDirectory = "/home/${config.home.username}";
-    stateVersion = "23.11";
+    stateVersion = "25.11";
   };
 
   # Nicely reload system units when changing configs
