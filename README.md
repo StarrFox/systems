@@ -14,6 +14,8 @@
 
 Edit a secret (or create a new one)
 
+### remember that agenix uses the ssh keys in /etc/ssh by default when decrypting
+
 ```bash
 cd secrets
 agenix -e file.age
