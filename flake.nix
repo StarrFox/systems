@@ -151,12 +151,12 @@
       magicRollback = false;
 
       nodes = {
-        nixtop = {
-          hostname = "nixtop";
+        nixcell = {
+          hostname = "nixcell";
           profiles = {
             system = {
               user = "root";
-              path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixtop;
+              path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixcell;
             };
           };
         };
