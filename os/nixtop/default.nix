@@ -12,15 +12,15 @@ in {
     ../common/hosts.nix
 
     ../common/services/openssh.nix
-    ../common/services/discord_chan.nix
+    #../common/services/discord_chan.nix
     #../common/services/jellyfin.nix
     #../common/services/tailscale.nix
     #../common/services/nextcloud.nix
-    ../common/services/syncthing.nix
-    ../common/services/postgresql_backup.nix
+    #../common/services/syncthing.nix
+    #../common/services/postgresql_backup.nix
     #../common/services/jellyseerr.nix
 
-    ../common/containers/portainer.nix
+    #../common/containers/portainer.nix
 
     ../common/users/starr.nix
 
@@ -30,7 +30,7 @@ in {
 
     #./services/nfs.nix
     #./services/nginx.nix
-    ./services/gitea.nix
+    #./services/gitea.nix
   ];
 
   users.users.starr.openssh.authorizedKeys.keys = [
@@ -42,11 +42,11 @@ in {
   networking.hostName = "nixtop";
 
   # TODO: update
-  services.postgresql.package = pkgs.postgresql_14;
+  #services.postgresql.package = pkgs.postgresql_14;
 
   # nixtop is a laptop
   services.logind.settings.Login.HandleLidSwitch = "ignore";
 
   # NOTE: make sure to double backup postgres before changing
-  system.stateVersion = "23.11";
+  system.stateVersion = "25.11";
 }

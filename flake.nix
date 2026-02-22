@@ -162,6 +162,16 @@
           };
         };
 
+        nixtop = {
+          hostname = "nixtop";
+          profiles = {
+            system = {
+              user = "root";
+              path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixtop;
+            };
+          };
+        };
+
         nixarr = {
           hostname = "nixarr";
           profiles = {

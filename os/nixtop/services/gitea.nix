@@ -6,21 +6,21 @@ in {
   services.gitea = {
     enable = true;
     dump.enable = true;
-    settings.server = {
-      DOMAIN = url;
-      ROOT_URL = "http${
-        if https
-        then "s"
-        else ""
-      }://${url}/";
-    };
+    # settings.server = {
+    #   DOMAIN = url;
+    #   ROOT_URL = "http${
+    #     if https
+    #     then "s"
+    #     else ""
+    #   }://${url}/";
+    # };
   };
 
-  services.nginx.virtualHosts.${url} = {
-    enableACME = https;
-    forceSSL = https;
-    locations."/" = {
-      proxyPass = "http://localhost:3000/";
-    };
-  };
+  # services.nginx.virtualHosts.${url} = {
+  #   enableACME = https;
+  #   forceSSL = https;
+  #   locations."/" = {
+  #     proxyPass = "http://localhost:3000/";
+  #   };
+  # };
 }
