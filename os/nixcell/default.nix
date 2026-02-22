@@ -15,7 +15,7 @@ in {
     #../common/services/discord_chan.nix
     ../common/services/jellyfin.nix
     #../common/services/tailscale.nix
-    ../common/services/nextcloud.nix
+    #../common/services/nextcloud.nix
     ../common/services/syncthing.nix
     ../common/services/postgresql_backup.nix
     #../common/services/jellyseerr.nix
