@@ -29,7 +29,6 @@ in {
 
 
     # games
-    xivlauncher
     prismlauncher
     #mangohud
     heroic
