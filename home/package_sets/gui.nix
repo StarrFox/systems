@@ -6,27 +6,37 @@
   starrpkgs = inputs.starrpkgs.packages.${pkgs.stdenv.hostPlatform.system};
 in {
   home.packages = with pkgs; [
+    # productivity
     #bitwarden
     #chromium
-    discord
-    flameshot
-    #gimp
     ghidra-bin
     obsidian
-    lutris
-    mpv
-    pcsx2
-    the-powder-toy
-    thunderbird-bin
-    spotify
-    helvum
-    heroic
     virt-manager
-    #drawio
+
+
+    # media
+    mpv
+    spotify
     feh
+    helvum
+    flameshot
+
+
+    # messaging
+    element-desktop
+    discord
+    thunderbird-bin
+
+
+    # games
+    xivlauncher
     prismlauncher
     #mangohud
-    element-desktop
+    heroic
+    pcsx2
+    the-powder-toy
+    lutris
+
 
     starrpkgs.imhex
   ];

@@ -1,4 +1,4 @@
-{pkgs, ...}: let
+_: let
   ssh-keys = import ../../ssh-keys.nix;
 in {
   imports = [
