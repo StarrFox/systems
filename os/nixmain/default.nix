@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: let
   ssh-keys = import ../../ssh-keys.nix;
@@ -65,6 +66,10 @@ in {
   #  fsType = "nfs";
   #  options = ["x-systemd.automount" "noauto" "nfsvers=3"];
   #};
+
+  environment.systemPackages = [
+    pkgs.kdiskmark
+  ];
 
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;

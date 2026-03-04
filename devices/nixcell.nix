@@ -20,10 +20,10 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
-    # todo: why is this ntfs
     "/big" = {
-      device = "/dev/disk/by-uuid/426AFB966AFB8547";
-      fsType = "ntfs";
+      device = "/dev/movies/movies";
+      fsType = "ext4";
+      options = [ "noatime" ];
     };
   };
 
