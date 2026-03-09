@@ -32,6 +32,7 @@ in {
     ./services/sonarr.nix
     ./services/jellyseerr_split_tunnel.nix
     ./services/sync_service.nix
+    ./services/qbittorrent.nix
     #./services/lidarr.nix
     #./services/readarr.nix
     #./services/deluge.nix
