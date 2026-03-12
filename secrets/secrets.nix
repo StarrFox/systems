@@ -7,4 +7,5 @@ in {
   "discord_chan_token.age".publicKeys = deployment;
   "nextcloud_pass.age".publicKeys = deployment;
   "exaroton.age".publicKeys = deployment;
+  "cloudflared_token.age".publicKeys = deployment;
 }

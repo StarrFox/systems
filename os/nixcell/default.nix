@@ -21,6 +21,7 @@ in {
     ../common/services/jellyseerr.nix
 
     ../common/containers/portainer.nix
+    ../common/containers/cloudflared.nix
 
     ../common/users/starr.nix
 
