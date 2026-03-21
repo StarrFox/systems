@@ -17,9 +17,9 @@
       availableKernelModules = ["xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod"];
       kernelModules = [];
     };
-    # TODO: remove this line when it works
-    # manually set 6.2 to try and fix bluetooth
-    kernelPackages = pkgs.linuxPackages_latest;
+    # TODO: switch back to `pkgs.linuxPackages_latest` when this issue is fixed
+    # https://github.com/NixOS/nixpkgs/issues/489947
+    kernelPackages = pkgs.linuxPackages_6_18;
   };
 
   #boot.loader.efi.efiSysMountPoint = "/boot/efi";

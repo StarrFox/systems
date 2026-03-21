@@ -37,6 +37,6 @@ in {
     lutris
 
 
-    starrpkgs.imhex
+    #starrpkgs.imhex
   ];
 }
