@@ -24,7 +24,7 @@ in {
 
     # messaging
     element-desktop
-    discord
+    (discord.override {withMoonlight = true;})
     thunderbird-bin
 
 
