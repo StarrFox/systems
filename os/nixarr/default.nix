@@ -20,7 +20,7 @@ in {
 
     ../common/roles/server.nix
 
-    ../../devices/vm.nix
+    ../../devices/nixarr.nix
 
     ../common/users/starr.nix
 
