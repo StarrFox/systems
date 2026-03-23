@@ -12,8 +12,8 @@
   systemd.timers.sync_service_timer = {
     description = "Run sync service every hour";
     timerConfig = {
-      OnBootSec = "30min";
-      OnUnitActiveSec = "30min";
+      OnBootSec = "10min";
+      OnUnitActiveSec = "10min";
       Unit = "sync_service.service";
     };
     wantedBy = [ "timers.target" ];
