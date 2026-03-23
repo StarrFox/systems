@@ -1,6 +1,5 @@
 {
   lib,
-  pkgs,
   ...
 }: let
   ssh-keys = import ../../ssh-keys.nix;
@@ -8,8 +7,7 @@ in {
   imports = [
     ../common/services/mullvad.nix
     ../common/services/openssh.nix
-    ../common/services/xbanish.nix
-    ../common/services/jellyseerr.nix
+    #../common/services/jellyseerr.nix
 
     ../common/nix_daemon.nix
     ../common/timezone.nix
@@ -28,7 +26,7 @@ in {
 
     ./services/prowlarr.nix
     ./services/radarr.nix
-    ./services/transmission.nix
+    #./services/transmission.nix
     ./services/sonarr.nix
     ./services/jellyseerr_split_tunnel.nix
     ./services/sync_service.nix
@@ -41,9 +39,9 @@ in {
     #./services/flaresolverr.nix
   ];
 
-  environment.systemPackages = with pkgs; [
-    tremc
-  ];
+  # environment.systemPackages = with pkgs; [
+  #   tremc # transmission tui
+  # ];
 
   # environment.etc.radarr_sync = {
   #   source = ./scripts/radarr_sync.py;
