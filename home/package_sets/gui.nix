@@ -29,7 +29,9 @@ in {
 
 
     # games
-    prismlauncher
+    # TODO: update when new jdks come out
+    # check https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/pr/prismlauncher/package.nix#L37-L42
+    (prismlauncher.override {jdks = [graalvmPackages.graalvm-ce jdk25 jdk21 jdk17 jdk8];})
     #mangohud
     heroic
     pcsx2
