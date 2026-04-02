@@ -1,10 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: let
-  starrpkgs = inputs.starrpkgs.packages.${pkgs.stdenv.hostPlatform.system};
-in {
+{ pkgs, ... }: {
   home.packages = with pkgs; [
     # productivity
     #bitwarden
@@ -37,8 +31,5 @@ in {
     pcsx2
     the-powder-toy
     lutris
-
-
-    #starrpkgs.imhex
   ];
 }

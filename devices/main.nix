@@ -17,9 +17,7 @@
       availableKernelModules = ["xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod"];
       kernelModules = [];
     };
-    # TODO: switch back to `pkgs.linuxPackages_latest` when this issue is fixed
-    # https://github.com/NixOS/nixpkgs/issues/489947
-    kernelPackages = pkgs.linuxPackages_6_18;
+    kernelPackages = pkgs.linuxPackages_latest;
   };
 
   #boot.loader.efi.efiSysMountPoint = "/boot/efi";
