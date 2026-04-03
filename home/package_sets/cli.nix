@@ -18,6 +18,7 @@ in {
     #neofetch
     #nethogs
     ncdu # usage gui
+    nix-output-monitor
     dua # usage gui
     ripgrep
     rsync
