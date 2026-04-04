@@ -22,6 +22,7 @@ in {
 
     ../common/containers/portainer.nix
     ../common/containers/cloudflared.nix
+    ../common/containers/discopanel.nix
 
     ../common/users/starr.nix
 
