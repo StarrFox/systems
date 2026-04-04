@@ -7,8 +7,6 @@ _: {
     image = "nickheyer/discopanel:latest";
     autoStart = true;
 
-    network = "host";
-
     volumes = [
       "/var/run/docker.sock:/var/run/docker.sock"
       "/var/lib/discopanel/data:/app/data"
@@ -24,6 +22,7 @@ _: {
 
     extraOptions = [
       "--add-host=host.docker.internal:host-gateway"
+      "--network=host"
     ];
   };
 
@@ -33,6 +32,17 @@ _: {
     "d /var/lib/discopanel/backups 0755 root root -"
   ];
 
-  networking.firewall.allowedTCPPorts = [ 8080 25565 ];
-  networking.firewall.allowedUDPPorts = [ 25565 ];
+  networking.firewall.allowedTCPPorts = [ 8080 ];
+  networking.firewall.allowedTCPPortRanges = [
+    {
+      from = 25565;
+      to = 25665;
+    }
+  ];
+  networking.firewall.allowedUDPPortRanges = [
+    {
+      from = 25565;
+      to = 25665;
+    }
+  ];
 }
