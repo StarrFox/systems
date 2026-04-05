@@ -6,7 +6,6 @@
 }: let
   ssh-keys = import ../../ssh-keys.nix;
 in {
-  # please change name :)
   imports = [
     ./services/postgresql.nix
     #./services/ratbagd.nix

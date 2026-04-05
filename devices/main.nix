@@ -63,6 +63,13 @@
       enable = true;
       package = (pkgs.ckb-next.overrideAttrs (finalAttrs: prevAttrs: {
         cmakeFlags = ["-DUSE_DBUS_MENU=0"] ++ prevAttrs.cmakeFlags;
+        # TODO: https://github.com/ckb-next/ckb-next/pull/1275
+        src = pkgs.fetchFromGitHub {
+          owner = "AlexLiniu";
+          repo = "ckb-next";
+          rev = "35899e731e0e61d6f08d27186632dbf6f0e06d9e";
+          hash = "sha256-CtlBMHkRcfXX71a2lhyJJNrk7EO/5sG+BecWCARjW+Q=";
+        };
       }));
     };
 
