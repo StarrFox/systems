@@ -7,7 +7,7 @@
 in {
   home.packages = with pkgs; [
     bat
-    btop
+    (btop.override {cudaSupport = true;})
     cava
     #croc
     duf
