@@ -117,13 +117,13 @@
         extraModules = [./os/nixtest/default.nix];
       };
 
-      nixtop = mkNixosConfig {
-        extraModules = [
-          ./os/nixtop/default.nix
-          discord_chan.nixosModules.default
-        ];
-        enableGui = false;
-      };
+      # nixtop = mkNixosConfig {
+      #   extraModules = [
+      #     ./os/nixtop/default.nix
+      #     discord_chan.nixosModules.default
+      #   ];
+      #   enableGui = false;
+      # };
 
       nixarr = mkNixosConfig {
         extraModules = [
