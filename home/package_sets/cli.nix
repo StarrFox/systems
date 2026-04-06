@@ -7,6 +7,7 @@
 in {
   home.packages = with pkgs; [
     bat
+    btop
     cava
     #croc
     duf
