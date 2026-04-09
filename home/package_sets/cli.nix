@@ -6,6 +6,7 @@
   starrpkgs = inputs.starrpkgs.packages.${pkgs.stdenv.hostPlatform.system};
 in {
   home.packages = with pkgs; [
+    atop
     bat
     (btop.override {cudaSupport = true;})
     cava

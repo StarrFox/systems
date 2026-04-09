@@ -1,12 +1,14 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
+    # monitoring
+    hardinfo2
+
     # productivity
     #bitwarden
     #chromium
     ghidra-bin
     obsidian
     virt-manager
-
 
     # media
     mpv
@@ -15,12 +17,10 @@
     helvum
     flameshot
 
-
     # messaging
     element-desktop
     (discord.override {withMoonlight = true;})
     thunderbird-bin
-
 
     # games
     # TODO: update when new jdks come out
@@ -40,7 +40,6 @@
     # TODO: prism wants these on path
     mangohud
     gamemode
-
     heroic
     pcsx2
     the-powder-toy
