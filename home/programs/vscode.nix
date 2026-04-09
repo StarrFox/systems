@@ -132,9 +132,9 @@ in {
         twxs.cmake
         ms-vscode.cmake-tools
         ms-vscode.makefile-tools
+        ziglang.vscode-zig
 
         starrpkgs.vscord
-        starrpkgs.vscode-zig
         starrpkgs.vscode-coconut
         starrpkgs.vscode-lark
         starrpkgs.github-code-owners
