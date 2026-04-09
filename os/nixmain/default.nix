@@ -37,6 +37,7 @@ in {
     ../common/hosts.nix
     ../common/bluetooth.nix
     ../common/nix_ld.nix # for uv
+    ../common/disable_documentation.nix
 
     ../common/roles/desktop/xserver/plasma.nix
     #../common/roles/desktop/wayland/hyperland.nix
