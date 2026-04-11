@@ -32,9 +32,7 @@ in {
 
     ../common/roles/server.nix
 
-    #./services/nfs.nix
-    #./services/nginx.nix
-    #./services/gitea.nix
+    ./services/nfs.nix
   ];
 
   users.users.starr.openssh.authorizedKeys.keys = [
@@ -47,10 +45,6 @@ in {
 
   # TODO: update sometimes
   services.postgresql.package = pkgs.postgresql_18;
-
-  # for minecraft
-  networking.firewall.allowedTCPPorts = [25565];
-  networking.firewall.allowedUDPPorts = [25565];
 
   # NOTE: make sure to double backup postgres before changing
   system.stateVersion = "25.11";

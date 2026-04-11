@@ -12,7 +12,7 @@
   boot = {
     kernelModules = ["kvm-amd"];
     extraModulePackages = [];
-    supportedFilesystems = ["ntfs"];
+    supportedFilesystems = ["ntfs" "nfs"];
     initrd = {
       availableKernelModules = ["xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod"];
       kernelModules = [];

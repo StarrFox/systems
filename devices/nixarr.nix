@@ -8,25 +8,35 @@
     [ (modulesPath + "/profiles/qemu-guest.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "ahci" "xhci_pci" "virtio_pci" "virtio_scsi" "sr_mod" "virtio_blk" ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-amd" ];
-  boot.extraModulePackages = [ ];
+  boot = {
+    initrd = {
+      availableKernelModules = [ "ahci" "xhci_pci" "virtio_pci" "virtio_scsi" "sr_mod" "virtio_blk" ];
+      kernelModules = [ ];
+    };
+    kernelModules = [ "kvm-amd" ];
+    extraModulePackages = [ ];
+    supportedFilesystems = [ "nfs" ];
+  };
 
-  fileSystems."/" =
-    { device = "/dev/disk/by-label/main";
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-label/main";
       fsType = "ext4";
     };
-
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-label/boot";
+    "/boot" = {
+      device = "/dev/disk/by-label/boot";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
-
-  fileSystems."/media" = {
-    device = "/dev/disk/by-label/bulk";
-    fsType = "xfs";
+    "/media" = {
+      device = "/dev/disk/by-label/bulk";
+      fsType = "xfs";
+    };
+    # "/export" = {
+    #   device = "nixcell:/";
+    #   fsType = "nfs";
+    #   options = ["nfsvers=4.2" "_netdev" "nofail"];
+    # };
   };
 
   swapDevices = [ ];
