@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     #nixpkgs-old.url = "github:nixos/nixpkgs/nixos-23.11";
     starrpkgs.url = "github:StarrFox/packages";
     discord_chan.url = "github:StarrFox/Discord-chan";

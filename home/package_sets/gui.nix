@@ -1,8 +1,4 @@
-{ pkgs, inputs, ... }: let
-  nixpkgs-unstable = import inputs.nixpkgs-unstable {
-    system = "${pkgs.stdenv.hostPlatform.system}";
-  };
-in {
+{ pkgs, ... }: {
   home.packages = with pkgs; [
     # monitoring
     hardinfo2
@@ -30,7 +26,6 @@ in {
     # TODO: update when new jdks come out
     # check https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/pr/prismlauncher/package.nix#L37-L42
     (prismlauncher.override {
-      prismlauncher-unwrapped = nixpkgs-unstable.prismlauncher-unwrapped;
       jdks = [
         graalvmPackages.graalvm-ce
         javaPackages.compiler.semeru-bin.jre-21
