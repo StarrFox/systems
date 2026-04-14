@@ -62,10 +62,11 @@
 # delete old store paths
 @gc:
     nix-collect-garbage -d --delete-older-than 1d
+    nh clean all
 
 # resource overview
 @resources:
-    glances
+    btop
 
 # system info
 @info:
