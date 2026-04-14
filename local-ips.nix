@@ -7,9 +7,9 @@
     }) (lib.attrsToList set));
 in rec {
   ips = {
-    nixarr  = "192.168.122.39";
+    nixarr = "192.168.122.39";
     nixtest = "192.168.122.214";
-    nixtop  = "192.168.1.110";
+    nixtop = "192.168.1.110";
     nixmain = "192.168.1.71";
     nixcell = "192.168.1.184";
   };

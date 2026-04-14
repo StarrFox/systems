@@ -30,15 +30,15 @@
     "/boot" = {
       device = "/dev/disk/by-uuid/E3D2-CE34";
       fsType = "vfat";
-      options = [ "fmask=0077" "dmask=0077" ];
+      options = ["fmask=0077" "dmask=0077"];
     };
     "/big" = {
-     device = "/dev/disk/by-label/big";
-     fsType = "ext4";
+      device = "/dev/disk/by-label/big";
+      fsType = "ext4";
     };
     "/big_fast" = {
-     device = "/dev/disk/by-label/big_fast";
-     fsType = "ext4";
+      device = "/dev/disk/by-label/big_fast";
+      fsType = "ext4";
     };
   };
 
@@ -61,7 +61,7 @@
     # corsair mouse driver
     ckb-next = {
       enable = true;
-      package = (pkgs.ckb-next.overrideAttrs (finalAttrs: prevAttrs: {
+      package = pkgs.ckb-next.overrideAttrs (_finalAttrs: prevAttrs: {
         cmakeFlags = ["-DUSE_DBUS_MENU=0"] ++ prevAttrs.cmakeFlags;
         # TODO: https://github.com/ckb-next/ckb-next/pull/1275
         src = pkgs.fetchFromGitHub {
@@ -70,7 +70,7 @@
           rev = "35899e731e0e61d6f08d27186632dbf6f0e06d9e";
           hash = "sha256-CtlBMHkRcfXX71a2lhyJJNrk7EO/5sG+BecWCARjW+Q=";
         };
-      }));
+      });
     };
 
     nvidia = {

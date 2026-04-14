@@ -1,6 +1,6 @@
 # https://wiki.nixos.org/wiki/NFS
 {pkgs, ...}: let
-  local_ips = import ../../../local-ips.nix {lib = pkgs.lib;};
+  local_ips = import ../../../local-ips.nix {inherit (pkgs) lib;};
 in {
   services.nfs = {
     server = {

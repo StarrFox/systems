@@ -32,7 +32,7 @@ _: {
     "d /var/lib/discopanel/backups 0755 root root -"
   ];
 
-  networking.firewall.allowedTCPPorts = [ 8080 ];
+  networking.firewall.allowedTCPPorts = [8080];
   networking.firewall.allowedTCPPortRanges = [
     {
       from = 25565;

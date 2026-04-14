@@ -1,12 +1,16 @@
-{ pkgs, lib, ... }: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   systemd.services.sync_service = {
     description = "Sync media";
     serviceConfig = {
       User = "starr";
       WorkingDirectory = "/home/starr";
-      ExecStart = "${ lib.getExe pkgs.fish } -c 'just sync'";
+      ExecStart = "${lib.getExe pkgs.fish} -c 'just sync'";
     };
-    wantedBy = [ "multi-user.target" ];
+    wantedBy = ["multi-user.target"];
   };
 
   systemd.timers.sync_service_timer = {
@@ -16,6 +20,6 @@
       OnUnitActiveSec = "10min";
       Unit = "sync_service.service";
     };
-    wantedBy = [ "timers.target" ];
+    wantedBy = ["timers.target"];
   };
 }

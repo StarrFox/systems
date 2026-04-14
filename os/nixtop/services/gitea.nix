@@ -1,7 +1,4 @@
-_: let
-  url = "nixtop.attlocal.net";
-  https = false;
-in {
+_: {
   # TODO: use postgres for database
   services.gitea = {
     enable = true;

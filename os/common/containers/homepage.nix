@@ -23,10 +23,10 @@ _: {
     };
   };
 
-    systemd.tmpfiles.rules = [
+  systemd.tmpfiles.rules = [
     "d /var/lib/homepage 0755 root root -"
     "d /var/lib/homepage/config 0755 root root -"
   ];
 
-  networking.firewall.allowedTCPPorts = [ 9582 ];
+  networking.firewall.allowedTCPPorts = [9582];
 }

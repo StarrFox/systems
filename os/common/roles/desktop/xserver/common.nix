@@ -8,13 +8,13 @@ _: {
   };
 
   services.displayManager = {
-      autoLogin = {
-        enable = true;
-        user = "starr";
-      };
-      sddm = {
-        enable = true;
-        autoNumlock = true;
-      };
+    autoLogin = {
+      enable = true;
+      user = "starr";
+    };
+    sddm = {
+      enable = true;
+      autoNumlock = true;
+    };
   };
 }
