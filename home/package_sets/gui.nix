@@ -29,7 +29,6 @@
       jdks = [
         graalvmPackages.graalvm-ce
         javaPackages.compiler.semeru-bin.jre-21
-        javaPackages.compiler.semeru-bin.jre-17
         javaPackages.compiler.semeru-bin.jre-8
         jdk25
         jdk21
