@@ -4,9 +4,19 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    #nixpkgs-old.url = "github:nixos/nixpkgs/nixos-23.11";
-    starrpkgs.url = "github:StarrFox/packages";
-    discord_chan.url = "github:StarrFox/Discord-chan";
+    starrpkgs = {
+      url = "github:StarrFox/packages";
+      inputs = {
+        flake-parts.follows = "flake-parts";
+      };
+    };
+    discord_chan = {
+      url = "github:StarrFox/Discord-chan";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-parts.follows = "flake-parts";
+      };
+    };
     nix_search = {
       url = "github:peterldowns/nix-search-cli";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -33,10 +43,15 @@
       url = "github:serokell/deploy-rs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # nixos-generators = {
-    #   url = "github:nix-community/nixos-generators";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    nixcord = {
+      url = "github:FlameFlag/nixcord";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        nixpkgs-nixcord.follows = "nixpkgs";
+        flake-parts.follows = "flake-parts";
+      };
+    };
+    flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
   outputs = {
@@ -46,7 +61,6 @@
     agenix,
     discord_chan,
     deploy-rs,
-    #nixos-generators,
     ...
   } @ inputs: {
     devShells.x86_64-linux = {
