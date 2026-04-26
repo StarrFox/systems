@@ -19,7 +19,7 @@
 
     # messaging
     element-desktop
-    (discord.override {withMoonlight = true;})
+    #(discord.override {withMoonlight = true;})
     thunderbird-bin
 
     # games

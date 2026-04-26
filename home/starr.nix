@@ -16,6 +16,7 @@
       ./programs/vscode.nix
       ./programs/obs.nix
       ./package_sets/gui.nix
+      ./programs/discord.nix
     ]
     else [];
 in {
@@ -37,6 +38,8 @@ in {
 
       # TODO: use nixos module instead
       inputs.nix-index-database.homeModules.nix-index
+
+      inputs.nixcord.homeModules.nixcord
     ]
     ++ extraModules;
 
