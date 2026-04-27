@@ -23,6 +23,7 @@ _: {
           enable = true;
           keepOpen = true;
         };
+        SaveFavoriteGIFs.enable = true;
       };
     };
   };
