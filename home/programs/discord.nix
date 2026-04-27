@@ -24,6 +24,7 @@ _: {
           keepOpen = true;
         };
         SaveFavoriteGIFs.enable = true;
+        equicordToolbox.enable = true;
       };
     };
   };
