@@ -118,7 +118,9 @@ in {
         ms-python.vscode-pylance
         mkhl.direnv
         editorconfig.editorconfig
-        rust-lang.rust-analyzer
+        # we need the updated version for latest rust
+        #rust-lang.rust-analyzer
+        nixpkgs-unstable.vscode-extensions.rust-lang.rust-analyzer
         kamadorueda.alejandra
         skellock.just
         gruntfuggly.todo-tree
