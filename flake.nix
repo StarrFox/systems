@@ -13,7 +13,6 @@
     discord_chan = {
       url = "github:StarrFox/Discord-chan";
       inputs = {
-        nixpkgs.follows = "nixpkgs";
         flake-parts.follows = "flake-parts";
       };
     };
