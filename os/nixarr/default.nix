@@ -21,6 +21,8 @@ in {
 
     ../common/users/starr.nix
 
+    ../common/containers/docker.nix
+
     ./services/prowlarr.nix
     ./services/radarr.nix
     #./services/transmission.nix
