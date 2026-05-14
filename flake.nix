@@ -43,7 +43,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixcord = {
-      url = "github:FlameFlag/nixcord/61808b8d5c8f3e6c1094515593a4886550a4f6b0";
+      url = "github:FlameFlag/nixcord/9c006519b16897a96845970618db42a74d13576a";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         nixpkgs-nixcord.follows = "nixpkgs";

@@ -344,17 +344,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1777338244,
-        "narHash": "sha256-OB3JPgU8K59mpO3W9UzxWWUhRwqd7zcG+IeZ2FHmV4o=",
+        "lastModified": 1778768735,
+        "narHash": "sha256-L9SSGpMiBcx12jC31S9O+FXEbwkdbpYswnDmX/d/0sM=",
         "owner": "FlameFlag",
         "repo": "nixcord",
-        "rev": "61808b8d5c8f3e6c1094515593a4886550a4f6b0",
+        "rev": "9c006519b16897a96845970618db42a74d13576a",
         "type": "github"
       },
       "original": {
         "owner": "FlameFlag",
         "repo": "nixcord",
-        "rev": "61808b8d5c8f3e6c1094515593a4886550a4f6b0",
+        "rev": "9c006519b16897a96845970618db42a74d13576a",
         "type": "github"
       }
     },
