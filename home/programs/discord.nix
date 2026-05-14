@@ -1,11 +1,11 @@
 _: {
   programs.nixcord = {
     enable = true;
-    krisp.enable = true;
 
     discord = {
       vencord.enable = false;
       equicord.enable = true;
+      krisp.enable = true;
     };
 
     config = {
