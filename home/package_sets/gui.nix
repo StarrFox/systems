@@ -42,6 +42,6 @@
     heroic
     pcsx2
     the-powder-toy
-    lutris
+    #lutris
   ];
 }
