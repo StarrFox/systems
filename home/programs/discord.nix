@@ -26,6 +26,9 @@ _: {
         };
         SaveFavoriteGIFs.enable = true;
         equicordToolbox.enable = true;
+        spotifyCrack.enable = true;
+        typingTweaks.enable = true;
+        typingIndicator.enable = true;
       };
     };
   };
