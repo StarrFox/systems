@@ -76,8 +76,8 @@ in {
         };
         "python.analysis.inlayHints.functionReturnTypes" = true;
         "python.analysis.inlayHints.variableTypes" = true;
-        # NOTE: options are off, basic, and strict
-        "python.analysis.typeCheckingMode" = "basic";
+        # NOTE: options are off, basic, standard, and strict
+        "python.analysis.typeCheckingMode" = "standard";
         "python.venvPath" = "~/.cache/pypoetry/virtualenvs";
         "python.testing.pytestEnabled" = true;
         "python.terminal.activateEnvironment" = false;
