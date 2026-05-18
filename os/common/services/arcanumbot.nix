@@ -1,4 +1,5 @@
-{config, ...}: {
+{ config, ... }:
+{
   age.secrets.arcanumbot_token = {
     file = ../../../secrets/arcanumbot_token.age;
     mode = "400";

@@ -3,12 +3,14 @@
   config,
   pkgs,
   ...
-}: let
+}:
+let
   nixpkgs-unstable = import inputs.nixpkgs-unstable {
     system = "${pkgs.stdenv.hostPlatform.system}";
     inherit (config.nixpkgs) config;
   };
-in {
+in
+{
   services.prowlarr = {
     enable = true;
     openFirewall = true;

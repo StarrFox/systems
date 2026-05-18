@@ -1,6 +1,8 @@
-{pkgs, ...}: let
+{ pkgs, ... }:
+let
   ssh-keys = import ../../ssh-keys.nix;
-in {
+in
+{
   imports = [
     ../common/nix_daemon.nix
     ../common/locale.nix

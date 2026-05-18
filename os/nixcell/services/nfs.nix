@@ -1,7 +1,9 @@
 # https://wiki.nixos.org/wiki/NFS
-{pkgs, ...}: let
-  local_ips = import ../../../local-ips.nix {inherit (pkgs) lib;};
-in {
+{ pkgs, ... }:
+let
+  local_ips = import ../../../local-ips.nix { inherit (pkgs) lib; };
+in
+{
   services.nfs = {
     server = {
       enable = true;
@@ -14,9 +16,9 @@ in {
   fileSystems = {
     "/export/media" = {
       device = "/big/media";
-      options = ["bind"];
+      options = [ "bind" ];
     };
   };
 
-  networking.firewall.allowedTCPPorts = [2049];
+  networking.firewall.allowedTCPPorts = [ 2049 ];
 }

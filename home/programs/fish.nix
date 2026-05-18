@@ -3,7 +3,8 @@
   lib,
   config,
   ...
-}: {
+}:
+{
   programs.fish = {
     enable = true;
     # nixpkgs doesn't have meta.mainProgram set for some of these

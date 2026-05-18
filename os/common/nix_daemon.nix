@@ -2,7 +2,8 @@
   lib,
   inputs,
   ...
-}: {
+}:
+{
   nix = {
     gc = {
       automatic = true;
@@ -10,20 +11,23 @@
       options = "--delete-old";
     };
     # this makes nix * commands use the same nixpkgs versions as the system
-    registry = lib.mapAttrs (_: value: {flake = value;}) inputs;
+    registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
 
     # a lot of stuff still uses channels
     #channel.enable = false;
 
     settings = {
-      experimental-features = ["nix-command" "flakes"];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
       # 500MB
       download-buffer-size = 524288000;
       auto-optimise-store = true;
       warn-dirty = false;
       # number of lines shown for failing builds
       log-lines = 25;
-      trusted-users = ["@wheel"];
+      trusted-users = [ "@wheel" ];
       substituters = [
         "https://starrfox.cachix.org"
       ];

@@ -53,142 +53,146 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    agenix,
-    discord_chan,
-    deploy-rs,
-    ...
-  } @ inputs: {
-    devShells.x86_64-linux = {
-      default = let
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-      in
-        pkgs.mkShell {
-          name = "starr-systems";
-          packages = with pkgs; [
-            alejandra
-            deadnix
-            just
-            nil
-            statix
-            btop
-            nix-tree
-            nh
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      agenix,
+      discord_chan,
+      deploy-rs,
+      ...
+    }@inputs:
+    {
+      devShells.x86_64-linux = {
+        default =
+          let
+            pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          in
+          pkgs.mkShell {
+            name = "starr-systems";
+            packages = with pkgs; [
+              deadnix
+              just
+              nil
+              statix
+              btop
+              nix-tree
+              nh
 
-            # disambiguate from the function argument
-            pkgs.deploy-rs
+              # disambiguate from the function argument
+              pkgs.deploy-rs
 
-            inputs.agenix.packages.x86_64-linux.default
-            #deploy-rs.packages.x86_64-linux.default
-          ];
-        };
-    };
-
-    nixosConfigurations = let
-      mkNixosConfig = {
-        extraModules ? [],
-        enableGui ? true,
-      }:
-        nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs;
+              inputs.agenix.packages.x86_64-linux.default
+              #deploy-rs.packages.x86_64-linux.default
+            ];
           };
-          modules =
-            [
-              agenix.nixosModules.default
-              home-manager.nixosModules.default
-              {
-                home-manager.useGlobalPkgs = true;
-                home-manager.useUserPackages = true;
-                home-manager.users.starr = import ./home/starr.nix {guiEnabled = enableGui;};
+      };
 
-                home-manager.extraSpecialArgs = {inherit inputs;};
-              }
+      nixosConfigurations =
+        let
+          mkNixosConfig =
+            {
+              extraModules ? [ ],
+              enableGui ? true,
+            }:
+            nixpkgs.lib.nixosSystem {
+              specialArgs = {
+                inherit inputs;
+              };
+              modules = [
+                agenix.nixosModules.default
+                home-manager.nixosModules.default
+                {
+                  home-manager.useGlobalPkgs = true;
+                  home-manager.useUserPackages = true;
+                  home-manager.users.starr = import ./home/starr.nix { guiEnabled = enableGui; };
+
+                  home-manager.extraSpecialArgs = { inherit inputs; };
+                }
+                {
+                  system.configurationRevision = self.rev or "dirty";
+                }
+              ]
+              ++ extraModules;
+            };
+        in
+        {
+          nixmain = mkNixosConfig {
+            extraModules = [ ./os/nixmain/default.nix ];
+          };
+
+          nixtest = mkNixosConfig {
+            extraModules = [ ./os/nixtest/default.nix ];
+          };
+
+          # nixtop = mkNixosConfig {
+          #   extraModules = [
+          #     ./os/nixtop/default.nix
+          #     discord_chan.nixosModules.default
+          #   ];
+          #   enableGui = false;
+          # };
+
+          nixarr = mkNixosConfig {
+            extraModules = [
+              ./os/nixarr/default.nix
               {
-                system.configurationRevision = self.rev or "dirty";
+                home-manager.users.starr.home.file."justfile".source = ./misc/nixarr_justfile;
               }
-            ]
-            ++ extraModules;
+            ];
+            enableGui = false;
+          };
+
+          nixcell = mkNixosConfig {
+            extraModules = [
+              ./os/nixcell/default.nix
+              discord_chan.nixosModules.default
+            ];
+            enableGui = false;
+          };
         };
-    in {
-      nixmain = mkNixosConfig {
-        extraModules = [./os/nixmain/default.nix];
-      };
 
-      nixtest = mkNixosConfig {
-        extraModules = [./os/nixtest/default.nix];
-      };
+      deploy = {
+        # this is too slow
+        #fastConnection = true;
+        # these currently break too often (networkmanager-online)
+        autoRollback = false;
+        magicRollback = false;
 
-      # nixtop = mkNixosConfig {
-      #   extraModules = [
-      #     ./os/nixtop/default.nix
-      #     discord_chan.nixosModules.default
-      #   ];
-      #   enableGui = false;
-      # };
+        nodes = {
+          nixcell = {
+            hostname = "nixcell";
+            profiles = {
+              system = {
+                user = "root";
+                path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixcell;
+              };
+            };
+          };
 
-      nixarr = mkNixosConfig {
-        extraModules = [
-          ./os/nixarr/default.nix
-          {
-            home-manager.users.starr.home.file."justfile".source = ./misc/nixarr_justfile;
-          }
-        ];
-        enableGui = false;
-      };
+          # nixtop = {
+          #   hostname = "nixtop";
+          #   profiles = {
+          #     system = {
+          #       user = "root";
+          #       path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixtop;
+          #     };
+          #   };
+          # };
 
-      nixcell = mkNixosConfig {
-        extraModules = [
-          ./os/nixcell/default.nix
-          discord_chan.nixosModules.default
-        ];
-        enableGui = false;
-      };
-    };
-
-    deploy = {
-      # this is too slow
-      #fastConnection = true;
-      # these currently break too often (networkmanager-online)
-      autoRollback = false;
-      magicRollback = false;
-
-      nodes = {
-        nixcell = {
-          hostname = "nixcell";
-          profiles = {
-            system = {
-              user = "root";
-              path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixcell;
+          nixarr = {
+            hostname = "nixarr";
+            profiles = {
+              system = {
+                user = "root";
+                path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixarr;
+              };
             };
           };
         };
-
-        # nixtop = {
-        #   hostname = "nixtop";
-        #   profiles = {
-        #     system = {
-        #       user = "root";
-        #       path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixtop;
-        #     };
-        #   };
-        # };
-
-        nixarr = {
-          hostname = "nixarr";
-          profiles = {
-            system = {
-              user = "root";
-              path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.nixarr;
-            };
-          };
-        };
       };
-    };
 
-    checks = builtins.mapAttrs (_system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;
-  };
+      checks = builtins.mapAttrs (_system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;
+    };
 }

@@ -1,6 +1,8 @@
-_: let
+_:
+let
   ssh-keys = import ../../ssh-keys.nix;
-in {
+in
+{
   imports = [
     ../common/nix_daemon.nix
     ../common/locale.nix

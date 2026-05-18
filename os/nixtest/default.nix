@@ -2,9 +2,11 @@
   lib,
   pkgs,
   ...
-}: let
+}:
+let
   ssh-keys = import ../../ssh-keys.nix;
-in {
+in
+{
   imports = [
     ../common/services/openssh.nix
     ../common/services/xbanish.nix

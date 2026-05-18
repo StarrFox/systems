@@ -2,13 +2,15 @@
   pkgs,
   inputs,
   ...
-}: let
+}:
+let
   starrpkgs = inputs.starrpkgs.packages.${pkgs.stdenv.hostPlatform.system};
-in {
+in
+{
   home.packages = with pkgs; [
     atop
     bat
-    (btop.override {cudaSupport = true;})
+    (btop.override { cudaSupport = true; })
     cava
     #croc
     duf

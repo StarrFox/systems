@@ -1,11 +1,16 @@
-{lib, ...}: let
+{ lib, ... }:
+let
   # {name: value} -> {value: [name]}
-  into_hosts = set:
-    builtins.listToAttrs (builtins.map (entry: {
-      name = entry.value;
-      value = [entry.name];
-    }) (lib.attrsToList set));
-in rec {
+  into_hosts =
+    set:
+    builtins.listToAttrs (
+      builtins.map (entry: {
+        name = entry.value;
+        value = [ entry.name ];
+      }) (lib.attrsToList set)
+    );
+in
+rec {
   ips = {
     nixarr = "192.168.122.39";
     nixtest = "192.168.122.214";

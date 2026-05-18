@@ -3,9 +3,11 @@
   config,
   pkgs,
   ...
-}: let
+}:
+let
   ssh-keys = import ../../ssh-keys.nix;
-in {
+in
+{
   imports = [
     ./services/postgresql.nix
     #./services/ratbagd.nix

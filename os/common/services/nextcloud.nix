@@ -3,7 +3,8 @@
   pkgs,
   config,
   ...
-}: {
+}:
+{
   age.secrets.nextcloud_pass = {
     file = ../../../secrets/nextcloud_pass.age;
     mode = "400";
@@ -21,5 +22,8 @@
     };
   };
 
-  networking.firewall.allowedTCPPorts = [80 443];
+  networking.firewall.allowedTCPPorts = [
+    80
+    443
+  ];
 }

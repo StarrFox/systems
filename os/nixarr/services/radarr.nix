@@ -3,12 +3,14 @@
   config,
   pkgs,
   ...
-}: let
+}:
+let
   nixpkgs-unstable = import inputs.nixpkgs-unstable {
     system = "${pkgs.stdenv.hostPlatform.system}";
     inherit (config.nixpkgs) config;
   };
-in {
+in
+{
   services.radarr = {
     enable = true;
     openFirewall = true;

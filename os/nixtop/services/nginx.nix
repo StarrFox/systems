@@ -1,6 +1,8 @@
-_: let
+_:
+let
   email = "starrfox6312@gmail.com";
-in {
+in
+{
   services.nginx = {
     enable = true;
     statusPage = true;
@@ -18,5 +20,8 @@ in {
     # };
   };
 
-  networking.firewall.allowedTCPPorts = [80 443];
+  networking.firewall.allowedTCPPorts = [
+    80
+    443
+  ];
 }

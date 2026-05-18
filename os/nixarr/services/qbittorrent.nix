@@ -1,4 +1,5 @@
-{config, ...}: {
+{ config, ... }:
+{
   services.qbittorrent = {
     enable = true;
     group = "arr";

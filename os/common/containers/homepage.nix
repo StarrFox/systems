@@ -28,5 +28,5 @@ _: {
     "d /var/lib/homepage/config 0755 root root -"
   ];
 
-  networking.firewall.allowedTCPPorts = [9582];
+  networking.firewall.allowedTCPPorts = [ 9582 ];
 }

@@ -3,14 +3,16 @@
   inputs,
   osConfig,
   ...
-}: let
+}:
+let
   nixpkgs-unstable = import inputs.nixpkgs-unstable {
     system = "${pkgs.stdenv.hostPlatform.system}";
     inherit (osConfig.nixpkgs) config;
   };
 
   starrpkgs = inputs.starrpkgs.packages.${pkgs.stdenv.hostPlatform.system};
-in {
+in
+{
   # TODO: don't do this
   # this is just incase I forget to add them to the enviroment
   home.packages = with pkgs; [
@@ -65,7 +67,11 @@ in {
         "zig.checkForUpdate" = false;
         "zig.zls.enableAutofix" = false;
 
-        "isort.args" = ["--profile" "black" "--skip-gitignore"];
+        "isort.args" = [
+          "--profile"
+          "black"
+          "--skip-gitignore"
+        ];
         "[python]" = {
           "editor.formatOnSave" = true;
           #"editor.formatOnType" = true;

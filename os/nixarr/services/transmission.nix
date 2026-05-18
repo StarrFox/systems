@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   # TODO: figure out how to access the webui externally
   services.transmission = {
     enable = true;

@@ -3,15 +3,22 @@
   lib,
   modulesPath,
   ...
-}: {
+}:
+{
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  boot.initrd.availableKernelModules = ["xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod"];
-  boot.initrd.kernelModules = [];
-  boot.kernelModules = ["kvm-intel"];
-  boot.extraModulePackages = [];
+  boot.initrd.availableKernelModules = [
+    "xhci_pci"
+    "ahci"
+    "usb_storage"
+    "usbhid"
+    "sd_mod"
+  ];
+  boot.initrd.kernelModules = [ ];
+  boot.kernelModules = [ "kvm-intel" ];
+  boot.extraModulePackages = [ ];
   boot.kernelParams = [ "usbcore.autosuspend=-1" ];
 
   fileSystems = {
@@ -23,18 +30,21 @@
     "/boot" = {
       device = "/dev/disk/by-uuid/392A-C3FE";
       fsType = "vfat";
-      options = ["fmask=0077" "dmask=0077"];
+      options = [
+        "fmask=0077"
+        "dmask=0077"
+      ];
     };
 
     "/big" = {
       device = "/dev/movies/movies";
       fsType = "ext4";
-      options = ["noatime"];
+      options = [ "noatime" ];
     };
   };
 
   swapDevices = [
-    {device = "/dev/disk/by-uuid/4883e788-39a6-418a-a59c-38388d310a3d";}
+    { device = "/dev/disk/by-uuid/4883e788-39a6-418a-a59c-38388d310a3d"; }
   ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";

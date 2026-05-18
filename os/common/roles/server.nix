@@ -1,5 +1,6 @@
 # most of this is from https://github.com/numtide/srvos/blob/5db34b8c369dad476406ef8ac6382fd019bd07a3/nixos/server/default.nix
-{lib, ...}: {
+{ lib, ... }:
+{
   # Notice this also disables --help for some commands such es nixos-rebuild
   documentation.enable = lib.mkDefault false;
   documentation.info.enable = lib.mkDefault false;

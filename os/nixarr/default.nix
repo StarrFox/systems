@@ -1,6 +1,8 @@
-{lib, ...}: let
+{ lib, ... }:
+let
   ssh-keys = import ../../ssh-keys.nix;
-in {
+in
+{
   imports = [
     ../common/services/mullvad.nix
     ../common/services/openssh.nix
@@ -53,9 +55,9 @@ in {
   };
 
   # arr services group
-  users.groups.arr = {};
+  users.groups.arr = { };
 
-  users.users.starr.extraGroups = ["arr"];
+  users.users.starr.extraGroups = [ "arr" ];
 
   users.users.starr.openssh.authorizedKeys.keys = [
     ssh-keys.starr-nixmain

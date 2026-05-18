@@ -2,9 +2,11 @@
   pkgs,
   inputs,
   ...
-}: let
+}:
+let
   starrpkgs = inputs.starrpkgs.packages.${pkgs.stdenv.hostPlatform.system};
-in {
+in
+{
   programs.gh = {
     enable = true;
     extensions = [

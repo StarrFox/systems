@@ -1,47 +1,52 @@
-{guiEnabled ? false}: {
+{
+  guiEnabled ? false,
+}:
+{
   config,
   inputs,
   ...
-}: let
+}:
+let
   extraModules =
-    if guiEnabled
-    then [
-      ./programs/vscode.nix
-      ./programs/firefox.nix
-      ./programs/alacritty.nix
-      #./programs/kitty.nix
-      ./programs/wezterm
-      #./programs/rio.nix
-      #./services/dunst.nix
-      ./programs/vscode.nix
-      ./programs/obs.nix
-      ./package_sets/gui.nix
-      ./programs/discord.nix
-    ]
-    else [];
-in {
-  imports =
-    [
-      ./programs/helix.nix
-      ./programs/fish.nix
-      ./programs/git.nix
-      ./programs/gpg.nix
-      ./programs/starship.nix
-      ./programs/direnv.nix
-      ./programs/nix-index.nix
-      #./programs/home-manager.nix
-      ./programs/kakoune.nix
-      ./programs/poetry.nix
-      ./programs/zoxide.nix
+    if guiEnabled then
+      [
+        ./programs/vscode.nix
+        ./programs/firefox.nix
+        ./programs/alacritty.nix
+        #./programs/kitty.nix
+        ./programs/wezterm
+        #./programs/rio.nix
+        #./services/dunst.nix
+        ./programs/vscode.nix
+        ./programs/obs.nix
+        ./package_sets/gui.nix
+        ./programs/discord.nix
+      ]
+    else
+      [ ];
+in
+{
+  imports = [
+    ./programs/helix.nix
+    ./programs/fish.nix
+    ./programs/git.nix
+    ./programs/gpg.nix
+    ./programs/starship.nix
+    ./programs/direnv.nix
+    ./programs/nix-index.nix
+    #./programs/home-manager.nix
+    ./programs/kakoune.nix
+    ./programs/poetry.nix
+    ./programs/zoxide.nix
 
-      ./package_sets/cli.nix
+    ./package_sets/cli.nix
 
-      # TODO: use nixos module instead
-      inputs.nix-index-database.homeModules.nix-index
+    # TODO: use nixos module instead
+    inputs.nix-index-database.homeModules.nix-index
 
-      inputs.nixcord.homeModules.nixcord
-    ]
-    ++ extraModules;
+    inputs.nixcord.homeModules.nixcord
+  ]
+  ++ extraModules;
 
   # NOTE: if switching from plasma consider adding handlr to handle default apps
 
@@ -55,8 +60,5 @@ in {
   systemd.user.startServices = "sd-switch";
 
   xdg.enable = true;
-  xsession.numlock.enable =
-    if guiEnabled
-    then true
-    else false;
+  xsession.numlock.enable = if guiEnabled then true else false;
 }
