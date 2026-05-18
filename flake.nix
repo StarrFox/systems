@@ -72,11 +72,8 @@
           pkgs.mkShell {
             name = "starr-systems";
             packages = with pkgs; [
-              deadnix
               just
               nil
-              statix
-              btop
               nix-tree
               nh
 
