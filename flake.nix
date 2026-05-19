@@ -44,11 +44,11 @@
     };
     nixcord = {
       url = "github:FlameFlag/nixcord";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        nixpkgs-nixcord.follows = "nixpkgs";
-        flake-parts.follows = "flake-parts";
-      };
+      # inputs = {
+      #   nixpkgs.follows = "nixpkgs";
+      #   nixpkgs-nixcord.follows = "nixpkgs";
+      #   flake-parts.follows = "flake-parts";
+      # };
     };
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
