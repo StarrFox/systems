@@ -11,9 +11,9 @@ let
   };
 in
 {
-  services.jellyseerr = {
+  services.seerr = {
     enable = true;
     openFirewall = true;
-    package = nixpkgs-unstable.jellyseerr;
+    package = nixpkgs-unstable.seerr;
   };
 }

@@ -2,7 +2,12 @@
   description = "nixos configs";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
+    # NOTE: should be the same release version as nixpkgs version
+    home-manager = {
+      url = "github:nix-community/home-manager/release-26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     starrpkgs = {
       url = "github:StarrFox/packages";
@@ -18,11 +23,6 @@
     };
     nix_search = {
       url = "github:peterldowns/nix-search-cli";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    # NOTE: should be the same release version as nixpkgs version
-    home-manager = {
-      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     agenix = {

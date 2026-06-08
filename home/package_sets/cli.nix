@@ -33,7 +33,6 @@ in
     inputs.nix_search.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     python3Packages.ipython
-    python3Packages.howdoi
 
     starrpkgs.mrpack-install
   ];

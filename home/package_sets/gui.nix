@@ -15,7 +15,7 @@
     mpv
     spotify
     feh
-    helvum
+    crosspipe # pipewire graph
     flameshot
 
     # messaging
