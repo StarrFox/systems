@@ -29,7 +29,7 @@ in
     ./services/radarr.nix
     #./services/transmission.nix
     ./services/sonarr.nix
-    ./services/jellyseerr_split_tunnel.nix
+    #./services/jellyseerr_split_tunnel.nix
     ./services/sync_service.nix
     ./services/qbittorrent.nix
     ./services/lidarr.nix
