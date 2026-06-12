@@ -24,7 +24,7 @@ _: {
           enable = true;
           keepOpen = true;
         };
-        SaveFavoriteGifs.enable = true;
+        saveFavoriteGifs.enable = true;
         equicordToolbox.enable = true;
         spotifyCrack.enable = true;
         typingTweaks.enable = true;
