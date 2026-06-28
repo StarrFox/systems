@@ -15,8 +15,8 @@ rec {
     nixarr = "192.168.122.39";
     nixtest = "192.168.122.214";
     nixtop = "192.168.1.110";
-    nixmain = "192.168.1.71";
-    nixcell = "192.168.1.184";
+    nixmain = "192.168.50.118";
+    nixcell = "192.168.50.220";
   };
 
   as_hosts = into_hosts ips;
