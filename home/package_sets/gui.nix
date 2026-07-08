@@ -44,5 +44,6 @@
     pcsx2
     the-powder-toy
     #lutris
+    xivlauncher
   ];
 }
