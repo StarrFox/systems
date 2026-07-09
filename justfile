@@ -8,6 +8,9 @@
     git commit -am "update dc"
     git push
 
+# update & deploy dc
+@update-deploy-dc: update-dc (deploy_node "nixcell")
+
 # switch os
 @os: && update-flatpak
     nh os switch .
