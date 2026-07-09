@@ -5,7 +5,7 @@
 # update dc and push the change
 @update-dc:
     nix flake update discord_chan
-    git commit -am "update dc"
+    git commit -m "update dc" flake.lock
     git push
 
 # update & deploy dc
