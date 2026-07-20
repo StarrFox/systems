@@ -30,9 +30,11 @@
       trusted-users = [ "@wheel" ];
       substituters = [
         "https://starrfox.cachix.org"
+        "https://cache.nixos-cuda.org"
       ];
       trusted-public-keys = [
         "starrfox.cachix.org-1:f72kZolyxFrJtrWoLRj12WdEx4xISSOybSlQ21HuhWY="
+        "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M="
       ];
     };
   };
