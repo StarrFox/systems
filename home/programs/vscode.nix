@@ -142,6 +142,9 @@ in
         ms-vscode.makefile-tools
         ziglang.vscode-zig
 
+        # AI garbage (work)
+        saoudrizwan.claude-dev
+
         starrpkgs.vscord
         starrpkgs.vscode-coconut
         starrpkgs.vscode-lark
