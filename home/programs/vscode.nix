@@ -142,6 +142,9 @@ in
         ms-vscode.makefile-tools
         ziglang.vscode-zig
 
+        # AI (work)
+        anthropic.claude-code
+
         starrpkgs.vscord
         starrpkgs.vscode-coconut
         starrpkgs.vscode-lark
