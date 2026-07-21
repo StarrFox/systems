@@ -13,6 +13,7 @@ in
     (btop.override { cudaSupport = true; })
     cava
     #croc
+    claude-code
     duf
     ffmpeg
     htop
