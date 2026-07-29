@@ -43,6 +43,8 @@ in
 
   networking.hostName = "nixcell";
 
+  virtualisation.libvirtd.enable = true;
+
   # TODO: update sometimes
   services.postgresql.package = pkgs.postgresql_18;
 
