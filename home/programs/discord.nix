@@ -16,10 +16,11 @@ _: {
           enableStickerBypass = false;
           enableStreamQualityBypass = true;
         };
-        favoriteGifSearch = {
-          enable = true;
-          searchOption = "path";
-        };
+        # TODO: make replacement
+        # favoriteGifSearch = {
+        #   enable = true;
+        #   searchOption = "path";
+        # };
         betterGifPicker = {
           enable = true;
           keepOpen = true;
