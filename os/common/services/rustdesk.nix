@@ -4,5 +4,6 @@ _: {
     openFirewall = true;
     signal.enable = true;
     relay.enable = true;
+    signal.relayHosts = ["starrfin.com"];
   };
 }

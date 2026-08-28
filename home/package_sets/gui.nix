@@ -43,6 +43,7 @@
     heroic
     pcsx2
     the-powder-toy
+    rustdesk-flutter
     #lutris
     xivlauncher
   ];
