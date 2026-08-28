@@ -22,6 +22,7 @@ in
     ../common/services/postgresql_backup.nix
     #../common/services/jellyseerr.nix
     ../common/services/glance.nix
+    ../common/services/rustdesk.nix
 
     ../common/containers/portainer.nix
     ../common/containers/cloudflared.nix
