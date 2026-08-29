@@ -30,7 +30,7 @@ in
     ../common/locale.nix
     ../common/environment.nix
     ../common/sound.nix
-    ../common/flatpak.nix
+    #../common/flatpak.nix
     ../common/steam.nix
     ../common/firejail.nix
     ../common/network_manager.nix

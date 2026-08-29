@@ -12,7 +12,7 @@
 @update-deploy-dc: update-dc (deploy_node "nixcell")
 
 # switch os
-@os: && update-flatpak
+@os:
     nh os switch .
 
 # browse dependency tree
