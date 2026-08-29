@@ -16,13 +16,13 @@ _: {
           enableStickerBypass = false;
           enableStreamQualityBypass = true;
         };
-        favoriteGifSearch = {
-          enable = true;
-          searchOption = "path";
-        };
+        # favoriteGifSearch = {
+        #   enable = true;
+        #   searchOption = "path";
+        # };
         betterGifPicker = {
           enable = true;
-          keepOpen = true;
+          #keepOpen = true;
         };
         saveFavoriteGifs.enable = true;
         equicordToolbox.enable = true;
