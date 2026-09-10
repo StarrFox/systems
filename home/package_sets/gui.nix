@@ -46,5 +46,6 @@
     rustdesk-flutter
     #lutris
     xivlauncher
+    moonlight-qt
   ];
 }
