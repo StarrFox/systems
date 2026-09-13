@@ -45,7 +45,10 @@ in
   networking.hostName = "nixcell";
 
   # valheim server
-  networking.firewall.allowedUDPPortRanges = [2456 2458];
+  networking.firewall.allowedUDPPortRanges = [{
+    from=2456;
+    to=2458;
+  }];
 
   virtualisation.libvirtd.enable = true;
 
