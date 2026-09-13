@@ -90,7 +90,7 @@
     };
 
     nvidia = {
-      open = false;
+      open = true;
       # nvidia driver
       package = config.boot.kernelPackages.nvidiaPackages.stable;
 
