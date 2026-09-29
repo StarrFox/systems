@@ -27,8 +27,9 @@
       ];
       kernelModules = [ ];
     };
-    #kernelPackages = pkgs.linuxPackages_latest;
-    kernelPackages = pkgs.linuxKernel.packages.linux_7_1;
+    #kernelPackages = pkgs.linuxPackages_latest; # _latest gives latest kernel
+    #kernelPackages = pkgs.linuxKernel.packages.linux_7_1;
+    kernelPackages = pkgs.linuxPackages; # pkgs.linuxPackages is an alias to current lts kernel
   };
 
   #boot.loader.efi.efiSysMountPoint = "/boot/efi";
