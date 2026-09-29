@@ -86,5 +86,5 @@ in
     config.boot.kernelPackages.v4l2loopback
   ];
 
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
 }
