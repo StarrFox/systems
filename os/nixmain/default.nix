@@ -22,6 +22,7 @@ in
     #../common/services/jellyfin.nix
     ../common/services/jellyseerr.nix
     ../common/services/locate.nix
+    ../common/services/nohang.nix
 
     ../common/containers/cloudflared.nix
 
