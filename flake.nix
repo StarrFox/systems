@@ -9,6 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+
+    # https://github.com/NixOS/nixpkgs/tree/27ec1c9b87f5906fcf94c1e7b2c50ca6c0fc8de5
+    graalvm_21_nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
+
     starrpkgs = {
       url = "github:StarrFox/packages";
       inputs = {

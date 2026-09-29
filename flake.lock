@@ -203,6 +203,22 @@
         "type": "github"
       }
     },
+    "graalvm_21_nixpkgs": {
+      "locked": {
+        "lastModified": 1720535198,
+        "narHash": "sha256-zwVvxrdIzralnSbcpghA92tWu2DV2lwv89xZc8MTrbg=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "205fd4226592cc83fd4c0885a3e4c9c400efabb5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-23.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -536,6 +552,7 @@
         "deploy-rs": "deploy-rs",
         "discord_chan": "discord_chan",
         "flake-parts": "flake-parts",
+        "graalvm_21_nixpkgs": "graalvm_21_nixpkgs",
         "home-manager": "home-manager",
         "nix-index-database": "nix-index-database",
         "nix_search": "nix_search",

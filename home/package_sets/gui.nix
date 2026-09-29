@@ -1,4 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, inputs, osConfig, ... }: let
+    graalvm_21_nixpkgs = import inputs.graalvm_21_nixpkgs {
+      system = "${pkgs.stdenv.hostPlatform.system}";
+      inherit (osConfig.nixpkgs) config;
+    };
+in
 {
   home.packages = with pkgs; [
     # monitoring
@@ -28,6 +33,7 @@
     # check https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/pr/prismlauncher/package.nix#L37-L42
     (prismlauncher.override {
       jdks = [
+        graalvm_21_nixpkgs.graalvmCEPackages.graalvm-ce
         graalvmPackages.graalvm-ce
         javaPackages.compiler.semeru-bin.jre-21
         javaPackages.compiler.semeru-bin.jre-8
