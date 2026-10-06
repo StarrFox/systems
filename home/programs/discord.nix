@@ -6,6 +6,8 @@ _: {
       vencord.enable = false;
       equicord.enable = true;
       krisp.enable = true;
+      # causes issues with gifs
+      openASAR.enable = false;
     };
 
     config = {
