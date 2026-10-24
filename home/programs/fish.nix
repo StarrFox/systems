@@ -26,6 +26,7 @@
       clip = "${lib.getExe pkgs.xsel} -ib";
       c = "clear";
       fetch = "${lib.getExe pkgs.fastfetch}";
+      disks = "lsblk --output NAME,RO,LABEL,FSTYPE,FSUSE%,FSSIZE,MOUNTPOINTS";
     };
     # wish they'd just remove this garbage
     interactiveShellInit = "set -U fish_greeting";
