@@ -52,6 +52,7 @@ in
 
   # factorio server
   networking.firewall.allowedUDPPorts = [ 34197 ];
+  networking.firewall.allowedTCPPorts = [ 34197 ];
 
   virtualisation.libvirtd.enable = true;
 
