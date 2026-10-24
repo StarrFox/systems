@@ -50,6 +50,9 @@ in
     to=2458;
   }];
 
+  # factorio server
+  networking.firewall.allowedTCPPorts = [ 34197 ];
+
   virtualisation.libvirtd.enable = true;
 
   # TODO: update sometimes
