@@ -61,6 +61,7 @@ in
 
   users.users.starr.openssh.authorizedKeys.keys = [
     ssh-keys.nixarr
+    ssh-keys.big
   ];
 
   networking = {
